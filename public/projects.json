@@ -1,0 +1,475 @@
+[
+    {
+      "id": 1,
+      "title": "Smoov",
+      "tags": [
+        {
+          "class": "development",
+          "name": "Development"
+        }
+      ],
+      "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
+      "image": "/images/smoov/smoov-main.jpg",
+      "info": [
+        {
+          "year": "2024",
+          "role": "Development, CMS Integration",
+          "stack": "Wordpress, Divi",
+          "collaborators": [
+            {
+              "name": "Rodrigo Stein",
+              "link": "https://www.behance.net/RodrigoStein"
+            },
+            {
+              "name": "Agência Twist",
+              "link": "https://twist.com.br/agenciadigital/"
+            }
+          ],
+          "live": "https://smoovco.com"
+        }
+      ],
+      "lines": [
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593629?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593653?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/smoov/smoov-mobile-hero.jpg"
+            },
+            {
+              "type": "image",
+              "url": "/images/smoov/smoov-mobile-menu.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593607?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593791?background=1&autopause=0"
+            },
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593801?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593689?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593680?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994593659?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/smoov/smoov-mobile-products.jpg"
+            },
+            {
+              "type": "image",
+              "url": "/images/smoov/smoov-mobile-product.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/smoov/smoov-splash.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "GSH",
+      "tags": [
+        {
+          "class": "development",
+          "name": "Development"
+        }
+      ],
+      "description": "GSH specializes in catering and event management for major events like Formula 1, the FIFA World Cup, and the Olympics. I was responsible for translating the design concepts into a functional interface, ensuring a seamless and visually appealing user experience. Implementing dynamic animations was particularly enjoyable, enhancing both functionality and aesthetics.",
+      "image": "/images/gsh/gsh-main.jpg",
+      "info": [
+        {
+          "year": "2023",
+          "role": "Development, CMS Integration",
+          "stack": "Wordpress, Divi",
+          "collaborators": [
+            {
+              "name": "Rodrigo Stein",
+              "link": "https://www.behance.net/RodrigoStein"
+            },
+            {
+              "name": "Agência Twist",
+              "link": "https://twist.com.br/agenciadigital/"
+            }
+          ],
+          "live": "https://gshlive.com.br"
+        }
+      ],
+      "lines": [
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994628110?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994628093?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994628069?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994633145?background=1&autopause=0"
+            },
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994628084?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/994629855?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/gsh/gsh-mobile-hero.jpg"
+            },
+            {
+              "type": "image",
+              "url": "/images/gsh/gsh-mobile-cards.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/gsh/gsh-brands.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Trevvú",
+      "tags": [
+        {
+          "class": "development",
+          "name": "Development"
+        },
+        {
+          "class": "design",
+          "name": "Design"
+        }
+      ],
+      "description": "Trevvú is a fashion brand that embodies a blend of elegance and informality, dedicated to presenting a unique, bold visual identity in everyday scenarios. I played a key role in designing and implementing Trevvú's website renewal, modernizing its look and feel to align perfectly with the brand's aesthetic, ensuring both functionality and visual appeal.",
+      "image": "/images/trevvu/trevvu-main.jpg",
+      "info": [
+        {
+          "year": "2023",
+          "role": "Design, Development, CMS Integration",
+          "stack": "Wordpress, Elementor, Woocommerce",
+          "collaborators": [
+            {
+              "name": "Agência Twist",
+              "link": "https://twist.com.br/agenciadigital/"
+            }
+          ],
+          "live": "https://trevvu.com"
+        }
+      ],
+      "lines": [
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/995589413?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/trevvu/trevvu-finest.jpg"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/trevvu/trevvu-mobile-home.jpg"
+            },
+            {
+              "type": "image",
+              "url": "/images/trevvu/trevvu-mobile-products.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/995589350?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/trevvu/trevvu-slogan.jpg"
+            },
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/995589390?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/995589476?background=1&autopause=0"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "video",
+              "url": "https://player.vimeo.com/video/995589438?background=1&autopause=0"      
+            }
+          ]
+        }
+        
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Bday",
+      "tags": [
+        {
+          "class": "development",
+          "name": "Development"
+        },
+        {
+          "class": "design",
+          "name": "Design"
+        },  
+        {
+          "class": "study",
+          "name": "Study"
+        }
+      ],
+      "description": "Bday is an app designed to plan personalized and special celebrations to share with friends. It was crafted as part of Base, a course from Aprender Design School, dedicated to applying comprehensive knowledge from concept to interface design, serving as a practical application of the lessons learned.",
+      "image": "/images/bday/bday-main.jpg",
+      "info": [
+        {
+          "year": "2024",
+          "role": "UX/UI Design",
+          "stack": "Figma",
+          "collaborators": [
+            {
+              "name": "Ana Luiza Persicano",
+              "link": "https://br.linkedin.com/in/ana-luiza-persicano-848b24223"
+            },
+            {
+              "name": "Lucas Guedes",
+              "link": "https://www.behance.net/lucsgueds"
+            },
+            {
+              "name": "Renata Sá",
+              "link": "https://rntza.cargo.site/"
+            },
+            {
+              "name": "Sarah Marchi",
+              "link": "https://br.linkedin.com/in/sarahsaraiva"
+            }
+          ]
+        }
+      ],
+      "lines": [
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-mockups.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-mosaic.jpg"
+            }
+          ]
+        },
+        {
+          "class": "equal-columns",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-close1.jpg"
+            },
+            {
+              "type": "image",
+              "url": "/images/bday/bday-close2.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-screens-1.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-screens-2.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-screens-3.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-screens-4.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-screens-5.jpg"
+            }
+          ]
+        },
+        {
+          "class": "full",
+          "media": [
+            {
+              "type": "image",
+              "url": "/images/bday/bday-screens-6.jpg"
+            }
+          ]
+        } 
+      ]
+    }
+]

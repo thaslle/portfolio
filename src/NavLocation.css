@@ -1,0 +1,60 @@
+nav#location {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: var(--section-padding);
+    z-index: 999;
+    pointer-events: none;
+}
+nav#location > div {
+    grid-column: span 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+    nav#location > div {
+        grid-column: span 6;
+    } 
+}
+nav#location p {
+    font-size: 14px;
+    text-transform: lowercase;
+}
+nav#location p .clock span {
+    animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+nav#location button.change-theme {
+    all: unset;
+    display: flex;
+    width: 52px;
+    height: 27px;
+    border-radius: 27px;
+    padding: 3px;
+    background-color: var(--highlight);
+    box-sizing: border-box;
+    cursor: var(--cursor-pointer);
+    pointer-events: all;
+}
+nav#location button.change-theme:before {
+    display: block;
+    content: '';
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-color: var(--bg-color);
+    transition: all var(--transition-time)  var(--transition-ease);
+}
+html[data-theme="dark"] nav#location button.change-theme:before {
+    transform: translateX(25px);
+}
+/*nav#location button.change-theme:focus {
+    outline: 1px var(--font-color) solid;
+}*/

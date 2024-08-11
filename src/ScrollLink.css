@@ -1,0 +1,57 @@
+.scroll-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--font-color);
+    padding-right: 0.95em;
+}
+.scroll-link .icon {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: calc(50% + 0.08em);
+    transform: translateY(-50%);
+    aspect-ratio: 1;
+    width: 0.75em;
+    height: 0.75em;
+    background-image: linear-gradient(180deg,var(--gradient-start) 0%, var(--gradient-end) 100%);
+    mask-image: url(./images/arrow.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center bottom;
+}
+
+.scroll-link .icon,
+.scroll-link .text {
+    z-index: 2;
+}
+.scroll-link .text {
+    display: inline-block;
+    position: relative;
+}
+
+.scroll-link:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: var(--bg-button);
+    mix-blend-mode: multiply;
+    z-index: 1;
+    opacity: 0;
+
+    left: -0.15em;
+    top: -0.15em;
+    width: calc(100% + 0.3em);
+    height: calc(100% + 0.3em);
+
+    clip-path: inset(8px round calc(1em / 3 + 0.15em));
+
+    transition: all var(--transition-time) var(--transition-ease);
+}
+html[data-theme="dark"] .scroll-link:after {
+    mix-blend-mode: lighten;
+}
+.scroll-link:hover:after {
+    opacity: 1;
+    clip-path: inset(0 round calc(1em / 3 + 0.15em));
+}

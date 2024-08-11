@@ -1,0 +1,30 @@
+ul.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 4px;
+}
+ul.tags li {
+    padding: 4px 8px;
+    border-radius: 50px;
+    text-transform: lowercase;
+    font-weight: 550;
+    font-size: 0.9em;
+    background-color: var(--tag-1);
+    color: var(--tag-color);
+}
+ul.tags li.development { 
+    background-color: var(--tag-1);
+}
+ul.tags li.design { 
+    background-color: var(--tag-2);
+}
+ul.tags li.study { 
+    background-color: var(--tag-3);
+}
+ul.tags li.illustration { 
+    background-color: var(--tag-4);
+}
+ul.tags li.architecture { 
+    background-color: var(--tag-3);
+}
