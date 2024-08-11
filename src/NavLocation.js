@@ -23,7 +23,7 @@ export function NavLocation() {
 
         const fetchTime = async () => {
             try {
-                const response = await fetch('http://worldtimeapi.org/api/timezone/America/Sao_Paulo');
+                const response = await fetch('https://worldtimeapi.org/api/timezone/America/Sao_Paulo');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
