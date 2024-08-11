@@ -5,7 +5,7 @@
 [[headers]]
 for = "/*"
 [headers.values]
-  Content-Security-Policy = "script-src 'self' https://f.vimeocdn.com; object-src 'none'; base-uri 'self';"
+  Content-Security-Policy = "default-src 'self'; script-src 'self' https://f.vimeocdn.com; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'self';"
   X-Frame-Options = "DENY"
   X-Content-Type-Options = "nosniff"
   Referrer-Policy = "strict-origin-when-cross-origin"
