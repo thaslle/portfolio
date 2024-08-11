@@ -1,0 +1,11 @@
+[build]
+  publish = "build"
+  command = "npm run build"
+
+[[headers]]
+for = "/*"
+[headers.values]
+  Content-Security-Policy = "script-src 'self' https://f.vimeocdn.com; object-src 'none'; base-uri 'self';"
+  X-Frame-Options = "DENY"
+  X-Content-Type-Options = "nosniff"
+  Referrer-Policy = "strict-origin-when-cross-origin"
