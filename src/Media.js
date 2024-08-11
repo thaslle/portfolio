@@ -11,12 +11,12 @@ export function Media({title,...props}) {
         return (
             <figure className={props.type}>
                 <iframe 
-                src={props.url} 
-                frameBorder="0" 
-                allow="autoplay; fullscreen" 
-                allowFullScreen="" 
-                title={title} 
-                data-ready="true">
+                    src={props.url} 
+                    frameBorder="0" 
+                    allow="autoplay; fullscreen" 
+                    allowFullScreen 
+                    title={title} 
+                    data-ready="true">
                 </iframe>
             </figure>
         )
