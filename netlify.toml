@@ -1,4 +1,4 @@
 [[headers]]
 for = "/*"
 [headers.values]
-  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.vimeocdn.com https://player.vimeo.com https://*.vimeo.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.vimeocdn.com https://player.vimeo.com; connect-src 'self' https://worldtimeapi.org https://*.vimeocdn.com https://*.vimeo.com; frame-src https://*.vimeo.com; object-src 'none'; base-uri 'self';"
+  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.vimeocdn.com https://player.vimeo.com https://*.vimeo.com https://www.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.vimeocdn.com https://player.vimeo.com; connect-src 'self' https://worldtimeapi.org https://*.vimeocdn.com https://*.vimeo.com https://www.googleapis.com; frame-src https://*.vimeo.com; object-src 'none'; base-uri 'self';"
