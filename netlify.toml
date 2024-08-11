@@ -1,8 +1,4 @@
-[build]
-  publish = "build"
-  command = "npm run build"
-
 [[headers]]
 for = "/*"
 [headers.values]
-  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://f.vimeocdn.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://f.vimeocdn.com https://fonts.gstatic.com; connect-src 'self' https://worldtimeapi.org; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'self';"
+  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://f.vimeocdn.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://f.vimeocdn.com https://fonts.gstatic.com; connect-src 'self' https://worldtimeapi.org https://fresnel.vimeocdn.com; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'self';"
