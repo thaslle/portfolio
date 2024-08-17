@@ -58,8 +58,12 @@ const createPixelatedImage = (container, originalImageSrc) => {
   imagem.src = originalImageSrc;
 };
 
-export function PixelatedImage({ src, alt }) {
+export function PixelatedImage({ src, alt, ratio }) {
   const containerRef = useRef(null);
+
+  const aspect = {
+    aspectRatio: ratio,
+  };
 
   useEffect(() => {
     const container = containerRef.current;
@@ -69,7 +73,7 @@ export function PixelatedImage({ src, alt }) {
   }, [src]);
 
   return (
-    <figure ref={containerRef} className="pixels">
+    <figure ref={containerRef} className="pixels" style={aspect}>
       <img src={src} alt={alt} className="original" />
     </figure>
   );

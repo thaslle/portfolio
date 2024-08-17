@@ -33,6 +33,7 @@ figure.pixels img:not(.original) {
   figure.pixels img {
     opacity: 0;
   }
+  
   figure.pixels img.original {
     animation: 0s linear 1s forwards 1 reverse hide;
   }
@@ -48,17 +49,20 @@ figure.pixels img:not(.original) {
   figure.pixels img.pixelated.img4 {
     animation: 0s linear 0s forwards 1 reverse hide, 0s linear 1s forwards 1 normal hide;
   }
-  .container-hover:hover figure.pixels img.pixelated.img1 {
-    animation: 0s linear 0.5s forwards 1 normal show;
-  }
-  .container-hover:hover figure.pixels img.pixelated.img2 {
-    animation: 0s linear 0.4s forwards 1 normal show;
-  }
-  .container-hover:hover figure.pixels img.pixelated.img3 {
-    animation: 0s linear 0.3s forwards 1 normal show;
-  }
-  .container-hover:hover figure.pixels img.pixelated.img4 {
-    animation: 0s linear 0s forwards 1 normal show;
+
+  @media screen and (min-width: 767px) {
+    .container-hover:hover figure.pixels img.pixelated.img1 {
+      animation: 0s linear 0.5s forwards 1 normal show;
+    }
+    .container-hover:hover figure.pixels img.pixelated.img2 {
+      animation: 0s linear 0.4s forwards 1 normal show;
+    }
+    .container-hover:hover figure.pixels img.pixelated.img3 {
+      animation: 0s linear 0.3s forwards 1 normal show;
+    }
+    .container-hover:hover figure.pixels img.pixelated.img4 {
+      animation: 0s linear 0s forwards 1 normal show;
+    }
   }
   
   .active figure.pixels img.pixelated,

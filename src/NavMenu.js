@@ -13,10 +13,12 @@ export function NavMenu() {
             const sectionTop = current.offsetTop;
             const sectionId = current.getAttribute('id');
 
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-              document.querySelector(`#menu a[href*=${sectionId}]`).classList.add('active');
-            } else {
-              document.querySelector(`#menu a[href*=${sectionId}]`).classList.remove('active');
+            if(document.querySelector(`#menu a[href*=${sectionId}]`)) {
+              if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                document.querySelector(`#menu a[href*=${sectionId}]`).classList.add('active');
+              } else {
+                document.querySelector(`#menu a[href*=${sectionId}]`).classList.remove('active');
+              }
             }
           });
         };

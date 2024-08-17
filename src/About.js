@@ -14,7 +14,7 @@ export function About() {
             rel="noopener noreferrer">
             Thalles,
           </ExtLink> <span className="nobreak">a web developer</span> </WordWrap>
-          <WordWrap><span className="nobreak">digital designer</span> based in <ExtLink 
+          <WordWrap>& <span className="nobreak">digital designer</span> based in <ExtLink 
             thumb="sao-paulo"
             href="https://google.com/search?q=city+of+sao+paulo"
             target="_blank" 
@@ -24,7 +24,7 @@ export function About() {
         </h1>
 
         <h2>
-          <WordWrap>For the last decade, I've been creating engaging digital </WordWrap>
+          <WordWrap>For over a decade, I've been creating engaging digital </WordWrap>
           <WordWrap>experiences through web design, architecture, and </WordWrap>
           <WordWrap>illustration. Here are some of my <ScrollLink href="#work">recent works</ScrollLink></WordWrap>
         </h2>      

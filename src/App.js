@@ -1,71 +1,49 @@
-
-import { useEffect } from 'react';
-
-import { NavLocation } from "./NavLocation";
-import { NavMenu } from "./NavMenu";
-import { About } from "./About";
-import { Work } from "./Work";
-import { Experiment } from "./Experiment";
-import { Contact } from "./Contact";
-import lenis from './utils/lenis';
-
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import PageTransition from './PageTransition';
+import Main from './pages/Main';
+import ProjectDetails from './pages/ProjectDetails';
 import './App.css';
 
+function Wrapper({ onLinkClick }) {
+  const location = useLocation();
+  const [targetRoute, setTargetRoute] = useState(null);
 
-function App() {
-  const scrollToAnchor = (anchorId) => {
-    const element = document.getElementById(anchorId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const handleLinkClick = (route) => {
+    setTargetRoute(route);
+    onLinkClick(route);
   };
 
-  useEffect(() => {
-    const handleScroll = (event) => {
-      event.preventDefault();
-      const anchor = event.target.closest('a.ease-scroll');
-      if (anchor && anchor.getAttribute('href')) {
-        const anchorId = anchor.getAttribute('href').substring(1);
-        scrollToAnchor(anchorId);
-      }
-    };
-
-    const links = document.querySelectorAll('a.ease-scroll');
-    links.forEach(link => {
-      link.addEventListener('click', handleScroll);
-    });
-
-    // Cleanup function to remove event listeners
-    return () => {
-      links.forEach(link => {
-        link.removeEventListener('click', handleScroll);
-      });
-    };
-  }, []);
-
-
-  useEffect(() => {
-    const onScroll = (e) => {
-      // Custom scroll handling
-    };
-
-    lenis.on('scroll', onScroll);
-
-    return () => {
-      lenis.off('scroll', onScroll);
-    };
-  }, []);
-
   return (
-    <>
+    <AnimatePresence mode="wait">
+      <Routes key={location.pathname} location={location}>
+        <Route
+          path="/"
+          element={
+            <PageTransition targetRoute={targetRoute}>
+              <Main onLinkClick={handleLinkClick} />
+            </PageTransition>
+          }
+        />
+        <Route
+          path="/project/:slug"
+          element={
+            <PageTransition targetRoute={targetRoute}>
+              <ProjectDetails onLinkClick={handleLinkClick} />
+            </PageTransition>
+          }
+        />
+      </Routes>
+    </AnimatePresence>
+  );
+}
 
-      <NavLocation />
-      <NavMenu />
-      <About />
-      <Work />
-      <Experiment />
-      <Contact />
-    </>
+function App() {
+  return (
+    <Router>
+      <Wrapper onLinkClick={() => {}} />
+    </Router>
   );
 }
 

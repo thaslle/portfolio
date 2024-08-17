@@ -6,6 +6,8 @@
     --font-color: #3f3f3f;
     --tag-color: #3f3f3f;
     --highlight: #9578fd;
+    --clock-track: #9578fd;
+    --clock-handler: #fff;
     --gradient-start: #6112e4;
     --gradient-end: #967bfe;
 
@@ -31,6 +33,8 @@ html[data-theme="dark"]:root {
     --font-color: #bdb3ca;
     --tag-color: #3f3f3f;
     --highlight: #9783db;
+    --clock-track: #4a406f;
+    --clock-handler: #9578fd;
     --gradient-start: #6112e4;
     --gradient-end: #5a4e86;
 
@@ -70,6 +74,9 @@ body {
 }
 a {
     cursor: var(--cursor-pointer);
+}
+a:active {
+    transform: translate(1px,1px);
 }
 h1,
 h2 {
@@ -148,7 +155,7 @@ nav#menu {
     bottom: var(--section-padding);
     width: 100%;
     text-align: center;
-    z-index: 999;
+    z-index: 998;
     pointer-events: none;
 }
 nav#menu ul {
@@ -189,6 +196,12 @@ nav#menu ul li a span {
     clip-path: inset(0);
     transition: all var(--transition-time) var(--transition-ease);
 }
+@media screen and (max-width: 400px) {
+    nav#menu ul li a span {
+        padding-inline: 1.1em;
+        font-size: 90%;
+    } 
+}
 nav#menu ul li a:hover,
 nav#menu ul li a.active {
     background-color: var(--gradient-start);
@@ -209,4 +222,31 @@ nav#menu ul li a.experiment span {
 }
 nav#menu ul li a.contact span { 
     background-color: var(--tag-4);
+}
+
+.squares {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+.squares > div {
+    background-color: var(--bg-color);
+}
+
+@media screen and (min-width: 980px) {
+    .squares {
+        grid-template-columns: repeat(15, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+    }
+}
+@media screen and (max-width: 980px) {
+    .squares {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+    }
 }
