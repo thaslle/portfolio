@@ -181,6 +181,7 @@
 @media screen and (max-width: 767px) {
     #project article.project {
         width: 100%;
+        position: relative;
     }
 }
 
@@ -292,7 +293,7 @@
     #project article.project .sticky {
         position: absolute;
         right: 0;
-        bottom: 0;
+        bottom: -0.5em;
     }
     #project article.project a.close > span .text {
         max-width: 100vw;
