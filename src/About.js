@@ -25,7 +25,7 @@ export function About() {
 
         <h2>
           <WordWrap>For over a decade, I've been creating engaging digital </WordWrap>
-          <WordWrap>experiences through web design, architecture, and </WordWrap>
+          <WordWrap>experiences through web design, architecture and </WordWrap>
           <WordWrap>illustration. Here are some of my <ScrollLink href="#work">recent works</ScrollLink></WordWrap>
         </h2>      
         
