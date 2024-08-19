@@ -38,28 +38,27 @@ export function Experiment() {
     return (
         <section id="experiment" className="section grid highlight">
             <h2>
-                <WordWrap>Having a safe space to experiment without constraints is </WordWrap> 
-                <WordWrap>crucial to me. I've been exploring new ways to bring ideas </WordWrap> 
-                <WordWrap>to life through <ExtLink 
-                thumb="codepen"
-                href="https://codepen.io/thaslle" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                front-end
-              </ExtLink> experiments, <ExtLink 
-                thumb="illustration"
-                href="https://www.artstation.com/thaslle" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                illustrations
-              </ExtLink> </WordWrap> 
-              <WordWrap>& <ExtLink 
-                thumb="architecture"
-                href="https://www.behance.net/estudioamarelo" 
-                target="_blank" 
-                rel="noopener noreferrer">
-                architecture
-              </ExtLink> visualization projects.</WordWrap>
+                <WordWrap>I love having the freedom to experiment and push boundaries. </WordWrap>
+                <WordWrap>Whether it’s through <ExtLink 
+                    thumb="codepen"
+                    href="https://codepen.io/thaslle" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    front-end</ExtLink> experiments, <ExtLink 
+                    thumb="illustration"
+                    href="https://www.artstation.com/thaslle" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    illustrations
+                </ExtLink>,</WordWrap>
+                <WordWrap> or <ExtLink 
+                    thumb="architecture"
+                    href="https://www.behance.net/estudioamarelo" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    architecture
+                </ExtLink> visualization, I enjoy exploring new ways </WordWrap>
+                <WordWrap> to bring ideas to life and see where creativity takes me.</WordWrap>
             </h2>  
 
             <div className="list carousel-container">
