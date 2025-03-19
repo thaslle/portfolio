@@ -1,0 +1,17 @@
+body {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100dvh;
+  touch-action: none;
+  overflow: hidden;
+}
+
