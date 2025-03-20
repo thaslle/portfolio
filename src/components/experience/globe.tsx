@@ -39,8 +39,8 @@ export const Globe = () => {
 
   // New indices to remap positions
   const targetIndices = [
-    12, 17, 7, 13, 18, 8, 19, 0, 14, 1, 15, 2, 20, 3, 16, 4, 21, 5, 22, 6, 23,
-    9, 24, 10, 11,
+    12, 17, 7, 13, 18, 8, 11, 16, 6, 2, 23, 3, 22, 21, 1, 14, 10, 9, 19, 14, 15,
+    24, 4, 20, 0,
   ]
 
   // Assuming 5x5 grid (odd number of columns and rows)
@@ -80,8 +80,9 @@ export const Globe = () => {
       />
       <ScreenSizer scale={1}>
         <group>
-          {projects.map((project, i) => {
+          {projects.slice(0, totalElements).map((project, i) => {
             const ri = targetIndices[i]
+
             // Calculate row and column index based on the element index
             const rowIndex = Math.floor(ri / gridSize) // Row index (0-4 for a 5x5 grid)
             const colIndex = ri % gridSize // Column index (0-4 for a 5x5 grid)
@@ -111,3 +112,4 @@ export const Globe = () => {
     </>
   )
 }
+
