@@ -8,15 +8,16 @@ import CustomShaderMaterial from 'three-custom-shader-material'
 
 import { fragment } from './shaders/fragment.glsl'
 import { vertex } from './shaders/vertex.glsl'
+import { Project } from '@/utils/types'
 
 export const Screen = ({
   rotation,
   distance,
-  text,
+  project,
 }: {
   rotation: Euler
   distance: number
-  text: string
+  project: Project
 }) => {
   const { size } = useThree()
 
@@ -27,7 +28,7 @@ export const Screen = ({
   const offset = -15 * width
   const offsetDistance = distance * width
 
-  const video = useVideoTexture('/videos/smoov-hero.mp4')
+  const video = useVideoTexture(project.video)
 
   return (
     <group rotation={rotation} position={[0, 0, (Math.abs(offset) / 3) * 2]}>
@@ -38,7 +39,7 @@ export const Screen = ({
           anchorX="left"
           anchorY="top"
         >
-          {text}
+          {project.title}
         </Text>
 
         <Plane args={[width, height]}>

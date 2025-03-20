@@ -1,18 +1,47 @@
 'use client'
 
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Euler, MathUtils } from 'three'
 import { useFrame } from '@react-three/fiber'
 import { CameraControls, ScreenSizer } from '@react-three/drei'
 
+import { loadProjects } from '@/utils/load-data'
+import { Projects } from '@/utils/types'
+
 import { Screen } from './screen'
 
 export const Globe = () => {
+  const [projects, setProjects] = useState<Projects>([])
+  const [loading, setLoading] = useState<boolean>(true)
+
   const cameraRef = useRef<CameraControls>(null)
+
+  // Load Data
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const data = await loadProjects()
+        setProjects(data)
+      } catch (error) {
+        console.error('Error loading projects:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProjects()
+  }, [])
 
   // Total number of elements
   const totalElements = 25
+  const loadedElements = projects.length
   const gridSpacing = 0.09
+
+  // New indices to remap positions
+  const targetIndices = [
+    12, 17, 7, 13, 18, 8, 19, 0, 14, 1, 15, 2, 20, 3, 16, 4, 21, 5, 22, 6, 23,
+    9, 24, 10, 11,
+  ]
 
   // Assuming 5x5 grid (odd number of columns and rows)
   const gridSize = 5
@@ -51,10 +80,11 @@ export const Globe = () => {
       />
       <ScreenSizer scale={1}>
         <group>
-          {[...Array(totalElements)].map((_, i) => {
+          {projects.map((project, i) => {
+            const ri = targetIndices[i]
             // Calculate row and column index based on the element index
-            const rowIndex = Math.floor(i / gridSize) // Row index (0-4 for a 5x5 grid)
-            const colIndex = i % gridSize // Column index (0-4 for a 5x5 grid)
+            const rowIndex = Math.floor(ri / gridSize) // Row index (0-4 for a 5x5 grid)
+            const colIndex = ri % gridSize // Column index (0-4 for a 5x5 grid)
 
             // Normalize X and Y positions to spread from center
             const xPos = colIndex - Math.floor(gridSize / 2) // Normalize X
@@ -72,7 +102,7 @@ export const Globe = () => {
                 key={i}
                 rotation={new Euler(rotationX, rotationY, 0)}
                 distance={distance}
-                text={`proj ${i}`}
+                project={project}
               />
             )
           })}
