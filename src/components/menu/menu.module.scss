@@ -1,0 +1,56 @@
+.menu {
+  pointer-events: visible;
+  width: 100%;
+  max-width: var(--width-menu);
+
+  padding: var(--padding-mini);
+  border-radius: var(--radius);
+
+  background-color: color-mix(
+    in srgb,
+    var(--color-background) var(--opacity-medium),
+    transparent
+  );
+
+  backdrop-filter: blur(var(--blur-light));
+
+  header {
+    display: grid;
+    grid-template-columns: var(--padding-section) max-content auto var(
+        --padding-section
+      );
+
+    gap: var(--spacing);
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: var(--font-upper);
+    line-height: 1em;
+    text-transform: uppercase;
+    color: var(--color-text);
+
+    figure {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: calc(var(--radius) - var(--padding-mini) * 0.5);
+      background-color: var(--color-text);
+    }
+
+    h1 {
+      font-weight: var(--font-semibold);
+    }
+
+    p {
+      opacity: 0.5;
+    }
+
+    button {
+      all: unset;
+      display: block;
+      width: 100%;
+      aspect-ratio: 1;
+      background-color: white;
+      cursor: pointer;
+    }
+  }
+}

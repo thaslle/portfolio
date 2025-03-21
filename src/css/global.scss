@@ -2,9 +2,34 @@ body {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
+  --font-small: 0.65rem;
+  --font-upper: 0.85rem;
+
+  --font-normal: 400;
+  --font-semibold: 700;
+
+  --color-background: #222;
+  --color-text: #fff;
+
+  --opacity-medium: 50%;
+  --opacity-dark: 75%;
+
+  --blur-light: 2rem;
+
+  --radius: 0.5rem;
+  --padding-section: 2.75rem;
+  --padding-mini: 0.5rem;
+  --padding-page: 2rem;
+
+  --gap: 0.75rem;
+  --spacing: 1.5rem;
+
+  --width-menu: 675px;
+  --width-panel: 750px;
+
   font-family: var(--font-sans);
   font-optical-sizing: auto;
-  font-weight: normal;
+  font-weight: var(--font-normal);
   font-style: normal;
 
   margin: 0;

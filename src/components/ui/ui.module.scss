@@ -1,0 +1,32 @@
+.ui {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100dvh;
+  z-index: 9999;
+
+  overflow: hidden;
+  padding: var(--padding-page);
+  pointer-events: none;
+
+  display: grid;
+  grid-template-areas: 'clock' 'menu';
+  grid-template-rows: min-content auto;
+
+  .clock {
+    grid-area: clock;
+    font-family: var(--font-mono);
+    font-size: var(--font-small);
+    text-transform: uppercase;
+    color: var(--color-background);
+  }
+
+  .menu {
+    grid-area: menu;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}

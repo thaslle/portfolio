@@ -4,6 +4,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import '@/css/reset.css'
 import '@/css/global.scss'
+import { UI } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Thalles Lopes',
@@ -19,7 +20,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(GeistSans.variable, GeistMono.variable)}>
-        {children}
+        <main>{children}</main>
+        <UI />
       </body>
     </html>
   )
