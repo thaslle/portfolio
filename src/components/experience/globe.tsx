@@ -54,14 +54,14 @@ export const Globe = () => {
     cameraRef.current.azimuthAngle = MathUtils.lerp(
       cameraRef.current.azimuthAngle,
       maxAngle * pointer.x * -1,
-      0.025,
+      0.015,
     )
 
     // Make camera follow mouse cursor y
     cameraRef.current.polarAngle = MathUtils.lerp(
       cameraRef.current.polarAngle,
       Math.PI / 2 + maxAngle * pointer.y,
-      0.025,
+      0.015,
     )
   })
 
@@ -98,11 +98,14 @@ export const Globe = () => {
             // Random distance for effect
             const distance = Math.random() * 4 - 2
 
+            // Map the input number to a distance between 4 and 2
+            const offset = 1 - (0.5 / totalElements) * i
+
             return (
               <Screen
                 key={i}
                 rotation={new Euler(rotationX, rotationY, 0)}
-                distance={distance}
+                distance={distance * offset}
                 project={project}
               />
             )

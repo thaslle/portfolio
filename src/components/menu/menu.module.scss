@@ -16,8 +16,8 @@
 
   header {
     display: grid;
-    grid-template-columns: var(--padding-section) max-content auto var(
-        --padding-section
+    grid-template-columns: var(--width-menu-card) max-content auto var(
+        --width-menu-card
       );
 
     gap: var(--spacing);
@@ -54,3 +54,4 @@
     }
   }
 }
+

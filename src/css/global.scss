@@ -10,6 +10,7 @@ body {
 
   --color-background: #222;
   --color-text: #fff;
+  --color-base: #0000ff;
 
   --opacity-medium: 50%;
   --opacity-dark: 75%;
@@ -26,11 +27,13 @@ body {
 
   --width-menu: 675px;
   --width-panel: 750px;
+  --width-menu-card: 2.75rem;
 
   font-family: var(--font-sans);
   font-optical-sizing: auto;
   font-weight: var(--font-normal);
   font-style: normal;
+  background-color: var(--color-base);
 
   margin: 0;
   padding: 0;
@@ -38,5 +41,20 @@ body {
   height: 100dvh;
   touch-action: none;
   overflow: hidden;
+
+  @media only screen and (max-width: 767px) {
+    --padding-section: 1.25rem;
+    --padding-mini: 0.45rem;
+    --padding-page: 0.5rem;
+
+    --gap: 0.5rem;
+    --spacing: 0.75rem;
+
+    // --width-menu: 675px;
+    // --width-panel: 750px;
+    --width-menu-card: 1.4rem;
+    --font-small: 0.55rem;
+    --font-upper: 0.75rem;
+  }
 }
 

@@ -3,12 +3,6 @@
   width: 100vw;
   height: 100dvh;
 
-  // background: radial-gradient(
-  //   circle,
-  //   var(--base-color) 0%,
-  //   var(--back-color) 100%
-  // );
-
   .canvas {
     position: relative;
     z-index: 1;
@@ -41,7 +35,7 @@
       100% 2px,
       3px 100%;
     pointer-events: none;
-    opacity: 0.5;
+    opacity: 0.3;
 
     @media only screen and (max-width: 767px) {
       & {
@@ -61,72 +55,73 @@
     opacity: 0;
     z-index: 2;
     pointer-events: none;
-    animation: flicker 0.15s infinite;
+    // animation: flicker 0.15s infinite;
   }
 
-  @keyframes flicker {
-    0% {
-      opacity: 0.6;
-    }
-    5% {
-      opacity: 0.681234;
-    }
-    10% {
-      opacity: 0.725678;
-    }
-    15% {
-      opacity: 0.654321;
-    }
-    20% {
-      opacity: 0.688901;
-    }
-    25% {
-      opacity: 0.603456;
-    }
-    30% {
-      opacity: 0.752345;
-    }
-    35% {
-      opacity: 0.678912;
-    }
-    40% {
-      opacity: 0.799876;
-    }
-    45% {
-      opacity: 0.635789;
-    }
-    50% {
-      opacity: 0.710234;
-    }
-    55% {
-      opacity: 0.654987;
-    }
-    60% {
-      opacity: 0.760123;
-    }
-    65% {
-      opacity: 0.788456;
-    }
-    70% {
-      opacity: 0.681345;
-    }
-    75% {
-      opacity: 0.759876;
-    }
-    80% {
-      opacity: 0.792345;
-    }
-    85% {
-      opacity: 0.680123;
-    }
-    90% {
-      opacity: 0.706789;
-    }
-    95% {
-      opacity: 0.748901;
-    }
-    100% {
-      opacity: 0.789456;
-    }
-  }
+  // @keyframes flicker {
+  //   0% {
+  //     opacity: 0.4;
+  //   }
+  //   5% {
+  //     opacity: 0.481234;
+  //   }
+  //   10% {
+  //     opacity: 0.525678;
+  //   }
+  //   15% {
+  //     opacity: 0.454321;
+  //   }
+  //   20% {
+  //     opacity: 0.488901;
+  //   }
+  //   25% {
+  //     opacity: 0.403456;
+  //   }
+  //   30% {
+  //     opacity: 0.552345;
+  //   }
+  //   35% {
+  //     opacity: 0.478912;
+  //   }
+  //   40% {
+  //     opacity: 0.599876;
+  //   }
+  //   45% {
+  //     opacity: 0.435789;
+  //   }
+  //   50% {
+  //     opacity: 0.510234;
+  //   }
+  //   55% {
+  //     opacity: 0.454987;
+  //   }
+  //   60% {
+  //     opacity: 0.560123;
+  //   }
+  //   65% {
+  //     opacity: 0.588456;
+  //   }
+  //   70% {
+  //     opacity: 0.481345;
+  //   }
+  //   75% {
+  //     opacity: 0.559876;
+  //   }
+  //   80% {
+  //     opacity: 0.592345;
+  //   }
+  //   85% {
+  //     opacity: 0.480123;
+  //   }
+  //   90% {
+  //     opacity: 0.506789;
+  //   }
+  //   95% {
+  //     opacity: 0.548901;
+  //   }
+  //   100% {
+  //     opacity: 0.589456;
+  //   }
+  // }
 }
+

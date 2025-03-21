@@ -33,14 +33,14 @@ export const Screen = ({
   return (
     <group rotation={rotation} position={[0, 0, (Math.abs(offset) / 3) * 2]}>
       <group position={[0, 0, offset + offsetDistance]}>
-        <Text
+        {/* <Text
           position={[-width / 2.1, height / 2.1, 0.01]}
           fontSize={width * 0.04}
           anchorX="left"
           anchorY="top"
         >
           {project.title}
-        </Text>
+        </Text> */}
 
         <Plane args={[width, height]}>
           <CustomShaderMaterial
@@ -56,3 +56,4 @@ export const Screen = ({
     </group>
   )
 }
+

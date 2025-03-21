@@ -17,10 +17,6 @@
 
   .clock {
     grid-area: clock;
-    font-family: var(--font-mono);
-    font-size: var(--font-small);
-    text-transform: uppercase;
-    color: var(--color-background);
   }
 
   .menu {
@@ -30,3 +26,4 @@
     justify-content: center;
   }
 }
+

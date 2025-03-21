@@ -1,0 +1,22 @@
+.location {
+  --offset: calc(var(--padding-page) * -0.5);
+  transform: translate(var(--offset), var(--offset));
+
+  p {
+    font-family: var(--font-mono);
+    font-size: var(--font-small);
+    text-transform: uppercase;
+    color: var(--color-background);
+
+    .clock span {
+      animation: blink 1s step-start infinite;
+    }
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+

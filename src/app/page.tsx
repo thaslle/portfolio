@@ -1,6 +1,6 @@
-import { Experience } from '@/components/experience'
+import { UI } from '@/components/ui'
 
 export default function Home() {
-  return <Experience />
+  return <UI />
 }
 
