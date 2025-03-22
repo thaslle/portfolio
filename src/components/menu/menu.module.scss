@@ -1,20 +1,12 @@
 .menu {
-  pointer-events: visible;
   width: 100%;
+  position: relative;
   max-width: var(--width-menu);
+  padding: var(--padding-page);
 
-  padding: var(--padding-mini);
-  border-radius: var(--radius);
+  .float {
+    pointer-events: visible;
 
-  background-color: color-mix(
-    in srgb,
-    var(--color-background) var(--opacity-medium),
-    transparent
-  );
-
-  backdrop-filter: blur(var(--blur-light));
-
-  header {
     display: grid;
     grid-template-columns: var(--width-menu-card) max-content auto var(
         --width-menu-card
@@ -22,6 +14,17 @@
 
     gap: var(--spacing);
     align-items: center;
+    padding: var(--padding-mini);
+    border-radius: var(--radius);
+
+    background-color: color-mix(
+      in srgb,
+      var(--color-background) var(--opacity-medium),
+      transparent
+    );
+
+    backdrop-filter: blur(var(--blur-light));
+
     font-family: var(--font-mono);
     font-size: var(--font-upper);
     line-height: 1em;
@@ -46,12 +49,41 @@
 
     button {
       all: unset;
-      display: block;
+      display: grid;
+      place-content: center;
       width: 100%;
       aspect-ratio: 1;
-      background-color: white;
       cursor: pointer;
+
+      .icon {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      &:hover .icon rect {
+        &.top {
+          y: 5;
+        }
+        &.bottom {
+          y: 17;
+        }
+      }
     }
   }
 }
 
+.highlight {
+  aspect-ratio: 3/1;
+  background-color: var(--color-base);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.icon {
+  fill: none;
+
+  rect {
+    fill: var(--color-text);
+    transition: all var(--transition-time) var(--transition-ease);
+  }
+}

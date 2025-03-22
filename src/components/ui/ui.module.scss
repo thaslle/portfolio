@@ -8,22 +8,24 @@
   z-index: 9999;
 
   overflow: hidden;
-  padding: var(--padding-page);
   pointer-events: none;
 
   display: grid;
-  grid-template-areas: 'clock' 'menu';
-  grid-template-rows: min-content auto;
+  grid-template-areas: 'stack';
 
   .clock {
-    grid-area: clock;
+    grid-area: stack;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
   }
 
   .menu {
-    grid-area: menu;
+    grid-area: stack;
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    z-index: 2;
   }
 }
-

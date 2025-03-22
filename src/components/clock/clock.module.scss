@@ -1,6 +1,5 @@
 .location {
-  --offset: calc(var(--padding-page) * -0.5);
-  transform: translate(var(--offset), var(--offset));
+  padding: calc(var(--padding-page) * 0.5);
 
   p {
     font-family: var(--font-mono);
@@ -19,4 +18,3 @@
     opacity: 0;
   }
 }
-

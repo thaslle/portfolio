@@ -12,8 +12,9 @@ body {
   --color-text: #fff;
   --color-base: #0000ff;
 
+  --opacity-light: 25%;
   --opacity-medium: 50%;
-  --opacity-dark: 75%;
+  --opacity-dark: 95%;
 
   --blur-light: 2rem;
 
@@ -28,6 +29,9 @@ body {
   --width-menu: 675px;
   --width-panel: 750px;
   --width-menu-card: 2.75rem;
+
+  --transition-time: 0.25s;
+  --transition-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
 
   font-family: var(--font-sans);
   font-optical-sizing: auto;
@@ -57,4 +61,3 @@ body {
     --font-upper: 0.75rem;
   }
 }
-
