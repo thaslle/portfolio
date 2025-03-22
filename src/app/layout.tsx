@@ -5,7 +5,10 @@ import { GeistMono } from 'geist/font/mono'
 import '@/css/reset.css'
 import '@/css/global.scss'
 
+import Providers from './providers'
+
 import { Experience } from '@/components/experience'
+import { loadProjects } from '@/utils/load-data'
 
 export const metadata: Metadata = {
   title: 'Thalles Lopes',
@@ -18,13 +21,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const projects = loadProjects()
+
   return (
     <html lang="en">
       <body className={clsx(GeistSans.variable, GeistMono.variable)}>
-        <main>{children}</main>
-        <Experience />
+        <Providers>
+          {children}
+          <Experience projects={projects} />
+        </Providers>
       </body>
     </html>
   )
 }
-

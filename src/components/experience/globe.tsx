@@ -1,40 +1,24 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useMemo, useRef } from 'react'
 import { Euler, MathUtils } from 'three'
 import { useFrame } from '@react-three/fiber'
 import { CameraControls, ScreenSizer } from '@react-three/drei'
 
-import { loadProjects } from '@/utils/load-data'
-import { Projects } from '@/utils/types'
-
 import { Screen } from './screen'
 
-export const Globe = () => {
-  const [projects, setProjects] = useState<Projects>([])
-  const [loading, setLoading] = useState<boolean>(true)
+import { Projects } from '@/utils/types'
 
+type GlobeProps = {
+  projects: Projects
+  onClickProject: (href: string) => void
+}
+export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
   const cameraRef = useRef<CameraControls>(null)
-
-  // Load Data
-  useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const data = await loadProjects()
-        setProjects(data)
-      } catch (error) {
-        console.error('Error loading projects:', error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    fetchProjects()
-  }, [])
 
   // Total number of elements
   const totalElements = 25
-  const loadedElements = projects.length
+  //const loadedElements = projects.length
   const gridSpacing = 0.09
 
   // New indices to remap positions
@@ -96,7 +80,7 @@ export const Globe = () => {
             const rotationY = yPos * gridSpacing
 
             // Random distance for effect
-            const distance = Math.random() * 4 - 2
+            const distance = useMemo(() => Math.random() * 4 - 2, [])
 
             // Map the input number to a distance between 4 and 2
             const offset = 1 - (0.5 / totalElements) * i
@@ -107,6 +91,7 @@ export const Globe = () => {
                 rotation={new Euler(rotationX, rotationY, 0)}
                 distance={distance * offset}
                 project={project}
+                onClickProject={onClickProject}
               />
             )
           })}
@@ -115,4 +100,3 @@ export const Globe = () => {
     </>
   )
 }
-

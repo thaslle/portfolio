@@ -5,6 +5,7 @@ import { Window } from '@/components/window'
 
 import { About } from './about'
 import { List } from './list'
+import { Contact } from './contact'
 import { IconHamburger } from './icons'
 
 import s from './menu.module.scss'
@@ -24,10 +25,11 @@ export const Menu = () => {
       </header>
 
       {showMenu && (
-        <Window title="Thalles Lopes">
+        <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
           <figure className={s.highlight}></figure>
           <About />
           <List />
+          <Contact />
         </Window>
       )}
     </nav>

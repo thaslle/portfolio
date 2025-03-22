@@ -1,0 +1,6 @@
+.container {
+  display: grid;
+  gap: var(--padding-section);
+  padding: var(--padding-section)
+    calc(var(--padding-section) - var(--padding-mini));
+}

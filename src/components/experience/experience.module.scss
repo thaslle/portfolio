@@ -1,7 +1,9 @@
 .wrapper {
-  position: relative;
+  position: fixed;
   width: 100vw;
   height: 100dvh;
+  left: 0;
+  top: 0;
 
   .canvas {
     position: relative;

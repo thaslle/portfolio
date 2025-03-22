@@ -1,5 +1,9 @@
+import dynamic from 'next/dynamic'
 import { Menu } from '@/components/menu'
-import { Clock } from '@/components/clock'
+
+const Clock = dynamic(() => import('@/components/clock'), {
+  ssr: false,
+})
 
 import s from './ui.module.scss'
 

@@ -1,0 +1,11 @@
+.links {
+  display: grid;
+  grid-template-columns: max-content max-content auto;
+  gap: var(--gap);
+  padding: var(--padding-section)
+    calc(var(--padding-section) - var(--padding-mini));
+
+  & > *:last-child {
+    justify-self: end;
+  }
+}

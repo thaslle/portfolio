@@ -6,10 +6,10 @@
   border-radius: 0.25em;
 
   font-family: var(--font-mono);
-  font-size: var(--font-upper);
+  font-size: var(--font-button);
   line-height: 1em;
   text-transform: uppercase;
   font-weight: var(--font-normal);
   text-decoration: none;
-  //   text-box-trim: cap alphabetic;
+  text-box: trim-both cap alphabetic;
 }

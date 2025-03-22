@@ -1,7 +1,7 @@
 .about {
-  padding-block: var(--padding-section) calc(var(--padding-section) * 2.5);
+  padding-block: var(--padding-section) calc(var(--padding-section) * 2);
   padding-inline: calc(var(--padding-section) - var(--padding-mini));
-  line-height: 1.5em;
+  line-height: 1.75em;
 
   display: grid;
   gap: var(--gap);

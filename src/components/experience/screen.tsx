@@ -2,7 +2,7 @@
 
 import { Euler, MeshBasicMaterial } from 'three'
 import { useThree } from '@react-three/fiber'
-import { Plane, Text, useVideoTexture } from '@react-three/drei'
+import { Plane, useVideoTexture } from '@react-three/drei'
 
 import CustomShaderMaterial from 'three-custom-shader-material'
 
@@ -10,14 +10,18 @@ import { fragment } from './shaders/fragment.glsl'
 import { vertex } from './shaders/vertex.glsl'
 import { Project } from '@/utils/types'
 
-export const Screen = ({
-  rotation,
-  distance,
-  project,
-}: {
+type ScreenProps = {
   rotation: Euler
   distance: number
   project: Project
+  onClickProject: (href: string) => void
+}
+
+export const Screen: React.FC<ScreenProps> = ({
+  rotation,
+  distance,
+  project,
+  onClickProject,
 }) => {
   const { size } = useThree()
 
@@ -30,30 +34,24 @@ export const Screen = ({
 
   const video = useVideoTexture(project.video)
 
+  const href = `/project/${project.slug}`
+
   return (
     <group rotation={rotation} position={[0, 0, (Math.abs(offset) / 3) * 2]}>
-      <group position={[0, 0, offset + offsetDistance]}>
-        {/* <Text
-          position={[-width / 2.1, height / 2.1, 0.01]}
-          fontSize={width * 0.04}
-          anchorX="left"
-          anchorY="top"
-        >
-          {project.title}
-        </Text> */}
-
-        <Plane args={[width, height]}>
-          <CustomShaderMaterial
-            baseMaterial={MeshBasicMaterial}
-            fragmentShader={fragment}
-            vertexShader={vertex}
-            map={video}
-            toneMapped={false}
-            transparent
-          />
-        </Plane>
-      </group>
+      <Plane
+        args={[width, height]}
+        position={[0, 0, offset + offsetDistance]}
+        onClick={() => onClickProject(href)}
+      >
+        <CustomShaderMaterial
+          baseMaterial={MeshBasicMaterial}
+          fragmentShader={fragment}
+          vertexShader={vertex}
+          map={video}
+          toneMapped={false}
+          transparent
+        />
+      </Plane>
     </group>
   )
 }
-
