@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
+
+import { Scramble } from '@/components/scramble'
 import { Video } from '@/components/video'
 
 import { Project } from '@/utils/types'
@@ -24,17 +26,28 @@ export const More: React.FC<MoreProps> = ({ prev, next }) => {
   )
 }
 
-const Item: React.FC<ItemProps> = ({ props }) => (
-  <div className={s.item}>
-    <Link href={`/project/${props.slug}`}>
-      <div className={s.group}>
-        <div className={s.video}>
-          <Video src={props.video} aspect="1" />
-        </div>
+const Item: React.FC<ItemProps> = ({ props }) => {
+  const [replay, setReplay] = useState(false)
+  return (
+    <div className={s.item}>
+      <Link
+        href={`/project/${props.slug}`}
+        onMouseOver={() => setReplay((prev) => !prev)}
+        onFocus={() => setReplay((prev) => !prev)}
+      >
+        <div className={s.group}>
+          <div className={s.video}>
+            <Video src={props.video} aspect="1" />
+          </div>
 
-        <h3>{props.title}</h3>
-        <p className={s.info}>{props.category}</p>
-      </div>
-    </Link>
-  </div>
-)
+          <h3>
+            <Scramble text={props.title} onReplay={replay} />
+          </h3>
+          <p className={s.info}>
+            <Scramble text={props.category} onReplay={replay} />
+          </p>
+        </div>
+      </Link>
+    </div>
+  )
+}

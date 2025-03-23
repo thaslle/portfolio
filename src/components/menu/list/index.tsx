@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Scramble } from '@/components/scramble'
+
 import s from './list.module.scss'
 
 type ItemProps = {
@@ -18,12 +20,22 @@ export const List = () => {
   )
 }
 
-const Item = ({ props }: { props: ItemProps }) => (
-  <li className={s.item}>
-    <button>
-      <figure></figure>
-      <h2>{props.title}</h2>
-      <p className={s.info}>{props.description}</p>
-    </button>
-  </li>
-)
+const Item = ({ props }: { props: ItemProps }) => {
+  const [replay, setReplay] = useState(false)
+  return (
+    <li className={s.item}>
+      <button
+        onMouseOver={() => setReplay((prev) => !prev)}
+        onFocus={() => setReplay((prev) => !prev)}
+      >
+        <figure></figure>
+        <h2>
+          <Scramble text={props.title} onReplay={replay} />
+        </h2>
+        <p className={s.info}>
+          <Scramble text={props.description} onReplay={replay} />
+        </p>
+      </button>
+    </li>
+  )
+}
