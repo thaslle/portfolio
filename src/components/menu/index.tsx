@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Window } from '@/components/window'
+import { AnimatePresence } from 'motion/react'
 
 import { About } from './about'
 import { List } from './list'
@@ -9,29 +10,26 @@ import { Contact } from './contact'
 import { IconHamburger } from './icons'
 
 import s from './menu.module.scss'
+import { Header } from './header'
 
 export const Menu = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
     <nav className={s.menu}>
-      <header className={s.float}>
-        <figure></figure>
-        <h1>Thalles Lopes</h1>
-        <p className={s.roles}>Creative Developer</p>
+      <AnimatePresence>
+        {!showMenu && (
+          <Header setShowMenu={() => setShowMenu((prev) => !prev)} />
+        )}
 
-        <button aria-label="Menu" onClick={() => setShowMenu((prev) => !prev)}>
-          <IconHamburger />
-        </button>
-      </header>
-
-      {showMenu && (
-        <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
-          <figure className={s.highlight}></figure>
-          <About />
-          <List />
-          <Contact />
-        </Window>
-      )}
+        {showMenu && (
+          <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
+            <figure className={s.highlight}></figure>
+            <About />
+            <List />
+            <Contact />
+          </Window>
+        )}
+      </AnimatePresence>
     </nav>
   )
 }

@@ -1,4 +1,4 @@
-.overlay {
+.wrapper {
   width: 100vw;
   height: 100dvh;
   position: fixed;
@@ -6,21 +6,32 @@
   top: 0;
   z-index: 9999;
   pointer-events: visible;
+  padding: var(--padding-page);
 
   display: grid;
   justify-items: center;
   align-items: end;
 
-  padding: var(--padding-page);
+  .overlay {
+    width: 100vw;
+    height: 100dvh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
 
-  background-color: color-mix(
-    in srgb,
-    var(--color-background) var(--opacity-medium),
-    transparent
-  );
+    background-color: color-mix(
+      in srgb,
+      var(--color-background) var(--opacity-medium),
+      transparent
+    );
+  }
 
   .window {
     --header-height: calc(var(--padding-section) * 2 + 1rem);
+
+    position: relative;
+    z-index: 1;
 
     width: 100%;
     display: grid;
