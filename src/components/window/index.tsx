@@ -1,7 +1,8 @@
 'use client'
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useTransitionState } from 'next-transition-router'
+import { useScramble } from 'use-scramble'
 import { motion } from 'motion/react'
 
 import { ExtLink } from '@/components/ext-link'
@@ -37,8 +38,14 @@ export const Window: React.FC<WindowProps> = ({
 
   const variants = {
     overlay: {
-      leaving: { opacity: 0 },
-      entering: { opacity: 1 },
+      leaving: {
+        opacity: 0,
+        backdropFilter: 'blur(0rem)',
+      },
+      entering: {
+        opacity: 1,
+        backdropFilter: 'blur(0.2rem)',
+      },
     },
     window: {
       leaving: {
@@ -90,7 +97,7 @@ export const Window: React.FC<WindowProps> = ({
         </div>
 
         <header className={s.header}>
-          <h1>{title}</h1>
+          <Title text={title} />
           {link && <ExtLink href={link}>View live</ExtLink>}
         </header>
         <div className={s.content}>{children}</div>
@@ -98,3 +105,18 @@ export const Window: React.FC<WindowProps> = ({
     </div>
   )
 }
+
+const Title = ({ text }: { text: string }) => {
+  const [show, setShow] = useState(false)
+  const { ref } = useScramble({
+    text: show ? text : '',
+  })
+
+  useEffect(() => {
+    const interval = setTimeout(() => setShow(true), settings.duration * 1000)
+    return () => clearTimeout(interval)
+  }, [])
+
+  return show && <h1 ref={ref} />
+}
+

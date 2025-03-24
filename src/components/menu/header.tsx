@@ -1,7 +1,10 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { useTransitionState } from 'next-transition-router'
+import { useScramble } from 'use-scramble'
+
 import { IconHamburger } from './icons'
 import { settings } from '@/utils/settings'
 
@@ -40,8 +43,8 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
       transition={{ duration: settings.duration * 0.2 }}
     >
       <figure></figure>
-      <h1>Thalles Lopes</h1>
-      <p className={s.roles}>Creative Developer</p>
+      <Title />
+      <Roles />
 
       <button aria-label="Menu" onClick={setShowMenu}>
         <IconHamburger />
@@ -49,3 +52,36 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
     </motion.header>
   )
 }
+
+const Title = () => {
+  const { ref } = useScramble({
+    text: 'Thalles Lopes',
+  })
+
+  return <h1 ref={ref} />
+}
+
+const Roles = () => {
+  const roles = ['Creative Developer', 'Digital Designer']
+
+  const [currentRole, setCurrentRole] = useState(roles[0])
+
+  const { ref } = useScramble({
+    text: currentRole,
+  })
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentRole((prevRole) => {
+        const currentIndex = roles.indexOf(prevRole)
+        const nextIndex = (currentIndex + 1) % roles.length
+        return roles[nextIndex]
+      })
+    }, 3000)
+
+    return () => clearInterval(intervalId)
+  }, [])
+
+  return <p className={s.roles} ref={ref} />
+}
+

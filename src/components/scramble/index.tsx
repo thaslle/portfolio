@@ -9,6 +9,7 @@ type TextProps = {
 export const Scramble: React.FC<TextProps> = ({ text, onReplay }) => {
   const { ref, replay } = useScramble({
     text: text,
+    speed: 0.9,
   })
 
   useEffect(() => {
@@ -17,3 +18,4 @@ export const Scramble: React.FC<TextProps> = ({ text, onReplay }) => {
 
   return <span ref={ref} />
 }
+

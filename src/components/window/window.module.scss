@@ -8,6 +8,10 @@
   pointer-events: visible;
   padding: var(--padding-page);
 
+  @media only screen and (max-width: 767px) {
+    padding-top: var(--padding-section);
+  }
+
   display: grid;
   justify-items: center;
   align-items: end;
@@ -38,6 +42,10 @@
     grid-template-rows: var(--header-height) calc(100% - var(--header-height));
     height: max-content;
     max-height: calc(100dvh - (var(--padding-page) * 2));
+
+    @media only screen and (max-width: 767px) {
+      max-height: calc(100dvh - (var(--padding-page) + var(--padding-section)));
+    }
 
     position: relative;
     max-width: var(--width-panel);
@@ -115,3 +123,4 @@
     }
   }
 }
+

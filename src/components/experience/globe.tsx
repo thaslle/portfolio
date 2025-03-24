@@ -59,6 +59,8 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
         maxAzimuthAngle={maxAngle}
         maxZoom={1}
         minZoom={1}
+        maxDistance={1}
+        minDistance={1}
         azimuthRotateSpeed={0.1}
         polarRotateSpeed={0.1}
       />
@@ -100,3 +102,4 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
     </>
   )
 }
+
