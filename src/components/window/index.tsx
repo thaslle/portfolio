@@ -1,14 +1,17 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useTransitionState } from 'next-transition-router'
 import { useScramble } from 'use-scramble'
 import { motion } from 'motion/react'
+import type { LenisRef } from 'lenis/react'
 
+import { Scroll } from './scroll'
 import { ExtLink } from '@/components/ext-link'
 import { settings } from '@/utils/settings'
 
 import s from './window.module.scss'
+import { Handler } from './handler'
 
 type WindowProps = {
   children: React.ReactNode
@@ -24,6 +27,8 @@ export const Window: React.FC<WindowProps> = ({
   onClose,
 }) => {
   const { stage } = useTransitionState()
+  const lenisRef = useRef<LenisRef>(null)
+  const [dragY, setDragY] = useState(0)
 
   // Calls the close event when ESC is pressed
   useEffect(() => {
@@ -87,20 +92,27 @@ export const Window: React.FC<WindowProps> = ({
         exit={variants.window.leaving}
         transition={{
           duration: settings.duration * 0.3,
-          delay: settings.duration * 0.5,
+          // delay: settings.duration * 0.5,
         }}
+        drag
+        dragDirectionLock
+        onDragStart={(event) => setDragY((event as any).y)}
+        onDrag={(event) => {
+          if ((event as any).y - dragY > 100) onClose()
+        }}
+        dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+        dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
+        dragElastic={0.2}
+        whileDrag={{ cursor: 'grabbing' }}
       >
-        <div className={s.handler}>
-          <div className={s.thumb}>
-            <span></span>
-          </div>
-        </div>
+        <Handler lenisRef={lenisRef} />
 
         <header className={s.header}>
           <Title text={title} />
           {link && <ExtLink href={link}>View live</ExtLink>}
         </header>
-        <div className={s.content}>{children}</div>
+
+        <Scroll lenisRef={lenisRef}>{children}</Scroll>
       </motion.section>
     </div>
   )
