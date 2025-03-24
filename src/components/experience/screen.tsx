@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Euler, MeshBasicMaterial } from 'three'
+import { Euler, MeshBasicMaterial, Vector2 } from 'three'
 import { useThree } from '@react-three/fiber'
 import { useVideoTexture } from '@react-three/drei'
 import { animated, useSpring } from '@react-spring/three'
@@ -68,6 +68,11 @@ export const Screen: React.FC<ScreenProps> = ({
           baseMaterial={MeshBasicMaterial}
           fragmentShader={fragment}
           vertexShader={vertex}
+          uniforms={{
+            resolution: {
+              value: new Vector2(window.innerWidth, window.innerHeight),
+            },
+          }}
           map={video}
           toneMapped={false}
           transparent
@@ -76,3 +81,4 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
+

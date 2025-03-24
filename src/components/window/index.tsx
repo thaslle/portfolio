@@ -92,7 +92,7 @@ export const Window: React.FC<WindowProps> = ({
         exit={variants.window.leaving}
         transition={{
           duration: settings.duration * 0.3,
-          // delay: settings.duration * 0.5,
+          delay: settings.duration * 0.5,
         }}
         drag
         dragDirectionLock

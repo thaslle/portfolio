@@ -7,7 +7,6 @@ import { AnimatePresence } from 'motion/react'
 import { About } from './about'
 import { List } from './list'
 import { Contact } from './contact'
-import { IconHamburger } from './icons'
 
 import s from './menu.module.scss'
 import { Header } from './header'
@@ -33,3 +32,4 @@ export const Menu = () => {
     </nav>
   )
 }
+
