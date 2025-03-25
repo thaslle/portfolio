@@ -1,13 +1,15 @@
 'use client'
 
-import { useMemo, useRef } from 'react'
-import { Euler, MathUtils } from 'three'
+import { useEffect, useMemo, useRef } from 'react'
+import { Euler, MathUtils, Vector2 } from 'three'
 import { useFrame } from '@react-three/fiber'
 import { CameraControls, ScreenSizer } from '@react-three/drei'
 
 import { Screen } from './screen'
 
 import { Projects } from '@/utils/types'
+import { useDeviceDetect } from '@/hooks/use-device-detect'
+// import { useTouchPosition } from '@/hooks/use-touch-position'
 
 type GlobeProps = {
   projects: Projects
@@ -15,6 +17,8 @@ type GlobeProps = {
 }
 export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
   const cameraRef = useRef<CameraControls>(null)
+  //const touch = useTouchPosition()
+  const device = useDeviceDetect()
 
   // Total number of elements
   const totalElements = 25
@@ -31,20 +35,88 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
   const gridSize = 5
   const maxAngle = gridSize * gridSpacing
 
+  const currentPosition = useRef({ x: 0, y: 0 })
+  const lastPosition = useRef({ x: 0, y: 0 })
+  const currentAzimuth = useRef(0)
+  const currentPolar = useRef(0)
+
+  useEffect(() => {
+    const handlePointerMove = (event: PointerEvent) => {
+      const currentX = event.clientX
+      const currentY = event.clientY
+
+      // Calculate the delta by subtracting the last position from the current position
+      const deltaX = currentX - lastPosition.current.x
+      const deltaY = currentY - lastPosition.current.y
+
+      // Normalize the delta values to be between -1 and 1
+      const width = window.innerWidth
+      const height = window.innerHeight
+
+      const normalizedDeltaX = Math.max(-1, Math.min(1, (deltaX / width) * 2)) // maps to [-1, 1]
+      const normalizedDeltaY = Math.max(-1, Math.min(1, -(deltaY / height) * 2)) // maps to [-1, 1]
+
+      // Update the state with the normalized delta values
+      currentPosition.current = { x: normalizedDeltaX, y: normalizedDeltaY }
+    }
+
+    const handleTouchStart = (event: TouchEvent) => {
+      // Get the first touch (in case of multi-touch)
+      const touch = event.touches[0]
+
+      // Get the touch position (clientX, clientY are in pixels)
+      const touchX = touch.clientX
+      const touchY = touch.clientY
+
+      // Update the state with normalized values
+      lastPosition.current = { x: touchX, y: touchY }
+
+      if (!cameraRef.current) return
+      currentAzimuth.current = cameraRef.current.azimuthAngle
+      currentPolar.current = cameraRef.current.polarAngle
+    }
+
+    // Attach the pointermove event to the window
+    window.addEventListener('touchstart', handleTouchStart)
+    window.addEventListener('pointermove', handlePointerMove)
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('pointermove', handlePointerMove)
+    }
+  }, [])
+
   useFrame(({ pointer }) => {
     if (!cameraRef.current) return
+
+    const mouse = new Vector2(
+      device.isMobile ? -currentPosition.current.x : pointer.x,
+      device.isMobile ? -currentPosition.current.y : pointer.y,
+    )
+
+    const azimuthAngle = maxAngle * mouse.x * -1
+    const polarAngle = Math.PI / 2 + maxAngle * mouse.y
+
+    //console.log(currentAzimuth.current, currentPolar.current)
+
+    if (device.isMobile) {
+      cameraRef.current.azimuthAngle = azimuthAngle
+      cameraRef.current.polarAngle = polarAngle
+      return
+    }
 
     // Make camera follow mouse cursor x
     cameraRef.current.azimuthAngle = MathUtils.lerp(
       cameraRef.current.azimuthAngle,
-      maxAngle * pointer.x * -1,
+      azimuthAngle,
       0.015,
     )
 
     // Make camera follow mouse cursor y
     cameraRef.current.polarAngle = MathUtils.lerp(
       cameraRef.current.polarAngle,
-      Math.PI / 2 + maxAngle * pointer.y,
+      polarAngle,
       0.015,
     )
   })
@@ -63,7 +135,18 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
         minDistance={1}
         azimuthRotateSpeed={0.1}
         polarRotateSpeed={0.1}
+        onEnd={(e) => {
+          if (
+            !currentAzimuth.current ||
+            !currentPolar.current ||
+            !cameraRef.current
+          )
+            return
+          currentAzimuth.current = cameraRef.current.azimuthAngle
+          currentPolar.current = cameraRef.current.polarAngle
+        }}
       />
+
       <ScreenSizer scale={1}>
         <group>
           {projects.slice(0, totalElements).map((project, i) => {
@@ -103,3 +186,4 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
     </>
   )
 }
+
