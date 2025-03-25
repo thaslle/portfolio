@@ -13,6 +13,7 @@ import { vertex } from './shaders/vertex.glsl'
 import { Project } from '@/utils/types'
 
 type ScreenProps = {
+  id: number
   rotation: Euler
   distance: number
   project: Project
@@ -20,6 +21,7 @@ type ScreenProps = {
 }
 
 export const Screen: React.FC<ScreenProps> = ({
+  id,
   rotation,
   distance,
   project,
@@ -28,6 +30,7 @@ export const Screen: React.FC<ScreenProps> = ({
   const { size } = useThree()
 
   const [hovered, setHovered] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   const ratio = size.width / size.height
   const width = ratio > 1 ? size.width * 0.8 : size.width * 0.6
@@ -49,16 +52,31 @@ export const Screen: React.FC<ScreenProps> = ({
     },
   })
 
-  // change cursor
+  // Change cursor
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
   }, [hovered])
+
+  // Initial animation
+  const { position } = useSpring({
+    position: mounted ? offset + offsetDistance : 0,
+    config: {
+      tension: 300,
+      friction: 60,
+      mass: 1,
+    },
+    delay: id * 20,
+  })
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   return (
     <group rotation={rotation} position={[0, 0, (Math.abs(offset) / 3) * 2]}>
       <animated.mesh
         scale={scale}
-        position={[0, 0, offset + offsetDistance]}
+        position-z={position}
         onClick={() => onClickProject(href)}
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
@@ -81,4 +99,3 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
-

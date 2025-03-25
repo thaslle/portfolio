@@ -90,6 +90,7 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
             return (
               <Screen
                 key={i}
+                id={i}
                 rotation={new Euler(rotationX, rotationY, 0)}
                 distance={distance * offset}
                 project={project}
@@ -102,4 +103,3 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
     </>
   )
 }
-
