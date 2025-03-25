@@ -1,6 +1,7 @@
 export const fragment = /* glsl */ `
 
 varying vec2 csm_vUv;
+uniform float uOpacity;
 
 float circle(in vec2 _st, in float _radius){
     vec2 dist = _st-vec2(0.5);
@@ -22,8 +23,8 @@ void main() {
     vec2 bl = step(vec2(pos * 0.08), csm_vUv);
     vec2 tr = step(vec2(pos * 0.08), 1.0 - csm_vUv);
    
-    vec3 alpha = rlb + rrb + rlt + rrt + vec3(bl.x * tr.x) + vec3(bl.y * tr.y);
+    vec3 alpha = (rlb + rrb + rlt + rrt + vec3(bl.x * tr.x) + vec3(bl.y * tr.y)) * uOpacity;
 
-csm_DiffuseColor = vec4( csm_DiffuseColor.rgb, alpha );
+    csm_DiffuseColor = vec4( csm_DiffuseColor.rgb, alpha );
 }
 `

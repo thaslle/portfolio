@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Euler, MeshBasicMaterial, Vector2 } from 'three'
 import { useThree } from '@react-three/fiber'
 import { useVideoTexture } from '@react-three/drei'
@@ -28,6 +28,7 @@ export const Screen: React.FC<ScreenProps> = ({
   onClickProject,
 }) => {
   const { size } = useThree()
+  const materialRef = useRef<any>(null)
 
   const [hovered, setHovered] = useState(false)
   const [mounted, setMounted] = useState(false)
@@ -83,13 +84,12 @@ export const Screen: React.FC<ScreenProps> = ({
       >
         <planeGeometry args={[width, height]} />
         <CustomShaderMaterial
+          ref={materialRef}
           baseMaterial={MeshBasicMaterial}
           fragmentShader={fragment}
           vertexShader={vertex}
           uniforms={{
-            resolution: {
-              value: new Vector2(window.innerWidth, window.innerHeight),
-            },
+            uOpacity: { value: 1.0 },
           }}
           map={video}
           toneMapped={false}
