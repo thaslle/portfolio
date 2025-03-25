@@ -1,16 +1,17 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Euler, MeshBasicMaterial, Vector2 } from 'three'
-import { useThree } from '@react-three/fiber'
+import { useFrame, useThree } from '@react-three/fiber'
 import { useVideoTexture } from '@react-three/drei'
 import { animated, useSpring } from '@react-spring/three'
-
 import CustomShaderMaterial from 'three-custom-shader-material'
+
+import { Project } from '@/utils/types'
+import { useStore } from '@/hooks/use-store'
 
 import { fragment } from './shaders/fragment.glsl'
 import { vertex } from './shaders/vertex.glsl'
-import { Project } from '@/utils/types'
 
 type ScreenProps = {
   id: number
@@ -27,6 +28,7 @@ export const Screen: React.FC<ScreenProps> = ({
   project,
   onClickProject,
 }) => {
+  const { filter } = useStore()
   const { size } = useThree()
   const materialRef = useRef<any>(null)
 
@@ -44,6 +46,14 @@ export const Screen: React.FC<ScreenProps> = ({
 
   const href = `/project/${project.slug}`
 
+  // Set uniforms
+  const uniforms = useMemo(
+    () => ({
+      uOpacity: { value: 1.0 },
+    }),
+    [],
+  )
+
   const { scale } = useSpring({
     scale: hovered ? 1.05 : 1,
     config: {
@@ -58,29 +68,42 @@ export const Screen: React.FC<ScreenProps> = ({
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
   }, [hovered])
 
-  // Initial animation
-  const { position } = useSpring({
-    position: mounted ? offset + offsetDistance : 0,
+  const filtered = !filter || filter === project.category
+
+  // Initial animation + filter
+  const { position, opacity } = useSpring({
+    position: mounted
+      ? filtered
+        ? offset + offsetDistance
+        : (offset + offsetDistance) * 1.2
+      : 0,
+    opacity: filtered ? 1.0 : 0.2,
     config: {
       tension: 300,
       friction: 60,
       mass: 1,
     },
-    delay: id * 20,
+    delay: id * 15,
   })
 
   useEffect(() => {
     setMounted(true)
   }, [])
 
+  useFrame(() => {
+    if (!materialRef) return
+    materialRef.current.uniforms.uOpacity.value = opacity.get()
+  })
+
   return (
     <group rotation={rotation} position={[0, 0, (Math.abs(offset) / 3) * 2]}>
       <animated.mesh
         scale={scale}
         position-z={position}
-        onClick={() => onClickProject(href)}
-        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)}
+        onClick={() => filtered && onClickProject(href)}
+        onPointerOver={() => filtered && setHovered(true)}
+        onPointerOut={() => filtered && setHovered(false)}
+        frustumCulled={false}
       >
         <planeGeometry args={[width, height]} />
         <CustomShaderMaterial
@@ -88,9 +111,7 @@ export const Screen: React.FC<ScreenProps> = ({
           baseMaterial={MeshBasicMaterial}
           fragmentShader={fragment}
           vertexShader={vertex}
-          uniforms={{
-            uOpacity: { value: 1.0 },
-          }}
+          uniforms={uniforms}
           map={video}
           toneMapped={false}
           transparent
@@ -99,3 +120,4 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
+

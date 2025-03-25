@@ -24,7 +24,7 @@ export const Menu = () => {
           <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
             <figure className={s.highlight}></figure>
             <About />
-            <List />
+            <List setShowMenu={() => setShowMenu(false)} />
             <Contact />
           </Window>
         )}

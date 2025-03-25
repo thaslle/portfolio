@@ -37,7 +37,7 @@
   }
 
   .window {
-    --header-height: calc(var(--padding-section) * 2 + 1rem);
+    --header-height: calc(var(--padding-section) * 1.8 + 1rem);
 
     position: relative;
     z-index: 1;
@@ -131,3 +131,4 @@
     }
   }
 }
+

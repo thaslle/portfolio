@@ -1,32 +1,52 @@
 import React, { useState } from 'react'
 import { Scramble } from '@/components/scramble'
+import { useStore } from '@/hooks/use-store'
+import { Category } from '@/utils/types'
 
 import s from './list.module.scss'
 
-type ItemProps = {
-  title: string
+type ListProps = {
+  setShowMenu: () => void
+}
+
+type ItemListProps = {
+  title: Category
   description: string
 }
 
-export const List = () => {
-  const list: ItemProps[] = [
+type ItemProps = {
+  props: ItemListProps
+} & ListProps
+
+export const List: React.FC<ListProps> = ({ setShowMenu }) => {
+  const list: ItemListProps[] = [
     { title: 'Work', description: 'A glimpse of selected work' },
     { title: 'Craft', description: 'My lab for creative experiments' },
   ]
   return (
     <div className={s.list}>
-      <ul>{list && list.map((item, i) => <Item key={i} props={item} />)}</ul>
+      <ul>
+        {list &&
+          list.map((item, i) => (
+            <Item key={i} props={item} setShowMenu={setShowMenu} />
+          ))}
+      </ul>
     </div>
   )
 }
 
-const Item = ({ props }: { props: ItemProps }) => {
+const Item: React.FC<ItemProps> = ({ props, setShowMenu }) => {
   const [replay, setReplay] = useState(false)
+  const { setFilter } = useStore()
   return (
     <li className={s.item}>
       <button
         onMouseOver={() => setReplay((prev) => !prev)}
         onFocus={() => setReplay((prev) => !prev)}
+        onClick={() => {
+          setFilter(props.title)
+          setShowMenu()
+        }}
       >
         <figure></figure>
         <h2>
@@ -39,3 +59,4 @@ const Item = ({ props }: { props: ItemProps }) => {
     </li>
   )
 }
+
