@@ -1,6 +1,6 @@
-import { UI } from '@/components/ui'
+import { Menu } from '@/components/menu'
 
 export default function Home() {
-  return <UI />
+  return <Menu />
 }
 

@@ -14,22 +14,24 @@ import { Header } from './header'
 export const Menu = () => {
   const [showMenu, setShowMenu] = useState(false)
   return (
-    <nav className={s.menu}>
-      <AnimatePresence>
-        {!showMenu && (
-          <Header setShowMenu={() => setShowMenu((prev) => !prev)} />
-        )}
+    <div className={s.wrapper}>
+      <nav className={s.menu}>
+        <AnimatePresence>
+          {!showMenu && (
+            <Header setShowMenu={() => setShowMenu((prev) => !prev)} />
+          )}
 
-        {showMenu && (
-          <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
-            <figure className={s.highlight}></figure>
-            <About />
-            <List setShowMenu={() => setShowMenu(false)} />
-            <Contact />
-          </Window>
-        )}
-      </AnimatePresence>
-    </nav>
+          {showMenu && (
+            <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
+              <figure className={s.highlight}></figure>
+              <About />
+              <List setShowMenu={() => setShowMenu(false)} />
+              <Contact />
+            </Window>
+          )}
+        </AnimatePresence>
+      </nav>
+    </div>
   )
 }
 

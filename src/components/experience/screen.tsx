@@ -55,7 +55,7 @@ export const Screen: React.FC<ScreenProps> = ({
   )
 
   const { scale } = useSpring({
-    scale: hovered ? 1.05 : 1,
+    scale: hovered ? 1.1 : 1,
     config: {
       tension: 250,
       friction: 12,

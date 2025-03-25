@@ -226,7 +226,7 @@
   {
     "title": "Smoov",
     "slug": "smoov5",
-    "category": "Work",
+    "category": "Craft",
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "video": "/videos/smoov/smoov-hero.mp4",
     "aspect": "16/9",
@@ -370,7 +370,7 @@
   {
     "title": "Smoov",
     "slug": "smoov12",
-    "category": "Work",
+    "category": "Craft",
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "video": "/videos/smoov/smoov-hero.mp4",
     "aspect": "16/9",
@@ -394,7 +394,7 @@
   {
     "title": "Smoov",
     "slug": "smoov13",
-    "category": "Work",
+    "category": "Craft",
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "video": "/videos/smoov/smoov-hero.mp4",
     "aspect": "16/9",
@@ -538,7 +538,7 @@
   {
     "title": "Smoov",
     "slug": "smoov19",
-    "category": "Work",
+    "category": "Craft",
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "video": "/videos/smoov/smoov-hero.mp4",
     "aspect": "16/9",
@@ -560,3 +560,4 @@
     }
   }
 ]
+

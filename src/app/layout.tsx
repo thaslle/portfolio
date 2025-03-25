@@ -8,6 +8,8 @@ import '@/css/global.scss'
 import Providers from './providers'
 
 import { Experience } from '@/components/experience'
+import { UI } from '@/components/ui'
+
 import { loadProjects } from '@/utils/load-data'
 
 export const metadata: Metadata = {
@@ -29,8 +31,10 @@ export default function RootLayout({
         <Providers>
           {children}
           <Experience projects={projects} />
+          <UI />
         </Providers>
       </body>
     </html>
   )
 }
+

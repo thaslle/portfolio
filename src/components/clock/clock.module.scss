@@ -1,6 +1,4 @@
 .location {
-  padding: calc(var(--padding-page) * 0.5);
-
   p {
     font-family: var(--font-mono);
     font-size: var(--font-small);
@@ -18,3 +16,4 @@
     opacity: 0;
   }
 }
+

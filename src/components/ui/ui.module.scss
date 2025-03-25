@@ -5,27 +5,25 @@
 
   width: 100vw;
   height: 100dvh;
-  z-index: 9999;
+  z-index: 998;
 
   overflow: hidden;
   pointer-events: none;
 
-  display: grid;
-  grid-template-areas: 'stack';
+  display: flex;
+  justify-content: space-between;
+  padding: calc(var(--padding-page) * 0.5);
 
   .clock {
-    grid-area: stack;
-    z-index: 1;
     display: flex;
     align-items: flex-start;
     justify-content: left;
   }
 
-  .menu {
-    grid-area: stack;
+  .filter {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    z-index: 2;
+    align-items: flex-start;
+    justify-content: right;
   }
 }
+

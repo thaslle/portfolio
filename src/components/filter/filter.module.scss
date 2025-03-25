@@ -1,0 +1,19 @@
+.button {
+  all: unset;
+  display: inline-block;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  padding: 0.5em;
+  border-radius: 0.25em;
+  pointer-events: visible;
+  cursor: pointer;
+
+  font-family: var(--font-mono);
+  font-size: var(--font-button);
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: var(--font-normal);
+  text-decoration: none;
+  text-box: trim-both cap alphabetic;
+}
+
