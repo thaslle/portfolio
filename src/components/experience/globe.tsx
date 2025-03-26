@@ -34,11 +34,11 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
   // Assuming 5x5 grid (odd number of columns and rows)
   const gridSize = 5
   const maxAngle = gridSize * gridSpacing
+  const polarThreshold = Math.PI / 2
+  const time = device.isMobile ? 0.15 : 0.015
 
   const currentPosition = useRef({ x: 0, y: 0 })
   const lastPosition = useRef({ x: 0, y: 0 })
-  const currentAzimuth = useRef(0)
-  const currentPolar = useRef(0)
 
   useEffect(() => {
     const handlePointerMove = (event: PointerEvent) => {
@@ -70,10 +70,6 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
 
       // Update the state with normalized values
       lastPosition.current = { x: touchX, y: touchY }
-
-      if (!cameraRef.current) return
-      currentAzimuth.current = cameraRef.current.azimuthAngle
-      currentPolar.current = cameraRef.current.polarAngle
     }
 
     // Attach the pointermove event to the window
@@ -95,29 +91,33 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
       device.isMobile ? -currentPosition.current.y : pointer.y,
     )
 
-    const azimuthAngle = maxAngle * mouse.x * -1
-    const polarAngle = Math.PI / 2 + maxAngle * mouse.y
+    const azimuthAngle = Math.max(
+      -maxAngle,
+      Math.min(maxAngle, maxAngle * mouse.x * -1),
+    )
+    const polarAngle = Math.max(
+      polarThreshold - maxAngle,
+      Math.min(polarThreshold + maxAngle, polarThreshold + maxAngle * mouse.y),
+    )
 
-    //console.log(currentAzimuth.current, currentPolar.current)
-
-    if (device.isMobile) {
-      cameraRef.current.azimuthAngle = azimuthAngle
-      cameraRef.current.polarAngle = polarAngle
-      return
-    }
+    // if (device.isMobile) {
+    //   cameraRef.current.azimuthAngle = azimuthAngle
+    //   cameraRef.current.polarAngle = polarAngle
+    //   return
+    // }
 
     // Make camera follow mouse cursor x
     cameraRef.current.azimuthAngle = MathUtils.lerp(
       cameraRef.current.azimuthAngle,
       azimuthAngle,
-      0.015,
+      time,
     )
 
     // Make camera follow mouse cursor y
     cameraRef.current.polarAngle = MathUtils.lerp(
       cameraRef.current.polarAngle,
       polarAngle,
-      0.015,
+      time,
     )
   })
 
@@ -125,8 +125,8 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
     <>
       <CameraControls
         ref={cameraRef}
-        minPolarAngle={Math.PI / 2 - maxAngle}
-        maxPolarAngle={Math.PI / 2 + maxAngle}
+        minPolarAngle={polarThreshold - maxAngle}
+        maxPolarAngle={polarThreshold + maxAngle}
         minAzimuthAngle={-maxAngle}
         maxAzimuthAngle={maxAngle}
         maxZoom={1}
@@ -135,16 +135,6 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
         minDistance={1}
         azimuthRotateSpeed={0.1}
         polarRotateSpeed={0.1}
-        onEnd={(e) => {
-          if (
-            !currentAzimuth.current ||
-            !currentPolar.current ||
-            !cameraRef.current
-          )
-            return
-          currentAzimuth.current = cameraRef.current.azimuthAngle
-          currentPolar.current = cameraRef.current.polarAngle
-        }}
       />
 
       <ScreenSizer scale={1}>
@@ -186,4 +176,3 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
     </>
   )
 }
-
