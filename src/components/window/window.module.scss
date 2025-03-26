@@ -47,19 +47,10 @@
     grid-template-rows: var(--header-height) calc(100% - var(--header-height));
     height: max-content;
 
-    @media only screen and (min-width: 768px) {
-      max-height: calc(100dvh - (var(--padding-page) + var(--padding-mini)));
-    }
-
-    @media only screen and (max-width: 767px) {
-      max-height: calc(100dvh - (var(--padding-section) + var(--padding-mini)));
-    }
-
     position: relative;
     max-width: var(--width-panel);
 
     padding: 1rem var(--padding-mini) 0 var(--padding-mini);
-    border-radius: calc(var(--radius) + var(--padding-mini));
 
     background-color: color-mix(
       in srgb,
@@ -69,6 +60,17 @@
 
     backdrop-filter: blur(var(--blur-light));
     color: var(--color-text);
+
+    @media only screen and (min-width: 768px) {
+      border-radius: calc(var(--radius) + var(--padding-mini));
+      max-height: calc(100dvh - (var(--padding-page) + var(--padding-mini)));
+    }
+
+    @media only screen and (max-width: 767px) {
+      border-radius: calc(var(--radius) + var(--padding-mini))
+        calc(var(--radius) + var(--padding-mini)) 0 0;
+      max-height: calc(100dvh - (var(--padding-section) + var(--padding-mini)));
+    }
 
     .handler {
       position: absolute;
@@ -122,6 +124,14 @@
       height: 100%;
       border-radius: var(--radius);
 
+      @media only screen and (min-width: 768px) {
+        border-radius: var(--radius);
+      }
+
+      @media only screen and (max-width: 767px) {
+        border-radius: var(--radius) var(--radius) 0 0;
+      }
+
       -ms-overflow-style: none;
       scrollbar-width: none;
 
@@ -131,4 +141,3 @@
     }
   }
 }
-
