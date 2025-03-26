@@ -32,16 +32,14 @@
 
       @media only screen and (min-width: 768px) {
         padding-top: var(--padding-list);
-        grid-template-columns: calc(
-            var(--width-menu-card) * 1.5
-          ) max-content auto;
+        grid-template-columns: var(--width-menu-card) max-content auto;
       }
 
       @media only screen and (max-width: 767px) {
         padding-block: calc(var(--padding-list) * 0.5);
-        grid-template-columns: calc(
-            var(--width-menu-card) * 2.5
-          ) max-content auto;
+        grid-template-columns:
+          calc(var(--width-menu-card) * 2.5)
+          max-content auto;
       }
 
       .video {
@@ -62,3 +60,4 @@
     }
   }
 }
+

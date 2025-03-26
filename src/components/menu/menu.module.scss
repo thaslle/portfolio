@@ -23,8 +23,9 @@
       pointer-events: visible;
 
       display: grid;
+
       grid-template-columns: var(--width-menu-card) max-content auto var(
-          --width-menu-card
+          --width-hamburger
         );
 
       gap: var(--spacing);
