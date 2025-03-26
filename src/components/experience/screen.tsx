@@ -33,6 +33,7 @@ export const Screen: React.FC<ScreenProps> = ({
   const materialRef = useRef<any>(null)
 
   const [hovered, setHovered] = useState(false)
+  const [clicked, setClicked] = useState(false)
   const [mounted, setMounted] = useState(false)
 
   const ratio = size.width / size.height
@@ -55,7 +56,7 @@ export const Screen: React.FC<ScreenProps> = ({
   )
 
   const { scale } = useSpring({
-    scale: hovered ? 1.1 : 1,
+    scale: hovered ? (clicked ? 1.05 : 1.1) : 1,
     config: {
       tension: 250,
       friction: 12,
@@ -67,6 +68,12 @@ export const Screen: React.FC<ScreenProps> = ({
   useEffect(() => {
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
   }, [hovered])
+
+  useEffect(() => {
+    if (!clicked) return
+    const timer = setTimeout(() => setClicked(false), 300)
+    return () => clearTimeout(timer)
+  }, [clicked])
 
   const filtered = !filter || filter === project.category
 
@@ -100,9 +107,17 @@ export const Screen: React.FC<ScreenProps> = ({
       <animated.mesh
         scale={scale}
         position-z={position}
-        onClick={() => filtered && onClickProject(href)}
+        onClick={() => {
+          if (!filtered) return
+          onClickProject(href)
+          setClicked(true)
+        }}
         onPointerOver={() => filtered && setHovered(true)}
-        onPointerOut={() => filtered && setHovered(false)}
+        onPointerOut={() => {
+          if (!filtered) return
+          setHovered(false)
+          setClicked(false)
+        }}
         frustumCulled={false}
       >
         <planeGeometry args={[width, height]} />
