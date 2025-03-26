@@ -4,6 +4,7 @@ import { useStore } from '@/hooks/use-store'
 import { Category } from '@/utils/types'
 
 import s from './list.module.scss'
+import { Video } from '@/components/video'
 
 type ListProps = {
   setShowMenu: () => void
@@ -12,6 +13,7 @@ type ListProps = {
 type ItemListProps = {
   title: Category
   description: string
+  video: string
 }
 
 type ItemProps = {
@@ -20,8 +22,16 @@ type ItemProps = {
 
 export const List: React.FC<ListProps> = ({ setShowMenu }) => {
   const list: ItemListProps[] = [
-    { title: 'Work', description: 'A glimpse of selected work' },
-    { title: 'Craft', description: 'My lab for creative experiments' },
+    {
+      title: 'Work',
+      description: 'A glimpse of selected work',
+      video: '/videos/menu/work.mp4',
+    },
+    {
+      title: 'Craft',
+      description: 'My lab for creative experiments',
+      video: '/videos/menu/craft.mp4',
+    },
   ]
   return (
     <div className={s.list}>
@@ -48,7 +58,9 @@ const Item: React.FC<ItemProps> = ({ props, setShowMenu }) => {
           setShowMenu()
         }}
       >
-        <figure></figure>
+        <div className={s.video}>
+          <Video src={props.video} aspect="1" />
+        </div>
         <h2>
           <Scramble text={props.title} onReplay={replay} />
         </h2>

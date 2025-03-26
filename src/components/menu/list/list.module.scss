@@ -33,12 +33,12 @@
       color: var(--color-text);
       cursor: pointer;
 
-      figure {
+      .video {
+        --radius: calc(0.5rem - var(--padding-mini) * 0.5);
+
         display: block;
         width: 100%;
         aspect-ratio: 1;
-        border-radius: calc(var(--radius) - var(--padding-mini) * 0.5);
-        background-color: var(--color-text);
       }
 
       h2 {
@@ -51,3 +51,4 @@
     }
   }
 }
+
