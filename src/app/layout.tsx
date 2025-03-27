@@ -8,6 +8,7 @@ import '@/css/global.scss'
 import Providers from './providers'
 
 import { Experience } from '@/components/experience'
+import { Ascii } from '@/components/ascii'
 import { UI } from '@/components/ui'
 
 import { loadProjects } from '@/utils/load-data'
@@ -32,9 +33,9 @@ export default function RootLayout({
           {children}
           <Experience projects={projects} />
           <UI />
+          <Ascii />
         </Providers>
       </body>
     </html>
   )
 }
-
