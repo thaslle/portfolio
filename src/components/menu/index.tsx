@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Window } from '@/components/window'
+import { Ascii } from '@/components/ascii'
 import { AnimatePresence } from 'motion/react'
 
 import { About } from './about'
@@ -23,7 +24,7 @@ export const Menu = () => {
 
           {showMenu && (
             <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
-              <figure className={s.highlight}></figure>
+              <Ascii />
               <About />
               <List setShowMenu={() => setShowMenu(false)} />
               <Contact />
