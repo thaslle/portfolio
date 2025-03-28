@@ -53,7 +53,7 @@ export const Macintosh = () => {
   })
 
   return (
-    <group ref={modelRef} dispose={null} scale={5} position-y={-0.5}>
+    <group ref={modelRef} dispose={null} scale={6} position={[0.5, -0.5, 0]}>
       <mesh geometry={nodes.back.geometry}>
         <meshLambertMaterial color="#fff" />
       </mesh>
@@ -68,4 +68,3 @@ export const Macintosh = () => {
 }
 
 useGLTF.preload('/models/macintosh.gltf')
-
