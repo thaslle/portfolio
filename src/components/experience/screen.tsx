@@ -28,7 +28,7 @@ export const Screen: React.FC<ScreenProps> = ({
   project,
   onClickProject,
 }) => {
-  const { filter } = useStore()
+  const { filter, setLabel } = useStore()
   const { size } = useThree()
   const materialRef = useRef<any>(null)
 
@@ -112,11 +112,16 @@ export const Screen: React.FC<ScreenProps> = ({
           onClickProject(href)
           setClicked(true)
         }}
-        onPointerOver={() => filtered && setHovered(true)}
+        onPointerOver={() => {
+          if (!filtered) return
+          setHovered(true)
+          setLabel({ title: project.title, subtitle: project.category })
+        }}
         onPointerOut={() => {
           if (!filtered) return
           setHovered(false)
           setClicked(false)
+          setLabel({ title: null, subtitle: null })
         }}
         frustumCulled={false}
       >
