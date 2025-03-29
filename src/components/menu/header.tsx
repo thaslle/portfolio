@@ -7,6 +7,8 @@ import { useScramble } from 'use-scramble'
 
 import { IconHamburger } from './icons'
 import { Avatar } from '@/components/avatar'
+
+import { useStore } from '@/hooks/use-store'
 import { settings } from '@/utils/settings'
 
 import s from './menu.module.scss'
@@ -43,7 +45,9 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
       exit={variants.header.leaving}
       transition={{ duration: settings.duration * 0.2 }}
     >
-      <Avatar />
+      <div className={s.avatar}>
+        <Avatar />
+      </div>
       <Title />
       <Roles />
 
@@ -55,8 +59,12 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
 }
 
 const Title = () => {
+  const {
+    label: { title },
+  } = useStore()
+
   const { ref } = useScramble({
-    text: 'Thalles Lopes',
+    text: title ?? 'Thalles Lopes',
   })
 
   return <h1 ref={ref} />
@@ -64,14 +72,19 @@ const Title = () => {
 
 const Roles = () => {
   const roles = ['Creative Developer', 'Digital Designer']
-
   const [currentRole, setCurrentRole] = useState(roles[0])
 
+  const {
+    label: { subtitle },
+  } = useStore()
+
   const { ref } = useScramble({
-    text: currentRole,
+    text: subtitle ?? currentRole,
   })
 
   useEffect(() => {
+    if (subtitle) return
+
     const intervalId = setInterval(() => {
       setCurrentRole((prevRole) => {
         const currentIndex = roles.indexOf(prevRole)
