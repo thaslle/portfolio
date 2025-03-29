@@ -1,7 +1,5 @@
 .wrapper {
   display: block;
-  // width: var(--width-menu-card);
-  // height: var(--width-menu-card);
   width: 100%;
   aspect-ratio: 1;
   border-radius: calc(var(--radius) - var(--padding-mini) * 0.5);
@@ -9,10 +7,6 @@
   position: relative;
   overflow: hidden;
   background-color: var(--color-avatar-base);
-
-  & > div {
-    height: 100%;
-  }
 
   .canvas {
     position: relative;
