@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Euler, MeshBasicMaterial, Vector2 } from 'three'
+import { Euler, MeshBasicMaterial } from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
 import { useVideoTexture } from '@react-three/drei'
 import { animated, useSpring } from '@react-spring/three'
@@ -135,4 +135,3 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
-

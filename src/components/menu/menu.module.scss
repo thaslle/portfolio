@@ -47,14 +47,6 @@
       text-transform: uppercase;
       color: var(--color-text);
 
-      figure {
-        display: block;
-        width: 100%;
-        aspect-ratio: 1;
-        border-radius: calc(var(--radius) - var(--padding-mini) * 0.5);
-        background-color: var(--color-text);
-      }
-
       h1 {
         font-weight: var(--font-semibold);
       }
@@ -97,4 +89,3 @@
     transition: all var(--transition-time) var(--transition-ease);
   }
 }
-

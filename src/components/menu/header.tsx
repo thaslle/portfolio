@@ -6,6 +6,7 @@ import { useTransitionState } from 'next-transition-router'
 import { useScramble } from 'use-scramble'
 
 import { IconHamburger } from './icons'
+import { Avatar } from '@/components/avatar'
 import { settings } from '@/utils/settings'
 
 import s from './menu.module.scss'
@@ -42,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
       exit={variants.header.leaving}
       transition={{ duration: settings.duration * 0.2 }}
     >
-      <figure></figure>
+      <Avatar />
       <Title />
       <Roles />
 
@@ -84,4 +85,3 @@ const Roles = () => {
 
   return <p className={s.roles} ref={ref} />
 }
-

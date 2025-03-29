@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Mesh, Group, MathUtils } from 'three'
+import { Mesh, Group, MathUtils, MeshLambertMaterial } from 'three'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { useFrame } from '@react-three/fiber'
@@ -10,10 +10,13 @@ type GLTFResult = GLTF & {
     body: Mesh
     screen: Mesh
   }
+  materials: {
+    Material: MeshLambertMaterial
+  }
 }
 
 export const Macintosh = () => {
-  const { nodes } = useGLTF('/models/macintosh.gltf') as unknown as GLTFResult
+  const { nodes } = useGLTF('/models/macintosh.gltf') as GLTFResult
   const modelRef = useRef<Group>(null)
   const mouse = useRef({ x: 0, y: 0 })
 
