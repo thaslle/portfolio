@@ -4,7 +4,7 @@ import { useStore } from '@/hooks/use-store'
 import { Category } from '@/utils/types'
 
 import s from './list.module.scss'
-import { Video } from '@/components/media'
+import { Media } from '@/components/media'
 
 type ListProps = {
   setShowMenu: () => void
@@ -59,7 +59,7 @@ const Item: React.FC<ItemProps> = ({ props, setShowMenu }) => {
         }}
       >
         <div className={s.video}>
-          <Video src={props.video} aspect="1" />
+          <Media url={props.video} type="video" aspect="1" />
         </div>
         <h2>
           <Scramble text={props.title} onReplay={replay} />
