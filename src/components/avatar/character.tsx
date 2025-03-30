@@ -36,8 +36,8 @@ export const Character = React.forwardRef<Group, CharacterProps>(
     const { scale } = useSpring({
       scale: blink ? 0.2 : 1,
       config: {
-        tension: 500,
-        friction: 50,
+        tension: 1500,
+        friction: 25,
         mass: 0.1,
       },
     })

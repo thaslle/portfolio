@@ -7,15 +7,18 @@ type ExtLinkProps = {
   children: React.ReactNode
   href: string
   arrow?: boolean
+  play?: boolean
 }
 
 export const ExtLink: React.FC<ExtLinkProps> = ({
   children,
   href,
   arrow = true,
+  play = true,
 }) => {
   const { ref, replay } = useScramble({
     text: `${children?.toString()}${arrow && ' ↗'}`,
+    playOnMount: play,
   })
 
   return (

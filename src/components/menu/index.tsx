@@ -5,12 +5,13 @@ import { Window } from '@/components/window'
 import { Ascii } from '@/components/ascii'
 import { AnimatePresence } from 'motion/react'
 
+import { Avatar } from '@/components/avatar'
 import { About } from './about'
 import { List } from './list'
 import { Contact } from './contact'
+import { Header } from './header'
 
 import s from './menu.module.scss'
-import { Header } from './header'
 
 export const Menu = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -23,8 +24,14 @@ export const Menu = () => {
           )}
 
           {showMenu && (
-            <Window title="Thalles Lopes" onClose={() => setShowMenu(false)}>
-              <Ascii />
+            <Window
+              title="Hey there, get to know me"
+              onClose={() => setShowMenu(false)}
+            >
+              <div className={s.interactive}>
+                <Avatar />
+                <Ascii />
+              </div>
               <About />
               <List setShowMenu={() => setShowMenu(false)} />
               <Contact />

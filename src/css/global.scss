@@ -25,6 +25,7 @@ body {
   --padding-mini: 0.5rem;
   --padding-page: 2rem;
   --padding-list: 2rem;
+  --avatar-radius: calc(var(--radius) - var(--padding-mini) * 0.5);
 
   --gap: 0.75rem;
   --spacing: 1.5rem;

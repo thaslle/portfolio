@@ -40,23 +40,23 @@ export const Macintosh = () => {
   useFrame(({ camera }, delta) => {
     if (!modelRef.current || !mouse.current) return
 
-    modelRef.current.rotation.y += delta * 0.8
+    modelRef.current.rotation.y += delta * 1.25
 
     camera.position.z = MathUtils.lerp(
       camera.position.z,
-      5 + mouse.current.x * 0.8,
+      5 - Math.abs(mouse.current.x) * 1.2,
       0.15,
     )
 
     modelRef.current.rotation.x = MathUtils.lerp(
       modelRef.current.rotation.x,
-      mouse.current.y * 0.5,
+      mouse.current.y * 0.75,
       0.15,
     )
   })
 
   return (
-    <group ref={modelRef} dispose={null} scale={6} position={[0.5, -0.5, 0]}>
+    <group ref={modelRef} dispose={null} scale={6} position={[0.25, -0.5, 0]}>
       <mesh geometry={nodes.back.geometry}>
         <meshLambertMaterial color="#fff" />
       </mesh>

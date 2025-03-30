@@ -109,6 +109,24 @@
         }
       }
     }
+
+    .interactive {
+      display: grid;
+      grid-gap: var(--gap);
+      gap: var(--padding-mini);
+
+      --avatar-radius: var(--radius);
+      --color-avatar-base: var(--color-base);
+
+      @media only screen and (min-width: 768px) {
+        grid-template-columns: 35% auto;
+      }
+
+      @media only screen and (max-width: 767px) {
+        grid-template-columns: 30vw auto;
+        height: 30vw;
+      }
+    }
   }
 }
 

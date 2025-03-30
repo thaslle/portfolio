@@ -2,7 +2,7 @@
   display: block;
   width: 100%;
   aspect-ratio: 1;
-  border-radius: calc(var(--radius) - var(--padding-mini) * 0.5);
+  border-radius: var(--avatar-radius);
   background-color: var(--color-text);
   position: relative;
   overflow: hidden;
