@@ -4,7 +4,7 @@ import { useStore } from '@/hooks/use-store'
 import { Category } from '@/utils/types'
 
 import s from './list.module.scss'
-import { Video } from '@/components/video'
+import { Video } from '@/components/media'
 
 type ListProps = {
   setShowMenu: () => void
@@ -71,4 +71,3 @@ const Item: React.FC<ItemProps> = ({ props, setShowMenu }) => {
     </li>
   )
 }
-

@@ -3,7 +3,7 @@
 import React from 'react'
 import { useTransitionRouter } from 'next-transition-router'
 
-import { Video } from '@/components/video'
+import { Media } from '@/components/media'
 import { Window } from '@/components/window'
 import { Project } from '@/utils/types'
 
@@ -34,7 +34,7 @@ export const ProjectView: React.FC<ProjectProps> = ({
       label={project.info.label}
       onClose={() => router.push('/', { scroll: false })}
     >
-      <Video aspect={project.aspect} src={project.video} />
+      <Media {...project.media} />
 
       <div className={s.container}>
         <About description={project.description} />

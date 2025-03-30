@@ -8,8 +8,9 @@
     transparent
   );
   clip-path: inset(0 round var(--radius));
+  position: relative;
 
-  .video {
+  .media {
     display: block;
     width: 100%;
     height: 100%;

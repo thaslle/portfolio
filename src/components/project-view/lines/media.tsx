@@ -1,6 +1,7 @@
 import clsx from 'clsx'
-import { MediaItem } from '@/utils/types'
+import Image from 'next/image'
 
+import { MediaItem } from '@/utils/types'
 import s from './lines.module.scss'
 
 export const Media: React.FC<{ media: MediaItem; title: string }> = ({
@@ -11,7 +12,7 @@ export const Media: React.FC<{ media: MediaItem; title: string }> = ({
     case 'image':
       return (
         <figure className={clsx(s.media, s.image)}>
-          <img src={media.url} alt={title} />
+          <Image src={media.url} alt={title} fill={true} />
         </figure>
       )
     case 'video':

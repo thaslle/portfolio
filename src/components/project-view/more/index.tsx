@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 
 import { Scramble } from '@/components/scramble'
-import { Video } from '@/components/video'
+import { Media } from '@/components/media'
 
 import { Project } from '@/utils/types'
 
@@ -37,7 +37,7 @@ const Item: React.FC<ItemProps> = ({ props }) => {
       >
         <div className={s.group}>
           <div className={s.video}>
-            <Video src={props.video} aspect="1" />
+            <Media {...props.media} aspect="1" />
           </div>
 
           <h3>

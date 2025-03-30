@@ -4,7 +4,6 @@ import React from 'react'
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { AdaptiveDpr } from '@react-three/drei'
-import { Leva } from 'leva'
 import { useTransitionRouter } from 'next-transition-router'
 
 import { Projects } from '@/utils/types'
@@ -25,9 +24,7 @@ export const Experience: React.FC<ExperienceProps> = ({ projects }) => {
   return (
     <div className={s.wrapper}>
       <Suspense>
-        <Leva hidden />
         <Canvas camera={{ fov: 25 }} className={s.canvas}>
-          {/* <Stats /> */}
           <AdaptiveDpr pixelated />
           <Globe projects={projects} onClickProject={handleClickProject} />
         </Canvas>

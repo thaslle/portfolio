@@ -19,6 +19,7 @@ export type MediaType = 'video' | 'image'
 export type MediaItem = {
   type: MediaType
   url: string
+  aspect?: string
 }
 
 export type Line = {
@@ -31,7 +32,7 @@ export type Project = {
   slug: string
   category: Category
   description: string
-  video: string
+  media: MediaItem
   aspect: string
   info: ProjectInfo
   lines?: Line[]

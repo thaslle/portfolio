@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Euler, MeshBasicMaterial } from 'three'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useVideoTexture } from '@react-three/drei'
+import { useTexture, useVideoTexture } from '@react-three/drei'
 import { animated, useSpring } from '@react-spring/three'
 import CustomShaderMaterial from 'three-custom-shader-material'
 
@@ -42,8 +42,10 @@ export const Screen: React.FC<ScreenProps> = ({
 
   const offset = -15 * width
   const offsetDistance = distance * width
+  const media = project.media.url
 
-  const video = useVideoTexture(project.video)
+  const map =
+    project.media.type === 'video' ? useVideoTexture(media) : useTexture(media)
 
   const href = `/project/${project.slug}`
 
@@ -132,7 +134,7 @@ export const Screen: React.FC<ScreenProps> = ({
           fragmentShader={fragment}
           vertexShader={vertex}
           uniforms={uniforms}
-          map={video}
+          map={map}
           toneMapped={false}
           transparent
         />
