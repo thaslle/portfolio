@@ -3,7 +3,7 @@
     font-family: var(--font-mono);
     font-size: var(--font-small);
     text-transform: uppercase;
-    color: var(--color-background);
+    color: var(--color-text);
 
     .clock span {
       animation: blink 1s step-start infinite;
@@ -16,4 +16,3 @@
     opacity: 0;
   }
 }
-

@@ -1,5 +1,6 @@
-import type { Metadata } from 'next'
+import { Suspense } from 'react'
 import { clsx } from 'clsx'
+import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import '@/css/reset.css'
@@ -7,6 +8,7 @@ import '@/css/global.scss'
 
 import Providers from './providers'
 
+import { Loading } from '@/components/loading'
 import { Experience } from '@/components/experience'
 import { UI } from '@/components/ui'
 
@@ -28,11 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(GeistSans.variable, GeistMono.variable)}>
-        <Providers>
-          {children}
-          <Experience projects={projects} />
-          <UI />
-        </Providers>
+        <Loading />
+        <Suspense>
+          <Providers>
+            {children}
+            <Experience projects={projects} />
+            <UI />
+          </Providers>
+        </Suspense>
       </body>
     </html>
   )

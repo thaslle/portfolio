@@ -10,15 +10,19 @@ type Label = {
 }
 
 type Store = {
+  ready: boolean
   filter: Filter
   label: Label
+  setReady: (ready: boolean) => void
   setFilter: (filter: Filter) => void
   setLabel: (label: Label) => void
 }
 
 export const useStore = create<Store>((set) => ({
+  ready: false,
   filter: null,
   label: { title: null, subtitle: null },
+  setReady: (ready) => set({ ready }),
   setFilter: (filter) => set({ filter }),
   setLabel: (label) => set({ label }),
 }))

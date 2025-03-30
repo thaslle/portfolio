@@ -4,6 +4,7 @@
   height: 100dvh;
   left: 0;
   top: 0;
+  z-index: var(--z-index-experience);
 
   .canvas {
     position: relative;

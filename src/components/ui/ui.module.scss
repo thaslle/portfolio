@@ -5,7 +5,7 @@
 
   width: 100vw;
   height: 100dvh;
-  z-index: 998;
+  z-index: var(--z-index-ui);
 
   overflow: hidden;
   pointer-events: none;
@@ -26,4 +26,3 @@
     justify-content: right;
   }
 }
-

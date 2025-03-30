@@ -13,6 +13,7 @@ body {
   --color-text: #fff;
   --color-base: #0000ff;
   --color-avatar-base: #e8e0d8;
+  --color-loading: #fff;
 
   --opacity-light: 25%;
   --opacity-medium: 50%;
@@ -37,6 +38,12 @@ body {
 
   --transition-time: 0.25s;
   --transition-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  --z-index-experience: 1;
+  --z-index-ui: 2;
+  --z-index-window: 3;
+  --z-index-menu: 4;
+  --z-index-loading: 5;
 
   font-family: var(--font-sans);
   font-optical-sizing: auto;
