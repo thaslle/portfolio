@@ -10,7 +10,8 @@ export type ProjectInfo = {
   role: string
   stack: string
   collaborators: Collaborator[]
-  live: string
+  live?: string
+  label?: string
 }
 
 export type MediaType = 'video' | 'image'

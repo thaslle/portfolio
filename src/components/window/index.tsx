@@ -17,12 +17,14 @@ type WindowProps = {
   children: React.ReactNode
   title: string
   link?: string
+  label?: string
   onClose: () => void
 }
 
 export const Window: React.FC<WindowProps> = ({
   children,
   title,
+  label,
   link,
   onClose,
 }) => {
@@ -109,7 +111,7 @@ export const Window: React.FC<WindowProps> = ({
 
         <header className={s.header}>
           <Title text={title} />
-          {link && <ExtLink href={link}>View live</ExtLink>}
+          {link && <ExtLink href={link}>{label}</ExtLink>}
         </header>
 
         <Scroll lenisRef={lenisRef}>{children}</Scroll>
@@ -131,4 +133,3 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
-

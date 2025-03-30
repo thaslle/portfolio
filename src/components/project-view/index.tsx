@@ -31,6 +31,7 @@ export const ProjectView: React.FC<ProjectProps> = ({
     <Window
       title={project.title}
       link={project.info.live}
+      label={project.info.label}
       onClose={() => router.push('/', { scroll: false })}
     >
       <Video aspect={project.aspect} src={project.video} />
