@@ -1,21 +1,19 @@
 .info {
-  padding-block: var(--padding-section)
-    calc(var(--padding-section) + var(--gap));
   border-top: 1px
     color-mix(in srgb, var(--color-text) var(--opacity-light), transparent)
     solid;
 
-  display: flex;
+  display: grid;
 
   @media only screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: var(--padding-page);
+    padding-block: var(--padding-section) var(--gap);
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--padding-page);
   }
 
   @media only screen and (max-width: 768px) {
-    flex-direction: column;
+    padding-block: var(--padding-section)
+      calc(var(--padding-section) + var(--gap));
     gap: var(--padding-section);
   }
 
