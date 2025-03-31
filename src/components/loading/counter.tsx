@@ -9,10 +9,11 @@ import {
 
 type CounterProps = {
   to: number
+  onProgress: (progress: number) => void
   animationOptions?: KeyframeOptions
 }
 
-export const Counter = ({ to, animationOptions }: CounterProps) => {
+export const Counter = ({ to, onProgress, animationOptions }: CounterProps) => {
   const ref = useRef<HTMLSpanElement>(null)
   const fromRef = useRef(0)
 
@@ -30,8 +31,13 @@ export const Counter = ({ to, animationOptions }: CounterProps) => {
       ease: 'easeOut',
       ...animationOptions,
       onUpdate(value) {
-        element.textContent = value.toFixed(0)
-        fromRef.current = value
+        const progress = Math.max(fromRef.current, value)
+
+        element.textContent = progress.toFixed(0)
+        fromRef.current = progress
+
+        // Update smoothProgress
+        onProgress(progress)
       },
     })
 
@@ -43,3 +49,4 @@ export const Counter = ({ to, animationOptions }: CounterProps) => {
 
   return <span ref={ref}>0</span>
 }
+

@@ -1,16 +1,33 @@
 .wrapper {
+  --progress: 0%;
+  --translate: 0vw;
+
   position: fixed;
   left: 0;
   top: 0;
   width: 100vw;
   height: 100dvh;
-  background-color: var(--color-loading);
+  display: flex;
+  align-items: center;
+
+  background-color: color-mix(
+    in srgb,
+    var(--color-base) var(--progress),
+    var(--color-loading)
+  );
+
   z-index: var(--z-index-loading);
 
-  .loader {
-    position: absolute;
+  .loading {
     font-family: var(--font-mono);
-    font-size: 8vw;
+    font-size: calc(var(--font-upper) * 5);
+    color: color-mix(
+      in srgb,
+      var(--color-loading) var(--progress),
+      var(--color-background)
+    );
+
+    transform: translateX(var(--translate));
   }
 
   &:before {
@@ -57,3 +74,4 @@
     pointer-events: none;
   }
 }
+
