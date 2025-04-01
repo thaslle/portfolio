@@ -10,6 +10,7 @@ import { About } from './about'
 import { List } from './list'
 import { Contact } from './contact'
 import { Header } from './header'
+import { Switcher } from './switcher'
 
 import s from './menu.module.scss'
 
@@ -33,14 +34,19 @@ export const Menu = () => {
               onClose={() => setShowMenu(false)}
             >
               <div className={s.interactive}>
-                <Avatar />
+                <div className={s.avatar}>
+                  <Avatar />
+                </div>
+                <div className={s.ascii}>
+                  <Ascii />
+                </div>
+                <div className={s.switcher}>
+                  <Switcher />
+                </div>
               </div>
               <About />
               <List setShowMenu={() => setShowMenu(false)} />
               <Contact />
-              <div className={s.ascii}>
-                <Ascii />
-              </div>
             </Window>
           )}
         </AnimatePresence>
@@ -48,4 +54,3 @@ export const Menu = () => {
     </div>
   )
 }
-
