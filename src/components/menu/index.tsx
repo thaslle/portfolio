@@ -20,21 +20,27 @@ export const Menu = () => {
       <nav className={s.menu}>
         <AnimatePresence>
           {!showMenu && (
-            <Header setShowMenu={() => setShowMenu((prev) => !prev)} />
+            <Header
+              key="header"
+              setShowMenu={() => setShowMenu((prev) => !prev)}
+            />
           )}
 
           {showMenu && (
             <Window
-              title="Hey there, get to know me"
+              key="window"
+              title="Get to know me"
               onClose={() => setShowMenu(false)}
             >
               <div className={s.interactive}>
                 <Avatar />
-                <Ascii />
               </div>
               <About />
               <List setShowMenu={() => setShowMenu(false)} />
               <Contact />
+              <div className={s.ascii}>
+                <Ascii />
+              </div>
             </Window>
           )}
         </AnimatePresence>
@@ -42,3 +48,4 @@ export const Menu = () => {
     </div>
   )
 }
+

@@ -56,9 +56,9 @@ export const Window: React.FC<WindowProps> = ({
     },
     window: {
       leaving: {
-        scale: 0.95,
+        scale: 0.98,
         opacity: 0,
-        y: '5%',
+        y: '25%',
       },
       entering: {
         scale: 1,

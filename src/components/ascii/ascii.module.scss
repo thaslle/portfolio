@@ -2,6 +2,7 @@
   background-color: var(--color-base);
   border-radius: var(--radius);
   overflow: hidden;
+  aspect-ratio: 3;
 
   .canvas {
     position: relative;
@@ -13,3 +14,4 @@
     touch-action: none;
   }
 }
+
