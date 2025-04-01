@@ -25,8 +25,6 @@ export const Loading = () => {
     }
   }, [active])
 
-  console.log(progress)
-
   return (
     <AnimatePresence>
       {!ready && (
@@ -52,4 +50,3 @@ export const Loading = () => {
     </AnimatePresence>
   )
 }
-

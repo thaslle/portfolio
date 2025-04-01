@@ -36,9 +36,29 @@ export const Screen: React.FC<ScreenProps> = ({
   const [clicked, setClicked] = useState(false)
   const [mounted, setMounted] = useState(false)
 
-  const ratio = size.width / size.height
-  const width = ratio > 1 ? size.width * 0.8 : size.width * 0.6
-  const height = width * (9 / 16)
+  // Get the aspect ratio from the project
+  const ratio = project.media.aspect || '16/9'
+  const viewportRatio = size.width / size.height
+
+  // Test if it matches the pattern
+  const match = ratio.match(/^(\d+)\/(\d+)$/)
+  const ratioW = match ? parseFloat(match[1]) : 16
+  const ratioH = match ? parseFloat(match[2]) : 9
+  const elementRatio = ratioW / ratioH
+
+  // Set the max value for element size
+  const viewportModifier = viewportRatio > 1 ? 0.6 : 0.4
+  const maxSize = size.width * viewportModifier * elementRatio
+
+  // Calculate the diagonal size based on the aspect ratio
+  const diagonal = Math.sqrt(Math.pow(ratioW, 2) + Math.pow(ratioH, 2))
+
+  // Get the scale factor to make the diagonal match maxSize
+  const scaleFactor = maxSize / diagonal
+
+  // Calculate width and height based on the scaling factor
+  const width = ratioW * scaleFactor
+  const height = ratioH * scaleFactor
 
   const offset = -15 * width
   const offsetDistance = distance * width

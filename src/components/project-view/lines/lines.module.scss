@@ -58,6 +58,7 @@
   clip-path: inset(0 round var(--radius));
 
   &.image img {
+    position: relative !important;
     display: block;
     width: 100%;
     height: 100%;
