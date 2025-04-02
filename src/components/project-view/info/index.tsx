@@ -22,22 +22,24 @@ export const Info: React.FC<InfoProps> = ({ info }) => (
         <h2>Stack</h2> <p>{info.stack}</p>
       </div>
     )}
-    <div>
-      <h2>Collaborators</h2>
-      <p>
-        {info.collaborators.map((collaborator, i) => (
-          <React.Fragment key={i}>
-            <a
-              href={collaborator.link}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {collaborator.name}
-            </a>
-            {i < info.collaborators.length - 1 ? ', ' : ''}
-          </React.Fragment>
-        ))}
-      </p>
-    </div>
+    {info.collaborators && (
+      <div>
+        <h2>Collaborators</h2>
+        <p>
+          {info.collaborators.map((collaborator, i) => (
+            <React.Fragment key={i}>
+              <a
+                href={collaborator.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {collaborator.name}
+              </a>
+              {i < info.collaborators.length - 1 ? ', ' : ''}
+            </React.Fragment>
+          ))}
+        </p>
+      </div>
+    )}
   </div>
 )
