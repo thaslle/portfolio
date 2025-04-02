@@ -1,12 +1,12 @@
 [
   {
     "title": "Smoov",
-    "slug": "smoov1",
+    "slug": "smoov",
     "category": "Work",
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -27,15 +27,6 @@
       "label": "View live"
     },
     "lines": [
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994593629?background=1&autopause=0"
-          }
-        ]
-      },
       {
         "class": "full",
         "media": [
@@ -126,6 +117,202 @@
           {
             "type": "image",
             "url": "/images/projects/smoov/smoov-splash.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Maria’s 30th Birthday",
+    "slug": "maria30",
+    "category": "Craft",
+    "description": "To celebrate my wife’s 30th birthday, I created a special project that combines her love for literature and adventure. Inspired by the beautiful novel “O Conto da Ilha Desconhecida (The Tale of the Unknown Island)” by José Saramago, I designed and developed a custom game using React Three Fiber. In this interactive 3D experience, my wife is the main character on a quest to find her birthday gift. Throughout the game, she follows clues and collects items, each one bringing her closer to discovering the ultimate surprise.",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/maria30/maria30.mp4",
+      "aspect": "80/54"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Blender",
+      "live": "https://maria30.vercel.app",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "GSH",
+    "slug": "gsh",
+    "category": "Work",
+    "description": "GSH specializes in catering and event management for major events like Formula 1, the FIFA World Cup, and the Olympics. I was responsible for translating the design concepts into a functional interface, ensuring a seamless and visually appealing user experience. Implementing dynamic animations was particularly enjoyable, enhancing both functionality and aesthetics.",
+    "media": {
+      "type": "video",
+      "url": "/images/projects/gsh/gsh-motion.mp4",
+      "aspect": "142/77"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Development, CMS Integration",
+      "stack": "Wordpress, Divi",
+      "collaborators": [
+        {
+          "name": "Rodrigo Stein",
+          "link": "https://www.behance.net/RodrigoStein"
+        },
+        {
+          "name": "Agência Twist",
+          "link": "https://twist.com.br/agenciadigital/"
+        }
+      ],
+      "live": "https://gshlive.com.br",
+      "label": "View live"
+    },
+    "lines": [
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628110?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628093?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994633145?background=1&autopause=0"
+          },
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628084?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994629855?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/gsh/gsh-mobile-hero.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/images/projects/gsh/gsh-mobile-cards.jpg"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/gsh/gsh-brands.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Trevvú",
+    "slug": "trevvu",
+    "category": "Work",
+    "description": "Trevvú is a fashion brand that embodies a blend of elegance and informality, dedicated to presenting a unique, bold visual identity in everyday scenarios. I played a key role in designing and implementing Trevvú's website renewal, modernizing its look and feel to align perfectly with the brand's aesthetic, ensuring both functionality and visual appeal.",
+    "media": {
+      "type": "video",
+      "url": "/images/projects/trevvu/trevvu-home.mp4",
+      "aspect": "142/77"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Design, Development, CMS Integration",
+      "stack": "Wordpress, Elementor, Woocommerce",
+      "collaborators": [
+        {
+          "name": "Agência Twist",
+          "link": "https://twist.com.br/agenciadigital/"
+        }
+      ]
+    },
+    "lines": [
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-finest.jpg"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-mobile-home.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-mobile-products.jpg"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589350?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-slogan.jpg"
+          },
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589390?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589476?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589438?background=1&autopause=0"
           }
         ]
       }
@@ -253,115 +440,21 @@
     ]
   },
   {
-    "title": "Smoov",
-    "slug": "smoov3",
-    "category": "Work",
-    "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
-    "media": {
-      "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
-      "aspect": "16/9"
-    },
-    "info": {
-      "year": "2024",
-      "role": "Development, CMS Integration",
-      "stack": "Wordpress, Divi",
-      "collaborators": [
-        {
-          "name": "Rodrigo Stein",
-          "link": "https://www.behance.net/RodrigoStein"
-        },
-        {
-          "name": "Agência Twist",
-          "link": "https://twist.com.br/agenciadigital/"
-        }
-      ],
-      "live": "https://smoovco.com",
-      "label": "View live"
-    }
-  },
-  {
-    "title": "Smoov",
-    "slug": "smoov4",
-    "category": "Work",
-    "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
-    "media": {
-      "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
-      "aspect": "16/9"
-    },
-    "info": {
-      "year": "2024",
-      "role": "Development, CMS Integration",
-      "stack": "Wordpress, Divi",
-      "collaborators": [
-        {
-          "name": "Rodrigo Stein",
-          "link": "https://www.behance.net/RodrigoStein"
-        },
-        {
-          "name": "Agência Twist",
-          "link": "https://twist.com.br/agenciadigital/"
-        }
-      ],
-      "live": "https://smoovco.com",
-      "label": "View live"
-    }
-  },
-  {
-    "title": "Smoov",
-    "slug": "smoov5",
-    "category": "Work",
-    "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
-    "media": {
-      "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
-      "aspect": "16/9"
-    },
-    "info": {
-      "year": "2024",
-      "role": "Development, CMS Integration",
-      "stack": "Wordpress, Divi",
-      "collaborators": [
-        {
-          "name": "Rodrigo Stein",
-          "link": "https://www.behance.net/RodrigoStein"
-        },
-        {
-          "name": "Agência Twist",
-          "link": "https://twist.com.br/agenciadigital/"
-        }
-      ],
-      "live": "https://smoovco.com",
-      "label": "View live"
-    }
-  },
-  {
-    "title": "Smoov",
-    "slug": "smoov5",
+    "title": "Codrops",
+    "slug": "codrops",
     "category": "Craft",
-    "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
+    "description": "I was invited by the amazing Codrops team to write an article on creating stylized water effects with React Three Fiber. In it, I explain how to craft smooth, cartoon-style water with dynamic movement, optimized for performance.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
-      "aspect": "16/9"
+      "url": "/images/craft/codrops/codrops.mp4",
+      "aspect": "80/54"
     },
     "info": {
-      "year": "2024",
-      "role": "Development, CMS Integration",
-      "stack": "Wordpress, Divi",
-      "collaborators": [
-        {
-          "name": "Rodrigo Stein",
-          "link": "https://www.behance.net/RodrigoStein"
-        },
-        {
-          "name": "Agência Twist",
-          "link": "https://twist.com.br/agenciadigital/"
-        }
-      ],
-      "live": "https://smoovco.com",
-      "label": "View live"
+      "year": "2025",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Blender",
+      "live": "https://tympanus.net/codrops/2025/03/04/creating-stylized-water-effects-with-react-three-fiber/",
+      "label": "Read article"
     }
   },
   {
@@ -371,7 +464,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -399,7 +492,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -427,7 +520,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -455,7 +548,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -483,7 +576,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -511,7 +604,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -539,7 +632,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -567,7 +660,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -595,7 +688,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -623,7 +716,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -651,7 +744,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -679,7 +772,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
@@ -707,7 +800,7 @@
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
     "media": {
       "type": "video",
-      "url": "/videos/smoov/smoov-hero.mp4",
+      "url": "/images/projects/smoov/smoov-hero.mp4",
       "aspect": "16/9"
     },
     "info": {
