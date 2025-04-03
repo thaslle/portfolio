@@ -690,6 +690,42 @@
       "live": "https://www.artstation.com/artwork/XgYQ90",
       "label": "View live"
     }
+  },
+  {
+    "title": "Big Numbers",
+    "slug": "big-numbers",
+    "category": "Craft",
+    "description": "An animation for big numbers components using GSAP to create a scroll-triggered effect. The numbers dynamically roll and transition as users scroll, adding an interactive and engaging element to the display, perfectly suited for data-driven visuals.",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/big-numbers/big-numbers.mp4",
+      "aspect": "8/6"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, Design",
+      "stack": "Javascript, GSAP",
+      "live": "https://codepen.io/thaslle/pen/XJrGyvW",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "Card Pop",
+    "slug": "pop",
+    "category": "Craft",
+    "description": "A playful, cartoonish animation style where elements pop onto the screen with energetic bounces, followed by a sleek flare effect. This vibrant animation brings a fun, exaggerated feel, combining whimsy with a touch of visual flair.",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/pop/pop.mp4",
+      "aspect": "800/1066"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, Design",
+      "stack": "Javascript",
+      "live": "https://codepen.io/thaslle/pen/MYgxjmw",
+      "label": "View live"
+    }
   }
 ]
 
