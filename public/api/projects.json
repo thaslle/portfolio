@@ -549,7 +549,7 @@
   },
   {
     "title": "Shader Pixelation",
-    "slug": "sahder",
+    "slug": "shader",
     "category": "Craft",
     "description": "This experiment showcases a GLSL shader that dynamically pixelates an image in response to mouse movements. As you move the cursor across the screen, the level of pixelation changes, creating a playful and interactive effect that transforms the image in real-time.",
     "media": {
@@ -562,6 +562,132 @@
       "role": "Development",
       "stack": "Three.js",
       "live": "https://codepen.io/thaslle/pen/YzmXeMQ",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "JS Pixelate",
+    "slug": "pixelate",
+    "category": "Craft",
+    "description": "Here we have a JavaScript script that creates an image loading animation with a pixelated effect, emulating the concept of a device from the early 2000s.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/pixelate/pixelate.jpg",
+      "aspect": "1/1"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Development",
+      "stack": "Javascript",
+      "live": "https://codepen.io/thaslle/pen/QWRKNgv",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "Okino Residence",
+    "slug": "kiki",
+    "category": "Craft",
+    "description": "3D visualization of Okino Residence from Studio Ghibli's Kiki's Delivery Service. A blend of 3D modeling, rendering, Photoshop, and Illustrator, bringing to life the charming architecture and warmth of this iconic setting in a visually captivating scene.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/kiki/kiki.jpg",
+      "aspect": "8/10"
+    },
+    "info": {
+      "year": "2023",
+      "role": "3D Visualization",
+      "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
+      "live": "https://www.behance.net/gallery/162665345/Okino-Residence",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "Amarelândia",
+    "slug": "amarelandia",
+    "category": "Craft",
+    "description": "3D axonometric visualization inspired by the nostalgic memories of playing The Sims and SimCity, depicting a vibrant city corner. The scene was crafted using 3D modeling and rendering techniques, enhanced with detailed Photoshop and Illustrator work.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/amarelandia/amarelandia.jpg",
+      "aspect": "1/1"
+    },
+    "info": {
+      "year": "2023",
+      "role": "3D Visualization",
+      "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
+      "live": "https://www.behance.net/gallery/135976639/Amarelandia",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "The Last of Us",
+    "slug": "the-last-of-us",
+    "category": "Craft",
+    "description": "3D visualization experiment inspired by The Last of Us show. Combining 3D modeling, rendering, Photoshop, and Illustrator to create a detailed, atmospheric scene, capturing the essence of the series in a visually immersive piece.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/the-last-of-us/the-last-of-us.jpg",
+      "aspect": "8/10"
+    },
+    "info": {
+      "year": "2023",
+      "role": "3D Visualization",
+      "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
+      "live": "https://www.behance.net/gallery/165990507/The-Last-of-Us",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "Background Illustration",
+    "slug": "background",
+    "category": "Craft",
+    "description": "Background illustration of an abandoned city, crafted in Photoshop. This piece captures the eerie desolation and haunting beauty of an empty urban landscape, blending detailed digital painting techniques to evoke a sense of mystery and decay.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/background/background.jpg",
+      "aspect": "80/89.5"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Illustration",
+      "stack": "Photoshop",
+      "live": "https://www.artstation.com/artwork/5BmN1O",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "Render",
+    "slug": "render",
+    "category": "Craft",
+    "description": "A study of a gator in a rendered style, exploring a different approach in illustration.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/render/render.jpg",
+      "aspect": "8/10"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Illustration",
+      "stack": "Photoshop",
+      "live": "https://www.artstation.com/artwork/03J61V",
+      "label": "View live"
+    }
+  },
+  {
+    "title": "Illustrations",
+    "slug": "illustration",
+    "category": "Craft",
+    "description": "An engaging set of illustrations, featuring this cool cowboy. This collection showcases a variety of detailed and expressive drawings, each adding to the overall visual narrative.",
+    "media": {
+      "type": "image",
+      "url": "/images/craft/illustration/illustration.jpg",
+      "aspect": "8/10"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Illustration",
+      "stack": "Photoshop",
+      "live": "https://www.artstation.com/artwork/XgYQ90",
       "label": "View live"
     }
   }
