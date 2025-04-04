@@ -41,11 +41,11 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/smoov/smoov-mobile-hero.jpg"
+            "url": "/images/projects/smoov/smoov-mobile-hero.webp"
           },
           {
             "type": "image",
-            "url": "/images/projects/smoov/smoov-mobile-menu.jpg"
+            "url": "/images/projects/smoov/smoov-mobile-menu.webp"
           }
         ]
       },
@@ -103,11 +103,11 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/smoov/smoov-mobile-products.jpg"
+            "url": "/images/projects/smoov/smoov-mobile-products.webp"
           },
           {
             "type": "image",
-            "url": "/images/projects/smoov/smoov-mobile-product.jpg"
+            "url": "/images/projects/smoov/smoov-mobile-product.webp"
           }
         ]
       },
@@ -116,7 +116,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/smoov/smoov-splash.jpg"
+            "url": "/images/projects/smoov/smoov-splash.webp"
           }
         ]
       }
@@ -167,7 +167,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/trevvu/trevvu-finest.jpg"
+            "url": "/images/projects/trevvu/trevvu-finest.webp"
           }
         ]
       },
@@ -176,11 +176,11 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/trevvu/trevvu-mobile-home.jpg"
+            "url": "/images/projects/trevvu/trevvu-mobile-home.webp"
           },
           {
             "type": "image",
-            "url": "/images/projects/trevvu/trevvu-mobile-products.jpg"
+            "url": "/images/projects/trevvu/trevvu-mobile-products.webp"
           }
         ]
       },
@@ -198,7 +198,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/trevvu/trevvu-slogan.jpg"
+            "url": "/images/projects/trevvu/trevvu-slogan.webp"
           },
           {
             "type": "video",
@@ -232,8 +232,8 @@
     "category": "Work",
     "description": "GSH specializes in catering and event management for major events like Formula 1, the FIFA World Cup, and the Olympics. I was responsible for translating the design concepts into a functional interface, ensuring a seamless and visually appealing user experience. Implementing dynamic animations was particularly enjoyable, enhancing both functionality and aesthetics.",
     "media": {
-      "type": "video",
-      "url": "/images/projects/gsh/gsh-motion.mp4",
+      "type": "image",
+      "url": "/images/projects/gsh/gsh-brands.webp",
       "aspect": "142/77"
     },
     "info": {
@@ -273,6 +273,15 @@
         ]
       },
       {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628069?background=1&autopause=0"
+          }
+        ]
+      },
+      {
         "class": "equal-columns",
         "media": [
           {
@@ -299,20 +308,11 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/gsh/gsh-mobile-hero.jpg"
+            "url": "/images/projects/gsh/gsh-mobile-hero.webp"
           },
           {
             "type": "image",
-            "url": "/images/projects/gsh/gsh-mobile-cards.jpg"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "image",
-            "url": "/images/projects/gsh/gsh-brands.jpg"
+            "url": "/images/projects/gsh/gsh-mobile-cards.webp"
           }
         ]
       }
@@ -325,7 +325,7 @@
     "description": "Bday is an app designed to plan personalized and special celebrations to share with friends. It was crafted as part of Base, a course from Aprender Design School, dedicated to applying comprehensive knowledge from concept to interface design, serving as a practical application of the lessons learned.",
     "media": {
       "type": "image",
-      "url": "/images/projects/bday/bday-main.jpg",
+      "url": "/images/projects/bday/bday-main.webp",
       "aspect": "14/11"
     },
     "info": {
@@ -357,7 +357,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-mockups.jpg"
+            "url": "/images/projects/bday/bday-mockups.webp"
           }
         ]
       },
@@ -366,7 +366,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-mosaic.jpg"
+            "url": "/images/projects/bday/bday-mosaic.webp"
           }
         ]
       },
@@ -375,11 +375,11 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-close1.jpg"
+            "url": "/images/projects/bday/bday-close1.webp"
           },
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-close2.jpg"
+            "url": "/images/projects/bday/bday-close2.webp"
           }
         ]
       },
@@ -388,7 +388,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-screens-1.jpg"
+            "url": "/images/projects/bday/bday-screens-1.webp"
           }
         ]
       },
@@ -397,7 +397,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-screens-2.jpg"
+            "url": "/images/projects/bday/bday-screens-2.webp"
           }
         ]
       },
@@ -406,7 +406,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-screens-3.jpg"
+            "url": "/images/projects/bday/bday-screens-3.webp"
           }
         ]
       },
@@ -415,7 +415,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-screens-4.jpg"
+            "url": "/images/projects/bday/bday-screens-4.webp"
           }
         ]
       },
@@ -424,7 +424,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-screens-5.jpg"
+            "url": "/images/projects/bday/bday-screens-5.webp"
           }
         ]
       },
@@ -433,7 +433,7 @@
         "media": [
           {
             "type": "image",
-            "url": "/images/projects/bday/bday-screens-6.jpg"
+            "url": "/images/projects/bday/bday-screens-6.webp"
           }
         ]
       }
@@ -470,9 +470,9 @@
     "info": {
       "year": "2025",
       "role": "Development, Design, 3D Modeling",
-      "stack": "React, Three.js (R3F), Groq AI",
+      "stack": "React, Three.js (R3F), Framer Motion, Groq AI",
       "live": "https://moodhue.vercel.app/",
-      "label": "View live"
+      "label": "Create your palette"
     }
   },
   {
@@ -508,7 +508,7 @@
       "role": "Development",
       "stack": "Three.js",
       "live": "https://codepen.io/thaslle/pen/xxvxpxm",
-      "label": "View live"
+      "label": "Play with the boxes"
     }
   },
   {
@@ -518,7 +518,7 @@
     "description": "This is an interface that simulates a notebook entirely made in CSS. HTML tags are used to emulate how we manually take notes. No images were used in this example.",
     "media": {
       "type": "image",
-      "url": "/images/craft/notebook/notebook.jpg",
+      "url": "/images/craft/notebook/notebook.webp",
       "aspect": "76/75"
     },
     "info": {
@@ -554,7 +554,7 @@
     "description": "This experiment showcases a GLSL shader that dynamically pixelates an image in response to mouse movements. As you move the cursor across the screen, the level of pixelation changes, creating a playful and interactive effect that transforms the image in real-time.",
     "media": {
       "type": "image",
-      "url": "/images/craft/shader/shader.jpg",
+      "url": "/images/craft/shader/shader.webp",
       "aspect": "80/64"
     },
     "info": {
@@ -590,7 +590,7 @@
     "description": "3D visualization of Okino Residence from Studio Ghibli's Kiki's Delivery Service. A blend of 3D modeling, rendering, Photoshop, and Illustrator, bringing to life the charming architecture and warmth of this iconic setting in a visually captivating scene.",
     "media": {
       "type": "image",
-      "url": "/images/craft/kiki/kiki.jpg",
+      "url": "/images/craft/kiki/kiki.webp",
       "aspect": "8/10"
     },
     "info": {
@@ -598,7 +598,7 @@
       "role": "3D Visualization",
       "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
       "live": "https://www.behance.net/gallery/162665345/Okino-Residence",
-      "label": "View live"
+      "label": "View image"
     }
   },
   {
@@ -626,7 +626,7 @@
     "description": "3D visualization experiment inspired by The Last of Us show. Combining 3D modeling, rendering, Photoshop, and Illustrator to create a detailed, atmospheric scene, capturing the essence of the series in a visually immersive piece.",
     "media": {
       "type": "image",
-      "url": "/images/craft/the-last-of-us/the-last-of-us.jpg",
+      "url": "/images/craft/the-last-of-us/the-last-of-us.webp",
       "aspect": "8/10"
     },
     "info": {
@@ -634,7 +634,7 @@
       "role": "3D Visualization",
       "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
       "live": "https://www.behance.net/gallery/165990507/The-Last-of-Us",
-      "label": "View live"
+      "label": "View image"
     }
   },
   {
@@ -644,7 +644,7 @@
     "description": "Background illustration of an abandoned city, crafted in Photoshop. This piece captures the eerie desolation and haunting beauty of an empty urban landscape, blending detailed digital painting techniques to evoke a sense of mystery and decay.",
     "media": {
       "type": "image",
-      "url": "/images/craft/background/background.jpg",
+      "url": "/images/craft/background/background.webp",
       "aspect": "80/89"
     },
     "info": {
@@ -652,7 +652,7 @@
       "role": "Illustration",
       "stack": "Photoshop",
       "live": "https://www.artstation.com/artwork/5BmN1O",
-      "label": "View live"
+      "label": "View image"
     }
   },
   {
@@ -662,7 +662,7 @@
     "description": "A study of a gator in a rendered style, exploring a different approach in illustration.",
     "media": {
       "type": "image",
-      "url": "/images/craft/render/render.jpg",
+      "url": "/images/craft/render/render.webp",
       "aspect": "8/10"
     },
     "info": {
@@ -670,7 +670,7 @@
       "role": "Illustration",
       "stack": "Photoshop",
       "live": "https://www.artstation.com/artwork/03J61V",
-      "label": "View live"
+      "label": "View image"
     }
   },
   {
@@ -680,7 +680,7 @@
     "description": "An engaging set of illustrations, featuring this cool cowboy. This collection showcases a variety of detailed and expressive drawings, each adding to the overall visual narrative.",
     "media": {
       "type": "image",
-      "url": "/images/craft/illustration/illustration.jpg",
+      "url": "/images/craft/illustration/illustration.webp",
       "aspect": "8/10"
     },
     "info": {
@@ -688,7 +688,7 @@
       "role": "Illustration",
       "stack": "Photoshop",
       "live": "https://www.artstation.com/artwork/XgYQ90",
-      "label": "View live"
+      "label": "View image"
     }
   },
   {
@@ -698,7 +698,7 @@
     "description": "Here we have a JavaScript script that creates an image loading animation with a pixelated effect, emulating the concept of a device from the early 2000s.",
     "media": {
       "type": "image",
-      "url": "/images/craft/pixelate/pixelate.jpg",
+      "url": "/images/craft/pixelate/pixelate.webp",
       "aspect": "1/1"
     },
     "info": {
@@ -716,7 +716,7 @@
     "description": "3D axonometric visualization inspired by the nostalgic memories of playing The Sims and SimCity, depicting a vibrant city corner. The scene was crafted using 3D modeling and rendering techniques, enhanced with detailed Photoshop and Illustrator work.",
     "media": {
       "type": "image",
-      "url": "/images/craft/amarelandia/amarelandia.jpg",
+      "url": "/images/craft/amarelandia/amarelandia.webp",
       "aspect": "1/1"
     },
     "info": {
@@ -724,7 +724,7 @@
       "role": "3D Visualization",
       "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
       "live": "https://www.behance.net/gallery/135976639/Amarelandia",
-      "label": "View live"
+      "label": "View image"
     }
   }
 ]
