@@ -471,7 +471,7 @@
       "year": "2025",
       "role": "Development, Design, 3D Modeling",
       "stack": "React, Three.js (R3F), Groq AI",
-      "live": "https://mood-hue.vercel.app/",
+      "live": "https://moodhue.vercel.app/",
       "label": "View live"
     }
   },
