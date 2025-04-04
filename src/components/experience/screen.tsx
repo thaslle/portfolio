@@ -47,7 +47,7 @@ export const Screen: React.FC<ScreenProps> = ({
   const elementRatio = ratioW / ratioH
 
   // Set the max value for element size
-  const viewportModifier = viewportRatio > 1 ? 0.6 : 0.4
+  const viewportModifier = viewportRatio > 1 ? 0.6 : 0.2
   const maxSize = size.width * viewportModifier * elementRatio
 
   // Calculate the diagonal size based on the aspect ratio
@@ -60,8 +60,8 @@ export const Screen: React.FC<ScreenProps> = ({
   const width = ratioW * scaleFactor
   const height = ratioH * scaleFactor
 
-  const offset = -15 * width
-  const offsetDistance = distance * width
+  const offset = -15 * maxSize
+  const offsetDistance = distance * maxSize
   const media = project.media.url
 
   const map =

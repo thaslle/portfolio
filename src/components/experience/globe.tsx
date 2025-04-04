@@ -27,7 +27,7 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
 
   // New indices to remap positions
   const targetIndices = [
-    12, 17, 7, 13, 18, 8, 11, 16, 6, 2, 23, 3, 22, 21, 1, 14, 10, 9, 19, 14, 15,
+    12, 17, 7, 13, 18, 8, 11, 16, 6, 2, 23, 3, 22, 21, 1, 5, 10, 9, 19, 14, 15,
     24, 4, 20, 0,
   ]
 
@@ -100,12 +100,6 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
       Math.min(polarThreshold + maxAngle, polarThreshold + maxAngle * mouse.y),
     )
 
-    // if (device.isMobile) {
-    //   cameraRef.current.azimuthAngle = azimuthAngle
-    //   cameraRef.current.polarAngle = polarAngle
-    //   return
-    // }
-
     // Make camera follow mouse cursor x
     cameraRef.current.azimuthAngle = MathUtils.lerp(
       cameraRef.current.azimuthAngle,
@@ -155,10 +149,13 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
             const rotationY = yPos * gridSpacing
 
             // Random distance for effect
-            const distance = useMemo(() => Math.random() * 4 - 2, [])
+            const distance = useMemo(() => Math.random() * 4 - 3, [])
 
             // Map the input number to a distance between 4 and 2
             const offset = 1 - (0.5 / totalElements) * i
+
+            // const distance = -2
+            // const offset = 1
 
             return (
               <Screen
