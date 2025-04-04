@@ -47,11 +47,11 @@ export const Window: React.FC<WindowProps> = ({
     overlay: {
       leaving: {
         opacity: 0,
-        backdropFilter: 'blur(0rem)',
+        // backdropFilter: 'blur(0rem)',
       },
       entering: {
         opacity: 1,
-        backdropFilter: 'blur(0.2rem)',
+        // backdropFilter: 'blur(0.2rem)',
       },
     },
     window: {
@@ -133,4 +133,3 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
-
