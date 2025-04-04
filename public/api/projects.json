@@ -141,6 +141,92 @@
     }
   },
   {
+    "title": "Trevvú",
+    "slug": "trevvu",
+    "category": "Work",
+    "description": "Trevvú is a fashion brand that embodies a blend of elegance and informality, dedicated to presenting a unique, bold visual identity in everyday scenarios. I played a key role in designing and implementing Trevvú's website renewal, modernizing its look and feel to align perfectly with the brand's aesthetic, ensuring both functionality and visual appeal.",
+    "media": {
+      "type": "video",
+      "url": "/images/projects/trevvu/trevvu-home.mp4",
+      "aspect": "142/77"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Design, Development, CMS Integration",
+      "stack": "Wordpress, Elementor, Woocommerce",
+      "collaborators": [
+        {
+          "name": "Agência Twist",
+          "link": "https://twist.com.br/agenciadigital/"
+        }
+      ]
+    },
+    "lines": [
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-finest.jpg"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-mobile-home.jpg"
+          },
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-mobile-products.jpg"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589350?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/trevvu/trevvu-slogan.jpg"
+          },
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589390?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589476?background=1&autopause=0"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/995589438?background=1&autopause=0"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "title": "GSH",
     "slug": "gsh",
     "category": "Work",
@@ -227,92 +313,6 @@
           {
             "type": "image",
             "url": "/images/projects/gsh/gsh-brands.jpg"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "Trevvú",
-    "slug": "trevvu",
-    "category": "Work",
-    "description": "Trevvú is a fashion brand that embodies a blend of elegance and informality, dedicated to presenting a unique, bold visual identity in everyday scenarios. I played a key role in designing and implementing Trevvú's website renewal, modernizing its look and feel to align perfectly with the brand's aesthetic, ensuring both functionality and visual appeal.",
-    "media": {
-      "type": "video",
-      "url": "/images/projects/trevvu/trevvu-home.mp4",
-      "aspect": "142/77"
-    },
-    "info": {
-      "year": "2023",
-      "role": "Design, Development, CMS Integration",
-      "stack": "Wordpress, Elementor, Woocommerce",
-      "collaborators": [
-        {
-          "name": "Agência Twist",
-          "link": "https://twist.com.br/agenciadigital/"
-        }
-      ]
-    },
-    "lines": [
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "image",
-            "url": "/images/projects/trevvu/trevvu-finest.jpg"
-          }
-        ]
-      },
-      {
-        "class": "equal-columns",
-        "media": [
-          {
-            "type": "image",
-            "url": "/images/projects/trevvu/trevvu-mobile-home.jpg"
-          },
-          {
-            "type": "image",
-            "url": "/images/projects/trevvu/trevvu-mobile-products.jpg"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/995589350?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "equal-columns",
-        "media": [
-          {
-            "type": "image",
-            "url": "/images/projects/trevvu/trevvu-slogan.jpg"
-          },
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/995589390?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/995589476?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/995589438?background=1&autopause=0"
           }
         ]
       }
@@ -458,24 +458,6 @@
     }
   },
   {
-    "title": "Basketball",
-    "slug": "basketball",
-    "category": "Craft",
-    "description": "A web-based basketball game developed with React Three Fiber, allowing players to shoot hoops with real-time physics and smooth animations. I created the full experience—from designing the UI to modeling 3D assets that bring the court to life. Every detail is crafted to make each shot feel satisfying and immersive. Let’s shoot some hoops!",
-    "media": {
-      "type": "video",
-      "url": "/images/craft/basketball/basketball.mp4",
-      "aspect": "3/4"
-    },
-    "info": {
-      "year": "2024",
-      "role": "Development, Design, 3D Modeling",
-      "stack": "React, Three.js (R3F), Blender",
-      "live": "https://thaslle-basketball.netlify.app/",
-      "label": "Shoot some hoops"
-    }
-  },
-  {
     "title": "MoodHue",
     "slug": "moodhue",
     "category": "Craft",
@@ -491,6 +473,24 @@
       "stack": "React, Three.js (R3F), Groq AI",
       "live": "https://mood-hue.vercel.app/",
       "label": "View live"
+    }
+  },
+  {
+    "title": "Basketball",
+    "slug": "basketball",
+    "category": "Craft",
+    "description": "A web-based basketball game developed with React Three Fiber, allowing players to shoot hoops with real-time physics and smooth animations. I created the full experience—from designing the UI to modeling 3D assets that bring the court to life. Every detail is crafted to make each shot feel satisfying and immersive. Let’s shoot some hoops!",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/basketball/basketball.mp4",
+      "aspect": "4/3"
+    },
+    "info": {
+      "year": "2024",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Blender",
+      "live": "https://thaslle-basketball.netlify.app/",
+      "label": "Shoot some hoops"
     }
   },
   {
@@ -566,20 +566,20 @@
     }
   },
   {
-    "title": "JS Pixelate",
-    "slug": "pixelate",
+    "title": "Big Numbers",
+    "slug": "big-numbers",
     "category": "Craft",
-    "description": "Here we have a JavaScript script that creates an image loading animation with a pixelated effect, emulating the concept of a device from the early 2000s.",
+    "description": "An animation for big numbers components using GSAP to create a scroll-triggered effect. The numbers dynamically roll and transition as users scroll, adding an interactive and engaging element to the display, perfectly suited for data-driven visuals.",
     "media": {
-      "type": "image",
-      "url": "/images/craft/pixelate/pixelate.jpg",
-      "aspect": "1/1"
+      "type": "video",
+      "url": "/images/craft/big-numbers/big-numbers.mp4",
+      "aspect": "8/6"
     },
     "info": {
-      "year": "2023",
-      "role": "Development",
-      "stack": "Javascript",
-      "live": "https://codepen.io/thaslle/pen/QWRKNgv",
+      "year": "2025",
+      "role": "Development, Design",
+      "stack": "Javascript, GSAP",
+      "live": "https://codepen.io/thaslle/pen/XJrGyvW",
       "label": "View live"
     }
   },
@@ -602,20 +602,20 @@
     }
   },
   {
-    "title": "Amarelândia",
-    "slug": "amarelandia",
+    "title": "Card Pop",
+    "slug": "pop",
     "category": "Craft",
-    "description": "3D axonometric visualization inspired by the nostalgic memories of playing The Sims and SimCity, depicting a vibrant city corner. The scene was crafted using 3D modeling and rendering techniques, enhanced with detailed Photoshop and Illustrator work.",
+    "description": "A playful, cartoonish animation style where elements pop onto the screen with energetic bounces, followed by a sleek flare effect. This vibrant animation brings a fun, exaggerated feel, combining whimsy with a touch of visual flair.",
     "media": {
-      "type": "image",
-      "url": "/images/craft/amarelandia/amarelandia.jpg",
-      "aspect": "1/1"
+      "type": "video",
+      "url": "/images/craft/pop/pop.mp4",
+      "aspect": "800/1066"
     },
     "info": {
-      "year": "2023",
-      "role": "3D Visualization",
-      "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
-      "live": "https://www.behance.net/gallery/135976639/Amarelandia",
+      "year": "2025",
+      "role": "Development, Design",
+      "stack": "Javascript",
+      "live": "https://codepen.io/thaslle/pen/MYgxjmw",
       "label": "View live"
     }
   },
@@ -645,7 +645,7 @@
     "media": {
       "type": "image",
       "url": "/images/craft/background/background.jpg",
-      "aspect": "80/89.5"
+      "aspect": "80/89"
     },
     "info": {
       "year": "2023",
@@ -692,40 +692,39 @@
     }
   },
   {
-    "title": "Big Numbers",
-    "slug": "big-numbers",
+    "title": "JS Pixelate",
+    "slug": "pixelate",
     "category": "Craft",
-    "description": "An animation for big numbers components using GSAP to create a scroll-triggered effect. The numbers dynamically roll and transition as users scroll, adding an interactive and engaging element to the display, perfectly suited for data-driven visuals.",
+    "description": "Here we have a JavaScript script that creates an image loading animation with a pixelated effect, emulating the concept of a device from the early 2000s.",
     "media": {
-      "type": "video",
-      "url": "/images/craft/big-numbers/big-numbers.mp4",
-      "aspect": "8/6"
+      "type": "image",
+      "url": "/images/craft/pixelate/pixelate.jpg",
+      "aspect": "1/1"
     },
     "info": {
-      "year": "2025",
-      "role": "Development, Design",
-      "stack": "Javascript, GSAP",
-      "live": "https://codepen.io/thaslle/pen/XJrGyvW",
+      "year": "2023",
+      "role": "Development",
+      "stack": "Javascript",
+      "live": "https://codepen.io/thaslle/pen/QWRKNgv",
       "label": "View live"
     }
   },
   {
-    "title": "Card Pop",
-    "slug": "pop",
+    "title": "Amarelândia",
+    "slug": "amarelandia",
     "category": "Craft",
-    "description": "A playful, cartoonish animation style where elements pop onto the screen with energetic bounces, followed by a sleek flare effect. This vibrant animation brings a fun, exaggerated feel, combining whimsy with a touch of visual flair.",
+    "description": "3D axonometric visualization inspired by the nostalgic memories of playing The Sims and SimCity, depicting a vibrant city corner. The scene was crafted using 3D modeling and rendering techniques, enhanced with detailed Photoshop and Illustrator work.",
     "media": {
-      "type": "video",
-      "url": "/images/craft/pop/pop.mp4",
-      "aspect": "800/1066"
+      "type": "image",
+      "url": "/images/craft/amarelandia/amarelandia.jpg",
+      "aspect": "1/1"
     },
     "info": {
-      "year": "2025",
-      "role": "Development, Design",
-      "stack": "Javascript",
-      "live": "https://codepen.io/thaslle/pen/MYgxjmw",
+      "year": "2023",
+      "role": "3D Visualization",
+      "stack": "SketchUp, V-Ray, Photoshop, Illustrator",
+      "live": "https://www.behance.net/gallery/135976639/Amarelandia",
       "label": "View live"
     }
   }
 ]
-
