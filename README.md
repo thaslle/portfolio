@@ -1,5 +1,6 @@
 # Thalles Lopes Portfolio
 
+https://github.com/user-attachments/assets/4f144f2d-dd02-44c8-91a7-01b4c2bdfdea
 Thalles Lopes's portfolio from 2025.
 
 # Overview
