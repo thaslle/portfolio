@@ -47,7 +47,7 @@ export const Screen: React.FC<ScreenProps> = ({
   const elementRatio = ratioW / ratioH
 
   // Set the max value for element size
-  const viewportModifier = viewportRatio > 1 ? 0.6 : 0.2
+  const viewportModifier = viewportRatio > 1 ? 0.6 : 0.65
   const maxSize = size.width * viewportModifier * elementRatio
 
   // Calculate the diagonal size based on the aspect ratio
