@@ -58,7 +58,7 @@ export const Window: React.FC<WindowProps> = ({
       leaving: {
         scale: 0.98,
         opacity: 0,
-        y: '25%',
+        y: '100%',
       },
       entering: {
         scale: 1,
@@ -71,6 +71,7 @@ export const Window: React.FC<WindowProps> = ({
   return (
     <div className={s.wrapper}>
       <motion.div
+        key="overlay"
         className={s.overlay}
         onClick={onClose}
         initial={variants.overlay.leaving}
@@ -84,6 +85,7 @@ export const Window: React.FC<WindowProps> = ({
       />
 
       <motion.section
+        key="window"
         className={s.window}
         initial={variants.window.leaving}
         animate={
@@ -133,3 +135,4 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
+
