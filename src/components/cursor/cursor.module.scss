@@ -1,0 +1,48 @@
+.cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  z-index: 1000;
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    position: absolute;
+    bottom: 0.3rem;
+    left: 0.3rem;
+
+    opacity: 0;
+    font-size: 0.9rem;
+    padding: 0.4em 0.8em;
+    height: 1.8em;
+    max-width: max-content;
+    white-space: nowrap;
+
+    transform-origin: left bottom;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: 0.5em;
+    border-radius: 0.25em;
+    pointer-events: visible;
+    cursor: pointer;
+
+    font-family: var(--font-mono);
+    font-size: var(--font-button);
+    line-height: 1em;
+    text-transform: uppercase;
+    font-weight: var(--font-normal);
+    text-decoration: none;
+    text-box: trim-both cap alphabetic;
+
+    @media only screen and (max-width: 767px) {
+      display: none !important;
+    }
+  }
+}
+
