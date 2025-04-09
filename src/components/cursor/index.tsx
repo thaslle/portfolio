@@ -1,13 +1,8 @@
 'use client'
 
+import { clsx } from 'clsx'
 import { RefObject, useEffect, useRef } from 'react'
-import {
-  AnimatePresence,
-  frame,
-  motion,
-  useMotionValue,
-  useSpring,
-} from 'motion/react'
+import { frame, motion, useMotionValue, useSpring } from 'motion/react'
 import { useScramble } from 'use-scramble'
 
 import { useStore } from '@/hooks/use-store'
@@ -23,33 +18,17 @@ export const Cursor = () => {
   const { x, y } = useFollowPointer(cursorRef)
 
   return (
-    <motion.div
-      ref={cursorRef}
-      className={s.cursor}
-      style={{ x, y }}
-      transition={{ duration: 0.5, delay: 0.2, ease: 'easeInOut' }}
-    >
-      <AnimatePresence>
-        {title && subtitle && (
-          <motion.div
-            key="label"
-            className={s.label}
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            transition={{ duration: 0.1 }}
-          >
-            <Text text={title} className={s.title} />
-            <Text text={subtitle} className={s.subtitle} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+    <motion.div ref={cursorRef} className={s.cursor} style={{ x, y }}>
+      <div className={clsx(s.label, { [s.visible]: title && subtitle })}>
+        <Text text={title} className={s.title} />
+        <Text text={subtitle} className={s.subtitle} />
+      </div>
     </motion.div>
   )
 }
 
 const useFollowPointer = (ref: RefObject<HTMLDivElement | null>) => {
-  const spring = { damping: 10, stiffness: 50, restDelta: 0.005 }
+  const spring = { damping: 30, stiffness: 200, restDelta: 0.005 }
   const xPoint = useMotionValue(0)
   const yPoint = useMotionValue(0)
   const x = useSpring(xPoint, spring)
@@ -76,10 +55,11 @@ const useFollowPointer = (ref: RefObject<HTMLDivElement | null>) => {
 }
 
 type TextProps = {
-  text: string
+  text: string | null
 } & React.HTMLProps<HTMLSpanElement>
 
 const Text: React.FC<TextProps> = ({ text, ...props }) => {
+  if (!text) return
   const { ref } = useScramble({
     text: text,
   })

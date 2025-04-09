@@ -37,6 +37,13 @@
     text-decoration: none;
     text-box: trim-both cap alphabetic;
 
+    transform: scale(0);
+    transition: transform (--transition-time) var(--transition-ease);
+
+    &.visible {
+      transform: scale(1);
+    }
+
     .title {
       font-weight: var(--font-semibold);
     }
