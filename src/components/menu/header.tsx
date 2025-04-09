@@ -60,11 +60,11 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
 
 const Title = () => {
   const {
-    label: { title },
+    label: { tag },
   } = useStore()
 
   const { ref } = useScramble({
-    text: title ?? 'Thalles Lopes',
+    text: tag ?? 'Thalles Lopes',
   })
 
   return <h1 ref={ref} />
@@ -75,15 +75,15 @@ const Roles = () => {
   const [currentRole, setCurrentRole] = useState(roles[0])
 
   const {
-    label: { subtitle },
+    label: { tag },
   } = useStore()
 
   const { ref } = useScramble({
-    text: subtitle ?? currentRole,
+    text: tag ? '' : currentRole,
   })
 
   useEffect(() => {
-    if (subtitle) return
+    if (tag) return
 
     const intervalId = setInterval(() => {
       setCurrentRole((prevRole) => {
@@ -98,3 +98,4 @@ const Roles = () => {
 
   return <p className={s.roles} ref={ref} />
 }
+

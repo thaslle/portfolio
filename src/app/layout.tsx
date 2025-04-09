@@ -12,6 +12,7 @@ import Providers from './providers'
 import { Loading } from '@/components/loading'
 import { Experience } from '@/components/experience'
 import { UI } from '@/components/ui'
+import { Cursor } from '@/components/cursor'
 
 import { loadProjects } from '@/utils/load-data'
 
@@ -37,6 +38,7 @@ export default function RootLayout({
             {children}
             <Experience projects={projects} />
             <UI />
+            <Cursor />
           </Providers>
         </Suspense>
       </body>

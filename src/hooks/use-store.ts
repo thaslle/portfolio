@@ -7,6 +7,7 @@ type Filter = Category | null
 type Label = {
   title: string | null
   subtitle: string | null
+  tag: string | null
 }
 
 type Store = {
@@ -21,7 +22,7 @@ type Store = {
 export const useStore = create<Store>((set) => ({
   ready: false,
   filter: null,
-  label: { title: null, subtitle: null },
+  label: { title: null, subtitle: null, tag: null },
   setReady: (ready) => set({ ready }),
   setFilter: (filter) => set({ filter }),
   setLabel: (label) => set({ label }),

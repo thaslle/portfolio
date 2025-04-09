@@ -137,13 +137,17 @@ export const Screen: React.FC<ScreenProps> = ({
         onPointerOver={() => {
           if (!filtered) return
           setHovered(true)
-          setLabel({ title: project.title, subtitle: project.category })
+          setLabel({
+            title: project.title,
+            subtitle: project.category,
+            tag: project.tag,
+          })
         }}
         onPointerOut={() => {
           if (!filtered) return
           setHovered(false)
           setClicked(false)
-          setLabel({ title: null, subtitle: null })
+          setLabel({ title: null, subtitle: null, tag: null })
         }}
         frustumCulled={false}
       >
@@ -162,3 +166,4 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
+

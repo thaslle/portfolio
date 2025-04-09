@@ -32,6 +32,7 @@ export type Project = {
   slug: string
   category: Category
   description: string
+  tag: string
   media: MediaItem
   aspect: string
   info: ProjectInfo

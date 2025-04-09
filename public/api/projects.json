@@ -4,6 +4,7 @@
     "slug": "smoov",
     "category": "Work",
     "description": "Smoov is a company that specializes in creating healthy and delicious smoothies and shakes. I was responsible for developing the user interface and implementing engaging animations, ensuring a seamless and visually appealing user experience. Crafting the animations was particularly enjoyable, as it allowed me to add dynamic elements that enhanced the overall feel of the site.",
+    "tag": "Watch the smoothies swirl!",
     "media": {
       "type": "video",
       "url": "/images/projects/smoov/smoov-hero.mp4",
@@ -127,6 +128,7 @@
     "slug": "maria30",
     "category": "Craft",
     "description": "To celebrate my wife’s 30th birthday, I created a special project that combines her love for literature and adventure. Inspired by the beautiful novel “O Conto da Ilha Desconhecida (The Tale of the Unknown Island)” by José Saramago, I designed and developed a custom game using React Three Fiber. In this interactive 3D experience, my wife is the main character on a quest to find her birthday gift. Throughout the game, she follows clues and collects items, each one bringing her closer to discovering the ultimate surprise.",
+    "tag": "Yep, it's a game!",
     "media": {
       "type": "video",
       "url": "/images/craft/maria30/maria30.mp4",
@@ -145,6 +147,7 @@
     "slug": "trevvu",
     "category": "Work",
     "description": "Trevvú is a fashion brand that embodies a blend of elegance and informality, dedicated to presenting a unique, bold visual identity in everyday scenarios. I played a key role in designing and implementing Trevvú's website renewal, modernizing its look and feel to align perfectly with the brand's aesthetic, ensuring both functionality and visual appeal.",
+    "tag": "A touch of minimalism",
     "media": {
       "type": "video",
       "url": "/images/projects/trevvu/trevvu-home.mp4",
@@ -231,6 +234,7 @@
     "slug": "gsh",
     "category": "Work",
     "description": "GSH specializes in catering and event management for major events like Formula 1, the FIFA World Cup, and the Olympics. I was responsible for translating the design concepts into a functional interface, ensuring a seamless and visually appealing user experience. Implementing dynamic animations was particularly enjoyable, enhancing both functionality and aesthetics.",
+    "tag": "A bit of SVG animations",
     "media": {
       "type": "image",
       "url": "/images/projects/gsh/gsh-brands.webp",
@@ -323,6 +327,7 @@
     "slug": "bday",
     "category": "Work",
     "description": "Bday is an app designed to plan personalized and special celebrations to share with friends. It was crafted as part of Base, a course from Aprender Design School, dedicated to applying comprehensive knowledge from concept to interface design, serving as a practical application of the lessons learned.",
+    "tag": "App Design? Yes!",
     "media": {
       "type": "image",
       "url": "/images/projects/bday/bday-main.webp",
@@ -444,6 +449,7 @@
     "slug": "codrops",
     "category": "Craft",
     "description": "I was invited by the amazing Codrops team to write an article on creating stylized water effects with React Three Fiber. In it, I explain how to craft smooth, cartoon-style water with dynamic movement, optimized for performance.",
+    "tag": "Learn stylized water with me!",
     "media": {
       "type": "video",
       "url": "/images/craft/codrops/codrops.mp4",
@@ -462,6 +468,7 @@
     "slug": "moodhue",
     "category": "Craft",
     "description": "MoodHue is an AI-powered tool that helps you create personalized color palettes based on your mood. Designed with React and React Three Fiber, it brings your emotions to life with smooth animations and dynamic color schemes.",
+    "tag": "Let AI match your mood",
     "media": {
       "type": "video",
       "url": "/images/craft/moodhue/moodhue.mp4",
@@ -480,6 +487,7 @@
     "slug": "basketball",
     "category": "Craft",
     "description": "A web-based basketball game developed with React Three Fiber, allowing players to shoot hoops with real-time physics and smooth animations. I created the full experience—from designing the UI to modeling 3D assets that bring the court to life. Every detail is crafted to make each shot feel satisfying and immersive. Let’s shoot some hoops!",
+    "tag": "Shoot some hoops",
     "media": {
       "type": "video",
       "url": "/images/craft/basketball/basketball.mp4",
@@ -498,6 +506,7 @@
     "slug": "boxes",
     "category": "Craft",
     "description": "Here we have a Three.js experiment that creates a playful set of boxes interacting with one another. The boxes bounce and collide in response to mouse movements, mimicking a fun physics-based simulation, bringing a dynamic and interactive visual effect to life.",
+    "tag": "Play with the boxes",
     "media": {
       "type": "video",
       "url": "/images/craft/boxes/boxes.mp4",
@@ -516,6 +525,7 @@
     "slug": "notebook",
     "category": "Craft",
     "description": "This is an interface that simulates a notebook entirely made in CSS. HTML tags are used to emulate how we manually take notes. No images were used in this example.",
+    "tag": "Just CSS and text",
     "media": {
       "type": "image",
       "url": "/images/craft/notebook/notebook.webp",
@@ -534,6 +544,7 @@
     "slug": "chronometer",
     "category": "Craft",
     "description": "CSS-only chronometer experiment utilizing pure CSS animations and transformations to simulate a ticking timer. No JavaScript is used, showcasing creative timing, transitions, and keyframe techniques for a visually dynamic effect.",
+    "tag": "No JS, just magic!",
     "media": {
       "type": "video",
       "url": "/images/craft/chronometer/chronometer.mp4",
@@ -552,6 +563,7 @@
     "slug": "shader",
     "category": "Craft",
     "description": "This experiment showcases a GLSL shader that dynamically pixelates an image in response to mouse movements. As you move the cursor across the screen, the level of pixelation changes, creating a playful and interactive effect that transforms the image in real-time.",
+    "tag": "Hover and pixelate",
     "media": {
       "type": "image",
       "url": "/images/craft/shader/shader.webp",
@@ -570,6 +582,7 @@
     "slug": "big-numbers",
     "category": "Craft",
     "description": "An animation for big numbers components using GSAP to create a scroll-triggered effect. The numbers dynamically roll and transition as users scroll, adding an interactive and engaging element to the display, perfectly suited for data-driven visuals.",
+    "tag": "GSAP big numbers",
     "media": {
       "type": "video",
       "url": "/images/craft/big-numbers/big-numbers.mp4",
@@ -588,6 +601,7 @@
     "slug": "kiki",
     "category": "Craft",
     "description": "3D visualization of Okino Residence from Studio Ghibli's Kiki's Delivery Service. A blend of 3D modeling, rendering, Photoshop, and Illustrator, bringing to life the charming architecture and warmth of this iconic setting in a visually captivating scene.",
+    "tag": "Ghibli-style made by a human",
     "media": {
       "type": "image",
       "url": "/images/craft/kiki/kiki.webp",
@@ -606,6 +620,7 @@
     "slug": "pop",
     "category": "Craft",
     "description": "A playful, cartoonish animation style where elements pop onto the screen with energetic bounces, followed by a sleek flare effect. This vibrant animation brings a fun, exaggerated feel, combining whimsy with a touch of visual flair.",
+    "tag": "Cartoonish pop animation",
     "media": {
       "type": "video",
       "url": "/images/craft/pop/pop.mp4",
@@ -614,7 +629,7 @@
     "info": {
       "year": "2025",
       "role": "Development, Design",
-      "stack": "Javascript",
+      "stack": "CSS Keyframes",
       "live": "https://codepen.io/thaslle/pen/MYgxjmw",
       "label": "View live"
     }
@@ -624,6 +639,7 @@
     "slug": "the-last-of-us",
     "category": "Craft",
     "description": "3D visualization experiment inspired by The Last of Us show. Combining 3D modeling, rendering, Photoshop, and Illustrator to create a detailed, atmospheric scene, capturing the essence of the series in a visually immersive piece.",
+    "tag": "Sort of 3D fan art",
     "media": {
       "type": "image",
       "url": "/images/craft/the-last-of-us/the-last-of-us.webp",
@@ -642,6 +658,7 @@
     "slug": "background",
     "category": "Craft",
     "description": "Background illustration of an abandoned city, crafted in Photoshop. This piece captures the eerie desolation and haunting beauty of an empty urban landscape, blending detailed digital painting techniques to evoke a sense of mystery and decay.",
+    "tag": "Good old illustration",
     "media": {
       "type": "image",
       "url": "/images/craft/background/background.webp",
@@ -660,6 +677,7 @@
     "slug": "render",
     "category": "Craft",
     "description": "A study of a gator in a rendered style, exploring a different approach in illustration.",
+    "tag": "Rendered illustration",
     "media": {
       "type": "image",
       "url": "/images/craft/render/render.webp",
@@ -678,6 +696,7 @@
     "slug": "illustration",
     "category": "Craft",
     "description": "An engaging set of illustrations, featuring this cool cowboy. This collection showcases a variety of detailed and expressive drawings, each adding to the overall visual narrative.",
+    "tag": "A can do characters",
     "media": {
       "type": "image",
       "url": "/images/craft/illustration/illustration.webp",
@@ -696,6 +715,7 @@
     "slug": "pixelate",
     "category": "Craft",
     "description": "Here we have a JavaScript script that creates an image loading animation with a pixelated effect, emulating the concept of a device from the early 2000s.",
+    "tag": "Y2K vibes",
     "media": {
       "type": "image",
       "url": "/images/craft/pixelate/pixelate.webp",
@@ -714,6 +734,7 @@
     "slug": "amarelandia",
     "category": "Craft",
     "description": "3D axonometric visualization inspired by the nostalgic memories of playing The Sims and SimCity, depicting a vibrant city corner. The scene was crafted using 3D modeling and rendering techniques, enhanced with detailed Photoshop and Illustrator work.",
+    "tag": "You can tell I like SimCity",
     "media": {
       "type": "image",
       "url": "/images/craft/amarelandia/amarelandia.webp",
@@ -728,3 +749,4 @@
     }
   }
 ]
+
