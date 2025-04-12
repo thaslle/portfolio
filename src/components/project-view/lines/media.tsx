@@ -17,7 +17,10 @@ export const Media: React.FC<{ media: MediaItem; title: string }> = ({
       )
     case 'video':
       return (
-        <figure className={clsx(s.media, s.video)}>
+        <figure
+          className={clsx(s.media, s.video)}
+          style={{ aspectRatio: media.aspect ?? 'auto' }}
+        >
           <iframe
             src={media.url}
             allow="autoplay; fullscreen"

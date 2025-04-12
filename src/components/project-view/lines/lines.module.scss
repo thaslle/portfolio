@@ -8,13 +8,13 @@
   .line {
     width: 100%;
 
-    &.full .media.video {
-      aspect-ratio: 142 / 77;
-    }
+    // &.full .media.video {
+    //   aspect-ratio: 142 / 77;
+    // }
 
-    &.equal-columns .media.video {
-      aspect-ratio: 1;
-    }
+    // &.equal-columns .media.video {
+    //   aspect-ratio: 1;
+    // }
 
     &.equal-columns,
     &.three-left,
