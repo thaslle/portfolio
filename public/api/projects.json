@@ -1,5 +1,120 @@
 [
   {
+    "title": "Produtora Audiovisual",
+    "slug": "produtora",
+    "category": "Work",
+    "description": "Produtora Audiovisual is the newly launched video production branch of Twist Agency, and I was responsible for developing its dedicated website. Beyond just front-end development, I played a key role in shaping the new visual identity that will be used across all of the agency’s digital platforms, from landing pages to other business units. I crafted smooth, scroll-triggered animations in GSAP that enhance storytelling while staying optimized for performance, ensuring a seamless experience across devices. I also crafted a custom button with a staggered animation, designed an interactive cursor that adds a playful, responsive touch to the interface. To elevate navigation in the cases section, I implemented a scroll-based minimap system, helping users stay oriented as they explore the content.",
+    "tag": "Videos with a Twist",
+    "media": {
+      "type": "video",
+      "url": "/images/projects/produtora/twist-produtora-audiovisual.mp4",
+      "aspect": "8/4"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, CMS Integration",
+      "stack": "Wordpress, GSAP",
+      "collaborators": [
+        {
+          "name": "Rodrigo Stein",
+          "link": "https://www.behance.net/RodrigoStein"
+        },
+        {
+          "name": "Agência Twist",
+          "link": "https://twist.com.br/agenciadigital/"
+        }
+      ],
+      "live": "https://twist.com.br/produtoraaudiovisual/",
+      "label": "View live"
+    },
+    "lines": [
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927490?background=1&autopause=0",
+            "aspect": "1440/774"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927388?background=1&autopause=0",
+            "aspect": "1440/774"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927445?background=1&autopause=0",
+            "aspect": "1440/774"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927325?background=1&autopause=0",
+            "aspect": "1440/774"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927417?background=1&autopause=0",
+            "aspect": "1440/774"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927358?background=1&autopause=0",
+            "aspect": "1/1"
+          },
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/1074927586?background=1&autopause=0",
+            "aspect": "1/1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Maria’s 30th Birthday",
+    "slug": "maria30",
+    "category": "Craft",
+    "description": "To celebrate my wife’s 30th birthday, I created a special project that combines her love for literature and adventure. Inspired by the beautiful novel “O Conto da Ilha Desconhecida (The Tale of the Unknown Island)” by José Saramago, I designed and developed a custom game using React Three Fiber. In this interactive 3D experience, my wife is the main character on a quest to find her birthday gift. Throughout the game, she follows clues and collects items, each one bringing her closer to discovering the ultimate surprise.",
+    "tag": "Yep, it's a game!",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/maria30/maria30.mp4",
+      "aspect": "80/54"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Blender",
+      "live": "https://maria30.vercel.app",
+      "label": "Play game"
+    }
+  },
+  {
     "title": "Smoov",
     "slug": "smoov",
     "category": "Work",
@@ -33,7 +148,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593653?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593653?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -55,7 +171,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593607?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593607?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -64,11 +181,13 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593791?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593791?background=1&autopause=0",
+            "aspect": "1/1"
           },
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593801?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593801?background=1&autopause=0",
+            "aspect": "1/1"
           }
         ]
       },
@@ -77,7 +196,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593689?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593689?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -86,7 +206,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593680?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593680?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -95,7 +216,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/994593659?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/994593659?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -124,23 +246,103 @@
     ]
   },
   {
-    "title": "Maria’s 30th Birthday",
-    "slug": "maria30",
-    "category": "Craft",
-    "description": "To celebrate my wife’s 30th birthday, I created a special project that combines her love for literature and adventure. Inspired by the beautiful novel “O Conto da Ilha Desconhecida (The Tale of the Unknown Island)” by José Saramago, I designed and developed a custom game using React Three Fiber. In this interactive 3D experience, my wife is the main character on a quest to find her birthday gift. Throughout the game, she follows clues and collects items, each one bringing her closer to discovering the ultimate surprise.",
-    "tag": "Yep, it's a game!",
+    "title": "GSH",
+    "slug": "gsh",
+    "category": "Work",
+    "description": "GSH specializes in catering and event management for major events like Formula 1, the FIFA World Cup, and the Olympics. I was responsible for translating the design concepts into a functional interface, ensuring a seamless and visually appealing user experience. Implementing dynamic animations was particularly enjoyable, enhancing both functionality and aesthetics.",
+    "tag": "A bit of SVG animations",
     "media": {
-      "type": "video",
-      "url": "/images/craft/maria30/maria30.mp4",
-      "aspect": "80/54"
+      "type": "image",
+      "url": "/images/projects/gsh/gsh-brands.webp",
+      "aspect": "142/77"
     },
     "info": {
-      "year": "2025",
-      "role": "Development, Design, 3D Modeling",
-      "stack": "React, Three.js (R3F), Blender",
-      "live": "https://maria30.vercel.app",
-      "label": "Play game"
-    }
+      "year": "2023",
+      "role": "Development, CMS Integration",
+      "stack": "Wordpress, Divi",
+      "collaborators": [
+        {
+          "name": "Rodrigo Stein",
+          "link": "https://www.behance.net/RodrigoStein"
+        },
+        {
+          "name": "Agência Twist",
+          "link": "https://twist.com.br/agenciadigital/"
+        }
+      ],
+      "live": "https://gshlive.com.br",
+      "label": "View live"
+    },
+    "lines": [
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628110?background=1&autopause=0",
+            "aspect": "142/77"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628093?background=1&autopause=0",
+            "aspect": "142/77"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628069?background=1&autopause=0",
+            "aspect": "142/77"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994633145?background=1&autopause=0",
+            "aspect": "1/1"
+          },
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994628084?background=1&autopause=0",
+            "aspect": "1/1"
+          }
+        ]
+      },
+      {
+        "class": "full",
+        "media": [
+          {
+            "type": "video",
+            "url": "https://player.vimeo.com/video/994629855?background=1&autopause=0",
+            "aspect": "142/77"
+          }
+        ]
+      },
+      {
+        "class": "equal-columns",
+        "media": [
+          {
+            "type": "image",
+            "url": "/images/projects/gsh/gsh-mobile-hero.webp"
+          },
+          {
+            "type": "image",
+            "url": "/images/projects/gsh/gsh-mobile-cards.webp"
+          }
+        ]
+      }
+    ]
   },
   {
     "title": "Trevvú",
@@ -192,7 +394,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/995589350?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/995589350?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -205,7 +408,8 @@
           },
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/995589390?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/995589390?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -214,7 +418,8 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/995589476?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/995589476?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       },
@@ -223,104 +428,107 @@
         "media": [
           {
             "type": "video",
-            "url": "https://player.vimeo.com/video/995589438?background=1&autopause=0"
+            "url": "https://player.vimeo.com/video/995589438?background=1&autopause=0",
+            "aspect": "142/77"
           }
         ]
       }
     ]
   },
   {
-    "title": "GSH",
-    "slug": "gsh",
-    "category": "Work",
-    "description": "GSH specializes in catering and event management for major events like Formula 1, the FIFA World Cup, and the Olympics. I was responsible for translating the design concepts into a functional interface, ensuring a seamless and visually appealing user experience. Implementing dynamic animations was particularly enjoyable, enhancing both functionality and aesthetics.",
-    "tag": "A bit of SVG animations",
+    "title": "Codrops",
+    "slug": "codrops",
+    "category": "Craft",
+    "description": "I was invited by the amazing Codrops team to write an article on creating stylized water effects with React Three Fiber. In it, I explain how to craft smooth, cartoon-style water with dynamic movement, optimized for performance.",
+    "tag": "Learn stylized water with me!",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/codrops/codrops.mp4",
+      "aspect": "80/54"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Blender",
+      "live": "https://tympanus.net/codrops/2025/03/04/creating-stylized-water-effects-with-react-three-fiber/",
+      "label": "Read article"
+    }
+  },
+  {
+    "title": "MoodHue",
+    "slug": "moodhue",
+    "category": "Craft",
+    "description": "MoodHue is an AI-powered tool that helps you create personalized color palettes based on your mood. Designed with React and React Three Fiber, it brings your emotions to life with smooth animations and dynamic color schemes.",
+    "tag": "Let AI match your mood",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/moodhue/moodhue.mp4",
+      "aspect": "800/376"
+    },
+    "info": {
+      "year": "2025",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Framer Motion, Groq AI",
+      "live": "https://moodhue.vercel.app/",
+      "label": "Create your palette"
+    }
+  },
+  {
+    "title": "Basketball",
+    "slug": "basketball",
+    "category": "Craft",
+    "description": "A web-based basketball game developed with React Three Fiber, allowing players to shoot hoops with real-time physics and smooth animations. I created the full experience—from designing the UI to modeling 3D assets that bring the court to life. Every detail is crafted to make each shot feel satisfying and immersive. Let’s shoot some hoops!",
+    "tag": "Shoot some hoops",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/basketball/basketball.mp4",
+      "aspect": "4/3"
+    },
+    "info": {
+      "year": "2024",
+      "role": "Development, Design, 3D Modeling",
+      "stack": "React, Three.js (R3F), Blender",
+      "live": "https://thaslle-basketball.netlify.app/",
+      "label": "Shoot some hoops"
+    }
+  },
+  {
+    "title": "Physics Boxes",
+    "slug": "boxes",
+    "category": "Craft",
+    "description": "Here we have a Three.js experiment that creates a playful set of boxes interacting with one another. The boxes bounce and collide in response to mouse movements, mimicking a fun physics-based simulation, bringing a dynamic and interactive visual effect to life.",
+    "tag": "Play with the boxes",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/boxes/boxes.mp4",
+      "aspect": "1/1"
+    },
+    "info": {
+      "year": "2024",
+      "role": "Development",
+      "stack": "Three.js",
+      "live": "https://codepen.io/thaslle/pen/xxvxpxm",
+      "label": "Play with the boxes"
+    }
+  },
+  {
+    "title": "CSS Notebook",
+    "slug": "notebook",
+    "category": "Craft",
+    "description": "This is an interface that simulates a notebook entirely made in CSS. HTML tags are used to emulate how we manually take notes. No images were used in this example.",
+    "tag": "Just CSS and text",
     "media": {
       "type": "image",
-      "url": "/images/projects/gsh/gsh-brands.webp",
-      "aspect": "142/77"
+      "url": "/images/craft/notebook/notebook.webp",
+      "aspect": "76/75"
     },
     "info": {
       "year": "2023",
-      "role": "Development, CMS Integration",
-      "stack": "Wordpress, Divi",
-      "collaborators": [
-        {
-          "name": "Rodrigo Stein",
-          "link": "https://www.behance.net/RodrigoStein"
-        },
-        {
-          "name": "Agência Twist",
-          "link": "https://twist.com.br/agenciadigital/"
-        }
-      ],
-      "live": "https://gshlive.com.br",
+      "role": "Development, Design",
+      "stack": "HTML, CSS",
+      "live": "https://codepen.io/thaslle/pen/QWREZyp",
       "label": "View live"
-    },
-    "lines": [
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994628110?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994628093?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994628069?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "equal-columns",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994633145?background=1&autopause=0"
-          },
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994628084?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "full",
-        "media": [
-          {
-            "type": "video",
-            "url": "https://player.vimeo.com/video/994629855?background=1&autopause=0"
-          }
-        ]
-      },
-      {
-        "class": "equal-columns",
-        "media": [
-          {
-            "type": "image",
-            "url": "/images/projects/gsh/gsh-mobile-hero.webp"
-          },
-          {
-            "type": "image",
-            "url": "/images/projects/gsh/gsh-mobile-cards.webp"
-          }
-        ]
-      }
-    ]
+    }
   },
   {
     "title": "Bday",
@@ -443,120 +651,6 @@
         ]
       }
     ]
-  },
-  {
-    "title": "Codrops",
-    "slug": "codrops",
-    "category": "Craft",
-    "description": "I was invited by the amazing Codrops team to write an article on creating stylized water effects with React Three Fiber. In it, I explain how to craft smooth, cartoon-style water with dynamic movement, optimized for performance.",
-    "tag": "Learn stylized water with me!",
-    "media": {
-      "type": "video",
-      "url": "/images/craft/codrops/codrops.mp4",
-      "aspect": "80/54"
-    },
-    "info": {
-      "year": "2025",
-      "role": "Development, Design, 3D Modeling",
-      "stack": "React, Three.js (R3F), Blender",
-      "live": "https://tympanus.net/codrops/2025/03/04/creating-stylized-water-effects-with-react-three-fiber/",
-      "label": "Read article"
-    }
-  },
-  {
-    "title": "MoodHue",
-    "slug": "moodhue",
-    "category": "Craft",
-    "description": "MoodHue is an AI-powered tool that helps you create personalized color palettes based on your mood. Designed with React and React Three Fiber, it brings your emotions to life with smooth animations and dynamic color schemes.",
-    "tag": "Let AI match your mood",
-    "media": {
-      "type": "video",
-      "url": "/images/craft/moodhue/moodhue.mp4",
-      "aspect": "800/376"
-    },
-    "info": {
-      "year": "2025",
-      "role": "Development, Design, 3D Modeling",
-      "stack": "React, Three.js (R3F), Framer Motion, Groq AI",
-      "live": "https://moodhue.vercel.app/",
-      "label": "Create your palette"
-    }
-  },
-  {
-    "title": "Basketball",
-    "slug": "basketball",
-    "category": "Craft",
-    "description": "A web-based basketball game developed with React Three Fiber, allowing players to shoot hoops with real-time physics and smooth animations. I created the full experience—from designing the UI to modeling 3D assets that bring the court to life. Every detail is crafted to make each shot feel satisfying and immersive. Let’s shoot some hoops!",
-    "tag": "Shoot some hoops",
-    "media": {
-      "type": "video",
-      "url": "/images/craft/basketball/basketball.mp4",
-      "aspect": "4/3"
-    },
-    "info": {
-      "year": "2024",
-      "role": "Development, Design, 3D Modeling",
-      "stack": "React, Three.js (R3F), Blender",
-      "live": "https://thaslle-basketball.netlify.app/",
-      "label": "Shoot some hoops"
-    }
-  },
-  {
-    "title": "Physics Boxes",
-    "slug": "boxes",
-    "category": "Craft",
-    "description": "Here we have a Three.js experiment that creates a playful set of boxes interacting with one another. The boxes bounce and collide in response to mouse movements, mimicking a fun physics-based simulation, bringing a dynamic and interactive visual effect to life.",
-    "tag": "Play with the boxes",
-    "media": {
-      "type": "video",
-      "url": "/images/craft/boxes/boxes.mp4",
-      "aspect": "1/1"
-    },
-    "info": {
-      "year": "2024",
-      "role": "Development",
-      "stack": "Three.js",
-      "live": "https://codepen.io/thaslle/pen/xxvxpxm",
-      "label": "Play with the boxes"
-    }
-  },
-  {
-    "title": "CSS Notebook",
-    "slug": "notebook",
-    "category": "Craft",
-    "description": "This is an interface that simulates a notebook entirely made in CSS. HTML tags are used to emulate how we manually take notes. No images were used in this example.",
-    "tag": "Just CSS and text",
-    "media": {
-      "type": "image",
-      "url": "/images/craft/notebook/notebook.webp",
-      "aspect": "76/75"
-    },
-    "info": {
-      "year": "2023",
-      "role": "Development, Design",
-      "stack": "HTML, CSS",
-      "live": "https://codepen.io/thaslle/pen/QWREZyp",
-      "label": "View live"
-    }
-  },
-  {
-    "title": "CSS Chronometer",
-    "slug": "chronometer",
-    "category": "Craft",
-    "description": "CSS-only chronometer experiment utilizing pure CSS animations and transformations to simulate a ticking timer. No JavaScript is used, showcasing creative timing, transitions, and keyframe techniques for a visually dynamic effect.",
-    "tag": "No JS, just magic!",
-    "media": {
-      "type": "video",
-      "url": "/images/craft/chronometer/chronometer.mp4",
-      "aspect": "1/1"
-    },
-    "info": {
-      "year": "2023",
-      "role": "Development, Design",
-      "stack": "HTML, CSS",
-      "live": "https://codepen.io/thaslle/full/RwzVNRy",
-      "label": "View live"
-    }
   },
   {
     "title": "Shader Pixelation",
@@ -747,6 +841,24 @@
       "live": "https://www.behance.net/gallery/135976639/Amarelandia",
       "label": "View image"
     }
+  },
+  {
+    "title": "CSS Chronometer",
+    "slug": "chronometer",
+    "category": "Craft",
+    "description": "CSS-only chronometer experiment utilizing pure CSS animations and transformations to simulate a ticking timer. No JavaScript is used, showcasing creative timing, transitions, and keyframe techniques for a visually dynamic effect.",
+    "tag": "No JS, just magic!",
+    "media": {
+      "type": "video",
+      "url": "/images/craft/chronometer/chronometer.mp4",
+      "aspect": "1/1"
+    },
+    "info": {
+      "year": "2023",
+      "role": "Development, Design",
+      "stack": "HTML, CSS",
+      "live": "https://codepen.io/thaslle/full/RwzVNRy",
+      "label": "View live"
+    }
   }
 ]
-
