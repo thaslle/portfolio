@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: 'Thalles Lopes',
   description:
     "Hello, I'm Thalles, a web developer & digital designer based in São Paulo. For over a decade, I've been creating engaging digital experiences through web design, architecture and illustration",
+  openGraph: {
+    images: ['/images/thalles-work.jpg'],
+  },
 }
 
 export default function RootLayout({
