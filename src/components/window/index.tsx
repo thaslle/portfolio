@@ -47,22 +47,18 @@ export const Window: React.FC<WindowProps> = ({
     overlay: {
       leaving: {
         opacity: 0,
-        // backdropFilter: 'blur(0rem)',
       },
       entering: {
         opacity: 1,
-        // backdropFilter: 'blur(0.2rem)',
       },
     },
     window: {
       leaving: {
         scale: 0.98,
-        opacity: 0,
         y: '100%',
       },
       entering: {
         scale: 1,
-        opacity: 1,
         y: 0,
       },
     },
@@ -95,8 +91,9 @@ export const Window: React.FC<WindowProps> = ({
         }
         exit={variants.window.leaving}
         transition={{
-          duration: settings.duration * 0.3,
-          delay: settings.duration * 0.5,
+          duration: settings.duration,
+          delay: settings.delay,
+          ease: settings.ease,
         }}
         drag
         dragDirectionLock
@@ -135,4 +132,3 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
-

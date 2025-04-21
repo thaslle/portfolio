@@ -43,7 +43,11 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
         stage === 'leaving' ? variants.header.leaving : variants.header.entering
       }
       exit={variants.header.leaving}
-      transition={{ duration: settings.duration * 0.2 }}
+      transition={{
+        duration: settings.duration,
+        delay: settings.delay,
+        ease: settings.ease,
+      }}
     >
       <div className={s.avatar}>
         <Avatar />
@@ -98,4 +102,3 @@ const Roles = () => {
 
   return <p className={s.roles} ref={ref} />
 }
-

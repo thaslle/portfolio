@@ -35,7 +35,7 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
   const gridSize = 5
   const maxAngle = gridSize * gridSpacing
   const polarThreshold = Math.PI / 2
-  const time = device.isMobile ? 0.15 : 0.015
+  const time = device.isMobile ? 0.15 : 0.025
 
   const currentPosition = useRef({ x: 0, y: 0 })
   const lastPosition = useRef({ x: 0, y: 0 })
