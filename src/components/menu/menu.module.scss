@@ -11,16 +11,6 @@
   align-items: center;
   padding: var(--padding-mini);
 
-  // border-radius: var(--radius);
-
-  // background-color: color-mix(
-  //   in srgb,
-  //   var(--color-background) var(--opacity-medium),
-  //   transparent
-  // );
-
-  // backdrop-filter: blur(var(--blur-light));
-
   font-family: var(--font-mono);
   font-size: var(--font-upper);
   line-height: 1em;
@@ -53,7 +43,7 @@
       height: 1.5rem;
     }
 
-    &:hover .icon rect {
+    &:hover .icon.hamburger rect {
       &.top {
         y: 5;
       }

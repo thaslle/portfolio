@@ -1,3 +1,5 @@
+import { clsx } from 'clsx'
+
 import s from './menu.module.scss'
 
 export const IconHamburger = () => (
@@ -6,7 +8,7 @@ export const IconHamburger = () => (
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    className={s.icon}
+    className={clsx(s.icon, s.hamburger)}
   >
     <rect className={s.top} x="3" y="6" width="18" height="2" />
     <rect x="3" y="11" width="18" height="2" />

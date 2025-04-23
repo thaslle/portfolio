@@ -28,7 +28,7 @@ export const Screen: React.FC<ScreenProps> = ({
   project,
   onClickProject,
 }) => {
-  const { filter, setLabel } = useStore()
+  const { filter, blockCamera, setLabel, setBlockCamera } = useStore()
   const { size } = useThree()
   const materialRef = useRef<any>(null)
 
@@ -136,12 +136,15 @@ export const Screen: React.FC<ScreenProps> = ({
         }}
         onPointerOver={() => {
           if (!filtered) return
+
           setHovered(true)
           setLabel({
             title: project.title,
             subtitle: project.category,
             tag: project.tag,
           })
+
+          if (blockCamera) setBlockCamera(false)
         }}
         onPointerOut={() => {
           if (!filtered) return
@@ -166,4 +169,3 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
-

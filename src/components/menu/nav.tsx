@@ -22,16 +22,6 @@ export const Nav: React.FC<NavProps> = ({ setShowMenu }) => {
 
   const variants = {
     nav: {
-      // leaving: {
-      //   scale: 0.98,
-      //   opacity: 0,
-      //   y: '5%',
-      // },
-      // entering: {
-      //   scale: 1,
-      //   opacity: 1,
-      //   y: 0,
-      // },
       leaving: {
         opacity: 0,
       },

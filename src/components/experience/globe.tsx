@@ -9,6 +9,7 @@ import { Screen } from './screen'
 
 import { Projects } from '@/utils/types'
 import { useDeviceDetect } from '@/hooks/use-device-detect'
+import { useStore } from '@/hooks/use-store'
 // import { useTouchPosition } from '@/hooks/use-touch-position'
 
 type GlobeProps = {
@@ -16,6 +17,8 @@ type GlobeProps = {
   onClickProject: (href: string) => void
 }
 export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
+  const { blockCamera } = useStore()
+
   const cameraRef = useRef<CameraControls>(null)
   //const touch = useTouchPosition()
   const device = useDeviceDetect()
@@ -91,27 +94,37 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
       device.isMobile ? -currentPosition.current.y : pointer.y,
     )
 
-    const azimuthAngle = Math.max(
-      -maxAngle,
-      Math.min(maxAngle, maxAngle * mouse.x * -1),
-    )
-    const polarAngle = Math.max(
-      polarThreshold - maxAngle,
-      Math.min(polarThreshold + maxAngle, polarThreshold + maxAngle * mouse.y),
-    )
+    let azimuthAngle = 0
+    let polarAngle = Math.PI / 2
+    let cameraSpeed = blockCamera ? time * 2 : time
+
+    // If camera is allowed to move
+    if (!blockCamera) {
+      azimuthAngle = Math.max(
+        -maxAngle,
+        Math.min(maxAngle, maxAngle * mouse.x * -1),
+      )
+      polarAngle = Math.max(
+        polarThreshold - maxAngle,
+        Math.min(
+          polarThreshold + maxAngle,
+          polarThreshold + maxAngle * mouse.y,
+        ),
+      )
+    }
 
     // Make camera follow mouse cursor x
     cameraRef.current.azimuthAngle = MathUtils.lerp(
       cameraRef.current.azimuthAngle,
       azimuthAngle,
-      time,
+      cameraSpeed,
     )
 
     // Make camera follow mouse cursor y
     cameraRef.current.polarAngle = MathUtils.lerp(
       cameraRef.current.polarAngle,
       polarAngle,
-      time,
+      cameraSpeed,
     )
   })
 
