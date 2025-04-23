@@ -1,43 +1,28 @@
 import React, { useState } from 'react'
+
 import { Scramble } from '@/components/scramble'
+import { Media } from '@/components/media'
+
 import { useStore } from '@/hooks/use-store'
-import { Category } from '@/utils/types'
+import { CategoryList } from '@/utils/types'
+import { categories } from '@/utils/category-list'
 
 import s from './list.module.scss'
-import { Media } from '@/components/media'
 
 type ListProps = {
   setShowMenu: () => void
 }
 
-type ItemListProps = {
-  title: Category
-  description: string
-  video: string
-}
-
 type ItemProps = {
-  props: ItemListProps
+  props: CategoryList
 } & ListProps
 
 export const List: React.FC<ListProps> = ({ setShowMenu }) => {
-  const list: ItemListProps[] = [
-    {
-      title: 'Work',
-      description: 'A glimpse of selected work',
-      video: '/videos/menu/work.mp4',
-    },
-    {
-      title: 'Craft',
-      description: 'My lab for creative experiments',
-      video: '/videos/menu/craft.mp4',
-    },
-  ]
   return (
     <div className={s.list}>
       <ul>
-        {list &&
-          list.map((item, i) => (
+        {categories &&
+          categories.map((item, i) => (
             <Item key={i} props={item} setShowMenu={setShowMenu} />
           ))}
       </ul>
@@ -71,3 +56,4 @@ const Item: React.FC<ItemProps> = ({ props, setShowMenu }) => {
     </li>
   )
 }
+

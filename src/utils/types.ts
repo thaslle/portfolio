@@ -5,6 +5,12 @@ export type Collaborator = {
 
 export type Category = 'Work' | 'Craft'
 
+export type CategoryList = {
+  title: Category
+  description: string
+  video: string
+}
+
 export type ProjectInfo = {
   year: string
   role: string

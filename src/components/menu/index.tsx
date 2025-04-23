@@ -10,14 +10,17 @@ import { About } from './about'
 import { List } from './list'
 import { Contact } from './contact'
 import { Nav } from './nav'
+import { Filter } from './filter'
 import { Switcher } from './switcher'
 
 import { settings } from '@/utils/settings'
+import { useStore } from '@/hooks/use-store'
 import s from './menu.module.scss'
 
 export const Menu = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [showMenuItems, setShowMenuItems] = useState(false)
+  const { filter } = useStore()
 
   useEffect(() => {
     if (!showMenu) {
@@ -36,9 +39,11 @@ export const Menu = () => {
   return (
     <>
       <AnimatePresence>
-        {!showMenu && (
+        {!showMenu && !filter && (
           <Nav key="nav" setShowMenu={() => setShowMenu((prev) => !prev)} />
         )}
+
+        {!showMenu && filter && <Filter key="filter" />}
 
         {showMenu && (
           <Window
@@ -60,3 +65,4 @@ export const Menu = () => {
     </>
   )
 }
+

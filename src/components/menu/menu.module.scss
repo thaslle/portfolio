@@ -51,6 +51,10 @@
         y: 17;
       }
     }
+
+    &:hover .icon.close {
+      transform: rotate(90deg);
+    }
   }
 
   @media only screen and (min-width: 768px) {
@@ -120,8 +124,13 @@
 .icon {
   fill: none;
 
+  &.close {
+    transition: transform var(--transition-time) var(--transition-ease);
+  }
+
   rect {
     fill: var(--color-text);
     transition: all var(--transition-time) var(--transition-ease);
   }
 }
+

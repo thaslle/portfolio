@@ -10,6 +10,7 @@ import { Screen } from './screen'
 import { Projects } from '@/utils/types'
 import { useDeviceDetect } from '@/hooks/use-device-detect'
 import { useStore } from '@/hooks/use-store'
+import { isMobile } from 'react-device-detect'
 // import { useTouchPosition } from '@/hooks/use-touch-position'
 
 type GlobeProps = {
@@ -17,7 +18,7 @@ type GlobeProps = {
   onClickProject: (href: string) => void
 }
 export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
-  const { blockCamera } = useStore()
+  const { blockCamera, setBlockCamera } = useStore()
 
   const cameraRef = useRef<CameraControls>(null)
   //const touch = useTouchPosition()
@@ -73,6 +74,8 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
 
       // Update the state with normalized values
       lastPosition.current = { x: touchX, y: touchY }
+
+      if (blockCamera && isMobile) setBlockCamera(false)
     }
 
     // Attach the pointermove event to the window
@@ -186,3 +189,4 @@ export const Globe: React.FC<GlobeProps> = ({ projects, onClickProject }) => {
     </>
   )
 }
+
