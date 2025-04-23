@@ -17,6 +17,7 @@
 .window {
   grid-area: 1/1;
   display: flex;
+  overflow: hidden;
 
   --header-height: calc(var(--padding-section) * 1.8 + 1rem);
 
@@ -44,6 +45,8 @@
   @media only screen and (min-width: 768px) {
     border-radius: calc(var(--radius) + var(--padding-mini));
     min-height: calc(var(--width-menu-card) + (var(--padding-mini) * 2));
+
+    height: 0;
     max-height: calc(100dvh - (var(--padding-page) * 2));
   }
 
@@ -51,6 +54,7 @@
     border-radius: calc(var(--radius) + var(--padding-mini))
       calc(var(--radius) + var(--padding-mini)) 0 0;
 
+    height: 0;
     min-height: calc(
       var(--width-menu-card) + (var(--padding-mini) * 2) + var(--padding-page)
     );
@@ -130,3 +134,4 @@
     }
   }
 }
+

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useTransitionState } from 'next-transition-router'
 import { useScramble } from 'use-scramble'
 import { motion } from 'motion/react'
@@ -33,6 +33,9 @@ export const Window: React.FC<WindowProps> = ({
   const lenisRef = useRef<LenisRef>(null)
   const [dragY, setDragY] = useState(0)
 
+  const [hasMounted, setHasMounted] = useState(false)
+  useLayoutEffect(() => setHasMounted(true), [])
+
   // Calls the close event when ESC is pressed
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -56,7 +59,7 @@ export const Window: React.FC<WindowProps> = ({
     window: {
       leaving: {
         opacity: [1, 1, 1, 0],
-        height: ['100%', '0', '0', '0'],
+        height: ['100%', '0%', '0%', '0%'],
         width: ['100%', '100%', '90%', '90%'],
         transition: {
           times: [0, 0.5, 0.95, 1],
@@ -66,7 +69,7 @@ export const Window: React.FC<WindowProps> = ({
       },
       entering: {
         opacity: [0, 1, 1],
-        height: ['0', '0', '100%'],
+        height: ['0%', '0%', '100%'],
         width: ['90%', '100%', '100%'],
         transition: {
           times: [0, 0.5, 1],
@@ -99,48 +102,50 @@ export const Window: React.FC<WindowProps> = ({
 
   return (
     <>
-      <motion.section
-        key="window"
-        className={s.window}
-        initial={variants.window.leaving}
-        animate={
-          stage === 'leaving'
-            ? variants.window.leaving
-            : variants.window.entering
-        }
-        exit={variants.window.leaving}
-        drag
-        dragDirectionLock
-        onDragStart={(event) => setDragY((event as any).y)}
-        onDrag={(event) => {
-          if ((event as any).y - dragY > 100) onClose()
-        }}
-        dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
-        dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
-        dragElastic={0.2}
-        whileDrag={{ cursor: 'grabbing' }}
-      >
+      {hasMounted && (
         <motion.section
-          key="wrapper"
-          className={s.wrapper}
-          initial={variants.wrapper.leaving}
+          key="window"
+          className={s.window}
+          initial={variants.window.leaving}
           animate={
             stage === 'leaving'
-              ? variants.wrapper.leaving
-              : variants.wrapper.entering
+              ? variants.window.leaving
+              : variants.window.entering
           }
-          exit={variants.wrapper.leaving}
+          exit={variants.window.leaving}
+          drag
+          dragDirectionLock
+          onDragStart={(event) => setDragY((event as any).y)}
+          onDrag={(event) => {
+            if ((event as any).y - dragY > 100) onClose()
+          }}
+          dragConstraints={{ top: 0, right: 0, bottom: 0, left: 0 }}
+          dragTransition={{ bounceStiffness: 500, bounceDamping: 15 }}
+          dragElastic={0.2}
+          whileDrag={{ cursor: 'grabbing' }}
         >
-          <Handler lenisRef={lenisRef} />
+          <motion.section
+            key="wrapper"
+            className={s.wrapper}
+            initial={variants.wrapper.leaving}
+            animate={
+              stage === 'leaving'
+                ? variants.wrapper.leaving
+                : variants.wrapper.entering
+            }
+            exit={variants.wrapper.leaving}
+          >
+            <Handler lenisRef={lenisRef} />
 
-          <header className={s.header}>
-            <Title text={title} />
-            {link && <ExtLink href={link}>{label}</ExtLink>}
-          </header>
+            <header className={s.header}>
+              <Title text={title} />
+              {link && <ExtLink href={link}>{label}</ExtLink>}
+            </header>
 
-          <Scroll lenisRef={lenisRef}>{children}</Scroll>
+            <Scroll lenisRef={lenisRef}>{children}</Scroll>
+          </motion.section>
         </motion.section>
-      </motion.section>
+      )}
 
       <Portal>
         <motion.div
@@ -174,3 +179,4 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
+
