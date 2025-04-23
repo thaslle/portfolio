@@ -41,8 +41,8 @@ body {
 
   --z-index-experience: 1;
   --z-index-ui: 2;
-  --z-index-window: 3;
-  --z-index-menu: 4;
+  --z-index-overlay: 3;
+  --z-index-window: 4;
   --z-index-loading: 5;
 
   font-family: var(--font-sans);
@@ -72,4 +72,14 @@ body {
     --font-upper: 0.75rem;
     --font-button: 0.65rem;
   }
+}
+
+#portal-root {
+  width: 100vw;
+  height: 100dvh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: var(--z-index-overlay);
+  pointer-events: none;
 }

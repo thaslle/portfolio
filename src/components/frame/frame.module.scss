@@ -1,0 +1,52 @@
+.wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100dvh;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: var(--z-index-window);
+
+  overflow: hidden;
+  pointer-events: none;
+
+  @media only screen and (min-width: 768px) {
+    padding: var(--padding-page);
+  }
+
+  @media only screen and (max-width: 767px) {
+    padding: var(--padding-page) 0;
+  }
+
+  .frame {
+    display: grid;
+    align-items: end;
+    justify-items: center;
+
+    &::before {
+      display: block;
+      content: '';
+
+      grid-area: 1/1;
+
+      width: calc(100vw - var(--padding-page) * 2);
+      max-width: var(--width-menu);
+      height: calc(var(--width-menu-card) + (var(--padding-mini) * 2));
+
+      pointer-events: none;
+      border-radius: var(--radius);
+
+      background-color: color-mix(
+        in srgb,
+        var(--color-background) var(--opacity-medium),
+        transparent
+      );
+
+      backdrop-filter: blur(var(--blur-light));
+      z-index: -1;
+    }
+  }
+}

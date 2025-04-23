@@ -20,8 +20,8 @@ export const Cursor = () => {
   return (
     <motion.div ref={cursorRef} className={s.cursor} style={{ x, y }}>
       <div className={clsx(s.label, { [s.visible]: title && subtitle })}>
-        <Text text={title} className={s.title} />
-        <Text text={subtitle} className={s.subtitle} />
+        {title && <Text text={title} className={s.title} />}
+        {subtitle && <Text text={subtitle} className={s.subtitle} />}
       </div>
     </motion.div>
   )
@@ -66,4 +66,3 @@ const Text: React.FC<TextProps> = ({ text, ...props }) => {
 
   return <span ref={ref} {...props} />
 }
-

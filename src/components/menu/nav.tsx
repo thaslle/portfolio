@@ -13,40 +13,46 @@ import { settings } from '@/utils/settings'
 
 import s from './menu.module.scss'
 
-type HeaderProps = {
+type NavProps = {
   setShowMenu: () => void
 }
 
-export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
+export const Nav: React.FC<NavProps> = ({ setShowMenu }) => {
   const { stage } = useTransitionState()
 
   const variants = {
-    header: {
+    nav: {
+      // leaving: {
+      //   scale: 0.98,
+      //   opacity: 0,
+      //   y: '5%',
+      // },
+      // entering: {
+      //   scale: 1,
+      //   opacity: 1,
+      //   y: 0,
+      // },
       leaving: {
-        scale: 0.98,
         opacity: 0,
-        y: '5%',
       },
       entering: {
-        scale: 1,
         opacity: 1,
-        y: 0,
       },
     },
   }
 
   return (
-    <motion.header
-      className={s.float}
-      initial={variants.header.leaving}
+    <motion.nav
+      className={s.nav}
+      initial={variants.nav.leaving}
       animate={
-        stage === 'leaving' ? variants.header.leaving : variants.header.entering
+        stage === 'leaving' ? variants.nav.leaving : variants.nav.entering
       }
-      exit={variants.header.leaving}
+      exit={variants.nav.leaving}
       transition={{
         duration: settings.duration,
         delay: settings.delay,
-        ease: settings.ease,
+        ease: settings.easeIn,
       }}
     >
       <div className={s.avatar}>
@@ -58,7 +64,7 @@ export const Header: React.FC<HeaderProps> = ({ setShowMenu }) => {
       <button aria-label="Menu" onClick={setShowMenu}>
         <IconHamburger />
       </button>
-    </motion.header>
+    </motion.nav>
   )
 }
 

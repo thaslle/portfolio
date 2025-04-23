@@ -6,12 +6,13 @@ import { useScramble } from 'use-scramble'
 import { motion } from 'motion/react'
 import type { LenisRef } from 'lenis/react'
 
+import { Handler } from './handler'
 import { Scroll } from './scroll'
 import { ExtLink } from '@/components/ext-link'
+import { Portal } from '@/components/portal'
 import { settings } from '@/utils/settings'
 
 import s from './window.module.scss'
-import { Handler } from './handler'
 
 type WindowProps = {
   children: React.ReactNode
@@ -54,32 +55,50 @@ export const Window: React.FC<WindowProps> = ({
     },
     window: {
       leaving: {
-        scale: 0.98,
-        y: '100%',
+        opacity: [1, 1, 1, 0],
+        height: ['100%', '0', '0', '0'],
+        width: ['100%', '100%', '90%', '90%'],
+        transition: {
+          times: [0, 0.5, 0.95, 1],
+          duration: settings.duration * 2.5,
+          ease: settings.easeOut,
+        },
       },
       entering: {
-        scale: 1,
-        y: 0,
+        opacity: [0, 1, 1],
+        height: ['0', '0', '100%'],
+        width: ['90%', '100%', '100%'],
+        transition: {
+          times: [0, 0.5, 1],
+          duration: settings.duration * 2.5,
+          delay: settings.delay,
+          ease: settings.easeIn,
+        },
+      },
+    },
+
+    wrapper: {
+      leaving: {
+        opacity: 0,
+        transition: {
+          duration: settings.duration * 0.5,
+          ease: settings.easeOut,
+        },
+      },
+      entering: {
+        opacity: [0, 0, 1],
+        transition: {
+          times: [0, 0.95, 1],
+          duration: settings.duration * 2.5,
+          delay: settings.delay,
+          ease: settings.easeIn,
+        },
       },
     },
   }
 
   return (
-    <div className={s.wrapper}>
-      <motion.div
-        key="overlay"
-        className={s.overlay}
-        onClick={onClose}
-        initial={variants.overlay.leaving}
-        animate={
-          stage === 'leaving'
-            ? variants.overlay.leaving
-            : variants.overlay.entering
-        }
-        exit={variants.overlay.leaving}
-        transition={{ duration: settings.duration }}
-      />
-
+    <>
       <motion.section
         key="window"
         className={s.window}
@@ -90,11 +109,6 @@ export const Window: React.FC<WindowProps> = ({
             : variants.window.entering
         }
         exit={variants.window.leaving}
-        transition={{
-          duration: settings.duration,
-          delay: settings.delay,
-          ease: settings.ease,
-        }}
         drag
         dragDirectionLock
         onDragStart={(event) => setDragY((event as any).y)}
@@ -106,16 +120,44 @@ export const Window: React.FC<WindowProps> = ({
         dragElastic={0.2}
         whileDrag={{ cursor: 'grabbing' }}
       >
-        <Handler lenisRef={lenisRef} />
+        <motion.section
+          key="wrapper"
+          className={s.wrapper}
+          initial={variants.wrapper.leaving}
+          animate={
+            stage === 'leaving'
+              ? variants.wrapper.leaving
+              : variants.wrapper.entering
+          }
+          exit={variants.wrapper.leaving}
+        >
+          <Handler lenisRef={lenisRef} />
 
-        <header className={s.header}>
-          <Title text={title} />
-          {link && <ExtLink href={link}>{label}</ExtLink>}
-        </header>
+          <header className={s.header}>
+            <Title text={title} />
+            {link && <ExtLink href={link}>{label}</ExtLink>}
+          </header>
 
-        <Scroll lenisRef={lenisRef}>{children}</Scroll>
+          <Scroll lenisRef={lenisRef}>{children}</Scroll>
+        </motion.section>
       </motion.section>
-    </div>
+
+      <Portal>
+        <motion.div
+          key="overlay"
+          className={s.overlay}
+          onClick={onClose}
+          initial={variants.overlay.leaving}
+          animate={
+            stage === 'leaving'
+              ? variants.overlay.leaving
+              : variants.overlay.entering
+          }
+          exit={variants.overlay.leaving}
+          transition={{ duration: settings.duration }}
+        />
+      </Portal>
+    </>
   )
 }
 

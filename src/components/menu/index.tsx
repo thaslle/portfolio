@@ -9,7 +9,7 @@ import { Avatar } from '@/components/avatar'
 import { About } from './about'
 import { List } from './list'
 import { Contact } from './contact'
-import { Header } from './header'
+import { Nav } from './nav'
 import { Switcher } from './switcher'
 
 import { settings } from '@/utils/settings'
@@ -27,44 +27,36 @@ export const Menu = () => {
 
     const timer = setTimeout(
       () => setShowMenuItems(showMenu),
-      settings.duration * 300,
+      settings.duration * 2350,
     )
 
     return () => clearTimeout(timer)
   }, [showMenu])
 
   return (
-    <div className={s.wrapper}>
-      <nav className={s.menu}>
-        <AnimatePresence>
-          {!showMenu && (
-            <Header
-              key="header"
-              setShowMenu={() => setShowMenu((prev) => !prev)}
-            />
-          )}
+    <>
+      <AnimatePresence>
+        {!showMenu && (
+          <Nav key="nav" setShowMenu={() => setShowMenu((prev) => !prev)} />
+        )}
 
-          {showMenu && (
-            <Window
-              key="window"
-              title="Get to know me"
-              onClose={() => setShowMenu(false)}
-            >
-              <div className={s.interactive}>
-                <div className={s.avatar}>{showMenuItems && <Avatar />}</div>
-                <div className={s.ascii}>{showMenuItems && <Ascii />}</div>
-                <div className={s.switcher}>
-                  {showMenuItems && <Switcher />}
-                </div>
-              </div>
-              <About />
-              <List setShowMenu={() => setShowMenu(false)} />
-              <Contact />
-            </Window>
-          )}
-        </AnimatePresence>
-      </nav>
-    </div>
+        {showMenu && (
+          <Window
+            key="window"
+            title="Get to know me"
+            onClose={() => setShowMenu(false)}
+          >
+            <div className={s.interactive}>
+              <div className={s.avatar}>{showMenuItems && <Avatar />}</div>
+              <div className={s.ascii}>{showMenuItems && <Ascii />}</div>
+              <div className={s.switcher}>{showMenuItems && <Switcher />}</div>
+            </div>
+            <About />
+            <List setShowMenu={() => setShowMenu(false)} />
+            <Contact />
+          </Window>
+        )}
+      </AnimatePresence>
+    </>
   )
 }
-
