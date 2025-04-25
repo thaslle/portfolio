@@ -1,10 +1,6 @@
 .ui {
-  position: fixed;
-  left: 0;
-  top: 0;
-
-  width: 100vw;
-  height: 100dvh;
+  position: relative;
+  grid-area: 1/1;
   z-index: var(--z-index-ui);
 
   overflow: hidden;

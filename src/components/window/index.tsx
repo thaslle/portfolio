@@ -32,13 +32,20 @@ export const Window: React.FC<WindowProps> = ({
   link,
   onClose,
 }) => {
-  const { fromTo } = useStore()
+  const { fromTo, setWindow } = useStore()
   const { stage } = useTransitionState()
   const lenisRef = useRef<LenisRef>(null)
   const [dragY, setDragY] = useState(0)
 
   const [hasMounted, setHasMounted] = useState(false)
-  useLayoutEffect(() => setHasMounted(true), [])
+  useLayoutEffect(() => {
+    setHasMounted(true)
+
+    // Update window opened state
+    setWindow(true)
+
+    return () => setWindow(false)
+  }, [])
 
   // Calls the close event when ESC is pressed
   useEffect(() => {
@@ -51,7 +58,6 @@ export const Window: React.FC<WindowProps> = ({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [onClose])
 
-  //console.log(fromTo)
   const fromProject = fromTo.from === 'project' && fromTo.to === 'project'
 
   const variants = {
@@ -161,3 +167,4 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
+

@@ -10,6 +10,7 @@ import '@/css/global.scss'
 import Providers from './providers'
 
 import { Frame } from '@/components/frame'
+import { Content } from '@/components/content'
 import { Loading } from '@/components/loading'
 import { Experience } from '@/components/experience'
 import { UI } from '@/components/ui'
@@ -40,8 +41,10 @@ export default function RootLayout({
         <Suspense>
           <Providers>
             <Frame>{children}</Frame>
-            <Experience projects={projects} />
-            <UI />
+            <Content>
+              <Experience projects={projects} />
+              <UI />
+            </Content>
             <Cursor />
           </Providers>
         </Suspense>
@@ -49,3 +52,4 @@ export default function RootLayout({
     </html>
   )
 }
+

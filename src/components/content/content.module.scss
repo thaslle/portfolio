@@ -1,0 +1,22 @@
+.wrapper {
+  position: fixed;
+  width: 100vw;
+  height: 100dvh;
+  left: 0;
+  top: 0;
+  z-index: var(--z-index-experience);
+  background-color: var(--color-base);
+  display: grid;
+
+  will-change: transform, clip-path;
+
+  transition:
+    transform calc(var(--transition-time) * 1.5) var(--transition-ease),
+    clip-path calc(var(--transition-time) * 1.5) var(--transition-ease);
+
+  &.open {
+    transform: scale(var(--scale));
+    clip-path: inset(var(--heightDiff) var(--widthDiff) round var(--radius));
+  }
+}
+

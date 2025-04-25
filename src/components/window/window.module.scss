@@ -29,6 +29,8 @@
   height: max-content;
   min-width: min(calc(100vw - var(--padding-page) * 2), var(--width-menu));
 
+  will-change: width, height;
+
   background-color: color-mix(
     in srgb,
     var(--color-background) var(--opacity-dark),
@@ -124,3 +126,4 @@
     }
   }
 }
+

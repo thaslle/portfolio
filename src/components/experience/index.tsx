@@ -17,7 +17,6 @@ type ExperienceProps = {
 
 export const Experience: React.FC<ExperienceProps> = ({ projects }) => {
   const router = useTransitionRouter()
-
   const handleClickProject = (href: string) =>
     router.push(href, { scroll: false })
 

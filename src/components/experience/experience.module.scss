@@ -1,9 +1,6 @@
 .wrapper {
-  position: fixed;
-  width: 100vw;
-  height: 100dvh;
-  left: 0;
-  top: 0;
+  position: relative;
+  grid-area: 1/1;
   z-index: var(--z-index-experience);
 
   .canvas {
@@ -127,3 +124,4 @@
   //   }
   // }
 }
+
