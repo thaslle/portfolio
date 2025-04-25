@@ -69,6 +69,8 @@
     grid-template-areas: 'avatar title menu' 'avatar subtitle menu';
     row-gap: var(--gap);
 
+    transform: translateY(calc(var(--padding-page) * -1));
+
     .avatar {
       grid-area: avatar;
     }
@@ -133,4 +135,3 @@
     transition: all var(--transition-time) var(--transition-ease);
   }
 }
-

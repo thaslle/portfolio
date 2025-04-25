@@ -41,7 +41,6 @@ export const Filter = () => {
         exit={variants.nav.leaving}
         transition={{
           duration: settings.duration,
-          delay: settings.delay,
           ease: settings.easeIn,
         }}
       >
@@ -78,4 +77,3 @@ const Subtitle = ({ text }: { text: string }) => {
 
   return <p className={s.roles} ref={ref} />
 }
-

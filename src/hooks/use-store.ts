@@ -9,16 +9,22 @@ type Label = {
   subtitle: string | null
   tag: string | null
 }
+type FromTo = {
+  from: string
+  to: string
+}
 
 type Store = {
   ready: boolean
   filter: Filter
   label: Label
   blockCamera: boolean
+  fromTo: FromTo
   setReady: (ready: boolean) => void
   setFilter: (filter: Filter) => void
   setLabel: (label: Label) => void
   setBlockCamera: (blockCamera: boolean) => void
+  setFromTo: (fromTo: FromTo) => void
 }
 
 export const useStore = create<Store>((set) => ({
@@ -26,6 +32,10 @@ export const useStore = create<Store>((set) => ({
   filter: null,
   label: { title: null, subtitle: null, tag: null },
   blockCamera: false,
+  fromTo: {
+    from: '/',
+    to: '/',
+  },
   setReady: (ready) => set({ ready }),
   setFilter: (filter) =>
     set(() => ({
@@ -35,4 +45,5 @@ export const useStore = create<Store>((set) => ({
 
   setLabel: (label) => set({ label }),
   setBlockCamera: (blockCamera) => set({ blockCamera }),
+  setFromTo: (fromTo) => set({ fromTo }),
 }))

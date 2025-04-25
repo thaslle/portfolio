@@ -21,7 +21,6 @@
 
   --header-height: calc(var(--padding-section) * 1.8 + 1rem);
 
-  position: relative;
   z-index: 1;
 
   width: 100%;
@@ -29,8 +28,6 @@
 
   height: max-content;
   min-width: min(calc(100vw - var(--padding-page) * 2), var(--width-menu));
-
-  padding: 1rem var(--padding-mini) 0 var(--padding-mini);
 
   background-color: color-mix(
     in srgb,
@@ -59,16 +56,17 @@
       var(--width-menu-card) + (var(--padding-mini) * 2) + var(--padding-page)
     );
     max-height: calc(100dvh - (var(--padding-section) * 2));
-
-    transform: translateY(var(--padding-page));
   }
 
   .wrapper {
     width: 100%;
     height: 100%;
 
+    position: relative;
+
     display: grid;
     grid-template-rows: var(--header-height) calc(100% - var(--header-height));
+    padding: 1rem var(--padding-mini) 0 var(--padding-mini);
   }
 
   .handler {
@@ -116,15 +114,7 @@
   .content {
     overflow-y: auto;
     height: 100%;
-    border-radius: var(--radius);
-
-    @media only screen and (min-width: 768px) {
-      border-radius: var(--radius);
-    }
-
-    @media only screen and (max-width: 767px) {
-      border-radius: var(--radius) var(--radius) 0 0;
-    }
+    border-radius: var(--radius) var(--radius) 0 0;
 
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -134,4 +124,3 @@
     }
   }
 }
-

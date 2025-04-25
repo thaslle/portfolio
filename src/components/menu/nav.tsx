@@ -41,7 +41,6 @@ export const Nav: React.FC<NavProps> = ({ setShowMenu }) => {
       exit={variants.nav.leaving}
       transition={{
         duration: settings.duration,
-        delay: settings.delay,
         ease: settings.easeIn,
       }}
     >
@@ -98,4 +97,3 @@ const Roles = () => {
 
   return <p className={s.roles} ref={ref} />
 }
-

@@ -10,7 +10,10 @@ import { Handler } from './handler'
 import { Scroll } from './scroll'
 import { ExtLink } from '@/components/ext-link'
 import { Portal } from '@/components/portal'
+
 import { settings } from '@/utils/settings'
+import { useStore } from '@/hooks/use-store'
+import { animations } from './animations'
 
 import s from './window.module.scss'
 
@@ -29,6 +32,7 @@ export const Window: React.FC<WindowProps> = ({
   link,
   onClose,
 }) => {
+  const { fromTo } = useStore()
   const { stage } = useTransitionState()
   const lenisRef = useRef<LenisRef>(null)
   const [dragY, setDragY] = useState(0)
@@ -47,56 +51,34 @@ export const Window: React.FC<WindowProps> = ({
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [onClose])
 
+  //console.log(fromTo)
+  const fromProject = fromTo.from === 'project' && fromTo.to === 'project'
+
   const variants = {
     overlay: {
-      leaving: {
-        opacity: 0,
-      },
-      entering: {
-        opacity: 1,
-      },
+      leaving: fromProject
+        ? animations.overlay.leaving.fromProject
+        : animations.overlay.leaving.fromHome,
+      entering: fromProject
+        ? animations.overlay.entering.fromProject
+        : animations.overlay.entering.fromHome,
     },
     window: {
-      leaving: {
-        opacity: [1, 1, 1, 0],
-        height: ['100%', '0%', '0%', '0%'],
-        width: ['100%', '100%', '90%', '90%'],
-        transition: {
-          times: [0, 0.5, 0.95, 1],
-          duration: settings.duration * 2.5,
-          ease: settings.easeOut,
-        },
-      },
-      entering: {
-        opacity: [0, 1, 1],
-        height: ['0%', '0%', '100%'],
-        width: ['90%', '100%', '100%'],
-        transition: {
-          times: [0, 0.5, 1],
-          duration: settings.duration * 2.5,
-          delay: settings.delay,
-          ease: settings.easeIn,
-        },
-      },
+      leaving: fromProject
+        ? animations.window.leaving.fromProject
+        : animations.window.leaving.fromHome,
+      entering: fromProject
+        ? animations.window.entering.fromProject
+        : animations.window.entering.fromHome,
     },
 
     wrapper: {
-      leaving: {
-        opacity: 0,
-        transition: {
-          duration: settings.duration * 0.5,
-          ease: settings.easeOut,
-        },
-      },
-      entering: {
-        opacity: [0, 0, 1],
-        transition: {
-          times: [0, 0.95, 1],
-          duration: settings.duration * 2.5,
-          delay: settings.delay,
-          ease: settings.easeIn,
-        },
-      },
+      leaving: fromProject
+        ? animations.wrapper.leaving.fromProject
+        : animations.wrapper.leaving.fromHome,
+      entering: fromProject
+        ? animations.wrapper.entering.fromProject
+        : animations.wrapper.entering.fromHome,
     },
   }
 
@@ -179,4 +161,3 @@ const Title = ({ text }: { text: string }) => {
 
   return show && <h1 ref={ref} />
 }
-
