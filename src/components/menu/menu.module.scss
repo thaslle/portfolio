@@ -20,6 +20,7 @@
   .avatar {
     width: 100%;
     aspect-ratio: 1;
+    --radius: var(--avatar-radius);
   }
 
   h1 {
