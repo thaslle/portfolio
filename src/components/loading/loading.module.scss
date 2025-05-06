@@ -27,7 +27,9 @@
       var(--color-background)
     );
 
-    transform: translateX(var(--translate));
+    transition: transform var(--transition-time) var(--transition-ease);
+
+    transform: translateX(var(--translate)) translateZ(0);
   }
 
   &:before {
