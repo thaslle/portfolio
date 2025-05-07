@@ -11,19 +11,19 @@ import s from './loading.module.scss'
 
 export const Loading = () => {
   const [smoothProgress, setSmoothProgress] = useState(0)
-  const { progress, active } = useProgress()
+  const { progress } = useProgress()
   const { ready, setReady } = useStore()
 
   // Set a delay time to hide loader
   useEffect(() => {
-    if (active) return
+    if (progress < 100) return
 
     const delayHide = setTimeout(() => setReady(true), 1000)
 
     return () => {
       clearTimeout(delayHide)
     }
-  }, [active])
+  }, [progress])
 
   return (
     <AnimatePresence>
@@ -32,13 +32,12 @@ export const Loading = () => {
           key="progress"
           className={s.wrapper}
           exit={{
-            filter: 'blur(5rem)',
             opacity: 0,
           }}
           transition={{ duration: 0.15 }}
           style={
             {
-              '--progress': `${smoothProgress}%`,
+              '--progress': `${smoothProgress > 50 ? 100 : 0}%`,
               '--translate': `${smoothProgress}vw`,
             } as React.CSSProperties
           }

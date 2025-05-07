@@ -33,6 +33,7 @@ export const Nav: React.FC<NavProps> = ({ setShowMenu }) => {
 
   return (
     <motion.nav
+      key="insideNav"
       className={s.nav}
       initial={variants.nav.leaving}
       animate={
@@ -97,3 +98,4 @@ const Roles = () => {
 
   return <p className={s.roles} ref={ref} />
 }
+
