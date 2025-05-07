@@ -20,7 +20,7 @@ export const Avatar = () => {
         <Canvas className={s.canvas}>
           <Camera />
           <AdaptiveDpr pixelated />
-          <Environment preset="sunset" />
+          <Environment files="images/sunset.hdr" />
           <ambientLight intensity={0.5} />
           <directionalLight position={[1, 1, 0]} intensity={0.5} />
 
@@ -30,3 +30,4 @@ export const Avatar = () => {
     </div>
   )
 }
+
