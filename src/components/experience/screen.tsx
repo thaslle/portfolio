@@ -28,7 +28,7 @@ export const Screen: React.FC<ScreenProps> = ({
   project,
   onClickProject,
 }) => {
-  const { filter, blockCamera, setLabel, setBlockCamera } = useStore()
+  const { ready, filter, blockCamera, setLabel, setBlockCamera } = useStore()
   const { size } = useThree()
   const materialRef = useRef<any>(null)
 
@@ -99,13 +99,20 @@ export const Screen: React.FC<ScreenProps> = ({
 
   const filtered = !filter || filter === project.category
 
+  const calcPosition = (
+    mounted: boolean,
+    filtered: boolean,
+    offset: number,
+    offsetDistance: number,
+  ): number => {
+    if (!mounted) return 0
+    if (filtered) return offset + offsetDistance
+    return (offset + offsetDistance) * 1.2
+  }
+
   // Initial animation + filter
   const { position, opacity } = useSpring({
-    position: mounted
-      ? filtered
-        ? offset + offsetDistance
-        : (offset + offsetDistance) * 1.2
-      : 0,
+    position: calcPosition(mounted, filtered, offset, offsetDistance),
     opacity: filtered ? 1.0 : 0.2,
     config: {
       tension: 300,
@@ -116,8 +123,8 @@ export const Screen: React.FC<ScreenProps> = ({
   })
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    if (ready) setMounted(true)
+  }, [ready])
 
   useFrame(() => {
     if (!materialRef) return
@@ -169,3 +176,4 @@ export const Screen: React.FC<ScreenProps> = ({
     </group>
   )
 }
+

@@ -18,7 +18,7 @@ export const Loading = () => {
   useEffect(() => {
     if (active) return
 
-    const delayHide = setTimeout(() => setReady(true), 500)
+    const delayHide = setTimeout(() => setReady(true), 1000)
 
     return () => {
       clearTimeout(delayHide)
@@ -29,6 +29,7 @@ export const Loading = () => {
     <AnimatePresence>
       {!ready && (
         <motion.div
+          key="progress"
           className={s.wrapper}
           exit={{
             filter: 'blur(5rem)',
@@ -50,3 +51,4 @@ export const Loading = () => {
     </AnimatePresence>
   )
 }
+

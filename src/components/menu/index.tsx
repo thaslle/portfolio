@@ -20,7 +20,7 @@ import s from './menu.module.scss'
 export const Menu = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [showMenuItems, setShowMenuItems] = useState(false)
-  const { filter } = useStore()
+  const { ready, filter } = useStore()
 
   useEffect(() => {
     if (!showMenu) {
@@ -39,7 +39,7 @@ export const Menu = () => {
   return (
     <>
       <AnimatePresence>
-        {!showMenu && !filter && (
+        {!showMenu && !filter && ready && (
           <Nav key="nav" setShowMenu={() => setShowMenu((prev) => !prev)} />
         )}
 
